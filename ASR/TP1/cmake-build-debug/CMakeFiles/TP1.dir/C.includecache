@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/benchai/Workspace/L3-MIAGE/ASR/TP1/main.c
+stdio.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+

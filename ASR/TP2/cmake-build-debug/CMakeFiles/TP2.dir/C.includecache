@@ -19,4 +19,10 @@ sys/types.h
 -
 sys/wait.h
 -
+signal.h
+-
+assert.h
+-
+errno.h
+-
 

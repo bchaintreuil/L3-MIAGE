@@ -7,7 +7,7 @@ import java.util.Random;
 import org.junit.Test;
 
 import test.TestSignature;
-import tp2.vecteur.Vecteur2D;
+import tp2.rendu.Vecteur2D;
 
 public class Vecteur2DTest {
 	private Random generateur = new Random();

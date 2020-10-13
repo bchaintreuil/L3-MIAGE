@@ -2,12 +2,15 @@
 
  * 
  */
-package tp2.vecteur;
+package tp2.rendu;
 
 /**
  * @author benchai
  *
  */
+
+// TODO : à commenter
+
 public class Vecteur {
 	private double coords[];
 	

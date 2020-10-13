@@ -1,4 +1,4 @@
-package tp2.vecteur;
+package tp2.rendu;
 
 /**
  * 

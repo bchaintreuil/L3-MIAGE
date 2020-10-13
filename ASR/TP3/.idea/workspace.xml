@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="TP3" targetName="TP3" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -9,48 +11,52 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad08f623-544b-437d-a919-8dc27b0f4dd0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../TP2/cmake-build-debug/CMakeFiles/TP2.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../TP2/cmake-build-debug/CMakeFiles/TP2.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP2/cmake-build-debug/CMakeFiles/TP2.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../TP2/cmake-build-debug/CMakeFiles/TP2.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP2/cmake-build-debug/TP2" beforeDir="false" afterPath="$PROJECT_DIR$/../TP2/cmake-build-debug/TP2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP2/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../TP2/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP2/test" beforeDir="false" afterPath="$PROJECT_DIR$/../TP2/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/src/tp1/triangle/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/src/tp1/vecteur/DessineVecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/src/tp1/vecteur/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.rendu/src/tp1/vecteur/Vecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/AllTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/DessineTortue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/DessineVecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/DessineVecteur1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/PolynomeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/RegleDeTroisTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/RunAllTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/TortueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/TriangleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1.tests/src/tp1/tests/VecteurTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/src/tp1/HelloSwing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/src/tp1/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/src/tp1/Polynome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/TP1/src/tp1/RegleDeTrois.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/l3helper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/tp1-tests.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/uca.l3.helper.complexity.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/uca.l3.helper.swing.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../POO/uca.l3.helper.test.jar" beforeDir="false" />
+    <list default="true" id="e0d45c5b-b8e7-4921-9e9d-8a26b41c8685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3_2020.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP_liaison_CHAINTREUIL.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP_liaison_CHAINTREUIL.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp.pkt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$_liaison_CHAINTREUIL.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/TP4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/TP4.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/shm_sysv_withoutsem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/singleprocpipe.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/test_kill_signal.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP4/tp_ipc.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +66,11 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1iHVzIxFJFv0iss462WLJZhN6KL" />
+  <component name="ProjectId" id="1ie13oYwD4cLnxHsBXH2vyWIW0f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -76,6 +83,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TP3" TARGET_NAME="TP3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TP3" RUN_TARGET_NAME="TP3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -85,13 +102,32 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad08f623-544b-437d-a919-8dc27b0f4dd0" name="Default Changelist" comment="" />
-      <created>1601564764347</created>
+      <changelist id="e0d45c5b-b8e7-4921-9e9d-8a26b41c8685" name="Default Changelist" comment="" />
+      <created>1602253046935</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1601564764347</updated>
-      <workItem from="1601564765532" duration="7000" />
+      <updated>1602253046935</updated>
+      <workItem from="1602253048560" duration="149000" />
+      <workItem from="1602253265518" duration="1758000" />
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom" timestamp="1602263424455">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
+    <state width="1638" height="272" key="GridCell.Tab.0.center" timestamp="1602263424455">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="272" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
+    <state width="1638" height="272" key="GridCell.Tab.0.left" timestamp="1602263424454">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="272" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424454" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right" timestamp="1602263424455">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="272" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
   </component>
 </project>

@@ -38,6 +38,14 @@ public class Polygone {
 	}
 
 	// Getters and setters
+	
+	public Vecteur[] getPoints() {
+		return points;
+	}
+	
+	public int length() {
+		return points.length;
+	}
 
 	public Vecteur getPoint(int i) throws RuntimeException{
 		if (i > points.length) {

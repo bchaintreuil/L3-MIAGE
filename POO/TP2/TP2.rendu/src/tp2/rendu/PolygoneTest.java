@@ -24,8 +24,8 @@ public class PolygoneTest {
         Polygone unPolygone = new Polygone(new Vecteur(0.0, 0.0), new Vecteur(0.0, 1.0), new Vecteur(1.0, 1.0), new Vecteur(1.0, 0.0));
         var barycentre = unPolygone.barycentre();
         
-        assertEquals(0.5, barycentre.get(0), 0);
-        assertEquals(0.5, barycentre.get(1), 0);
+        assertEquals(0.0, barycentre.get(0), 0);
+        assertEquals(0.0, barycentre.get(1), 0);
     }
 
     @Test
@@ -35,8 +35,22 @@ public class PolygoneTest {
 		Triangle[] liste_triangles = unPolygone.trianguler();
 		
         assertEquals(unPolygone.length()-2, liste_triangles.length, 0);
-        // TODO check coordonnées générées sont bonnes
-        assertEquals(new Vecteur(0.0, 1.0) ,liste_triangles[0]);
-        assertEquals(new Vecteur(0.0, 1.1), liste_triangles[1]);
+        
+        // Triangle 1
+        assertEquals(0.0 ,liste_triangles[0].OA.get(0), 0);
+        assertEquals(0.0 ,liste_triangles[0].OA.get(1), 0);
+        assertEquals(0.0 ,liste_triangles[0].OB.get(0), 0);
+        assertEquals(1.0 ,liste_triangles[0].OB.get(1), 0);
+        assertEquals(1.0 ,liste_triangles[0].OC.get(0), 0);
+        assertEquals(0.0 ,liste_triangles[0].OC.get(1), 0);
+        
+        // Triangle 2
+        assertEquals(0.0 ,liste_triangles[1].OA.get(0), 0);
+        assertEquals(1.0 ,liste_triangles[1].OA.get(1), 0);
+        assertEquals(1.0 ,liste_triangles[1].OB.get(0), 0);
+        assertEquals(1.0 ,liste_triangles[1].OB.get(1), 0);
+        assertEquals(1.0 ,liste_triangles[1].OC.get(0), 0);
+        assertEquals(0.0 ,liste_triangles[1].OC.get(1), 0);
+        
     }
 }

@@ -25,7 +25,7 @@ public class Polygone {
 	// Main
 
 	public static void main(String[] args) {		
-		Polygone unPolygone = new Polygone(new Vecteur(0.0, 0.0), new Vecteur(2.0, 2.0), new Vecteur(4.0, 2.0), new Vecteur(6.0, 0.0), new Vecteur(6.0, -2.0), new Vecteur(4.0, -4.0), new Vecteur(2.0, -4.0), new Vecteur(0.0, -2.0));
+		Polygone unPolygone = new Polygone(new Vecteur(0.0, 0.0), new Vecteur(0.0, 1.0), new Vecteur(1.0, 1.0), new Vecteur(1.0, 0.0));
 		
 		Triangle[] triangles = unPolygone.trianguler();
 		
@@ -35,6 +35,10 @@ public class Polygone {
 			triangles[i].OB.print();
 			triangles[i].OC.print();
 		}
+		
+		var barycentre = unPolygone.barycentre();
+		System.out.println("Barycentre coordonnées :");
+		barycentre.print();
 	}
 
 	// Getters and setters

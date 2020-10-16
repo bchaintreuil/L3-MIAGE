@@ -25,4 +25,10 @@ sys/types.h
 -
 sys/shm.h
 -
+sys/sem.h
+-
+semaphore.h
+-
+time.h
+-
 

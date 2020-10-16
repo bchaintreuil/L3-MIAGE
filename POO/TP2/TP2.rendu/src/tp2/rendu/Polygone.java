@@ -1,11 +1,9 @@
-/**
- * 
- */
 package tp2.rendu;
 
 import java.util.ArrayList;
 
 /**
+ * Classe Polygone
  * @author Benjamin CHAINTREUIL
  * @author Thomas DELMARE
  */
@@ -18,44 +16,31 @@ public class Polygone {
 		if (points.length < 3) {
 			throw new RuntimeException("Nbr de points < 3");
 		}
-		this.points = new Vecteur[points.length];
-		System.arraycopy(points, 0, this.points, 0, points.length);
-	}
-
-	// Main
-
-	public static void main(String[] args) {		
-		Polygone unPolygone = new Polygone(new Vecteur(0.0, 0.0), new Vecteur(0.0, 1.0), new Vecteur(1.0, 1.0), new Vecteur(1.0, 0.0));
 		
-		Triangle[] triangles = unPolygone.trianguler();
-		
-		for(int i = 0; i < triangles.length; i++) {
-			System.out.println("Triangle n°" + (i+1));
-			triangles[i].OA.print();
-			triangles[i].OB.print();
-			triangles[i].OC.print();
+		int dim = points[0].dimension();
+		for(Vecteur point: points) {
+			if(point.dimension() != dim) {
+				throw new RuntimeException("Vecteurs de dim différentes");
+			}
 		}
 		
-		var barycentre = unPolygone.barycentre();
-		System.out.println("Barycentre coordonnées :");
-		barycentre.print();
+		this.points = new Vecteur[points.length];
+		System.arraycopy(points, 0, this.points, 0, points.length);
 	}
 
 	// Getters and setters
 	
 	public Vecteur[] getPoints() {
-		return points;
-	}
-	
-	public int length() {
-		return points.length;
+		Vecteur[] foo = new Vecteur[this.points.length];
+		System.arraycopy(this.points, 0, foo, 0, this.points.length);
+		return foo;
 	}
 
 	public Vecteur getPoint(int i) throws RuntimeException{
-		if (i > points.length) {
+		if (i > this.points.length) {
 			throw new RuntimeException("i > nbr de points");
 		} else {
-			return points[i];
+			return this.points[i];
 		}
 	}
 
@@ -66,30 +51,38 @@ public class Polygone {
 		return new Polygone(new_points);
 	}
 	
-	// Methods
+	/*
+	 * Methods
+	 */
+	
+	// Retourne le nombre de points constituant le polygone
+	public int nbrPoints() {
+		return this.points.length;
+	}
 	
 	// Détermine et renvoi le barycentre du polygone
 	public Vecteur barycentre() {
 		Vecteur foo = Vecteur.add(this.points);
-		return foo.multK(1/points.length);
+		return foo.multK(1.0/this.points.length);
 	}
 	
 	// Calcul et renvoi le périmètre du polygone
 	public double perimetre() {
 		double perimetre = 0;
 		
-		for(int i = 0; i < points.length; i++) {
-			if (i < points.length - 1) {
-				perimetre += Vecteur.add(points[i], points[i+1].opposé()).length();
+		for(int i = 0; i < this.points.length; i++) {
+			if (i < this.points.length - 1) {
+				perimetre += Vecteur.add(this.points[i], this.points[i+1].opposé()).length();
 			} else {
-				System.out.println(points[0].toString());
-				perimetre += Vecteur.add(points[i], points[0].opposé()).length();
+				perimetre += Vecteur.add(this.points[i], this.points[0].opposé()).length();
 			}
 		}
 		return perimetre;
 	}
 	
-	// Triangulation
+	/*
+	 * Triangulation
+	 */
 	
 	// Renvoi l'indice du sommet le plus à gauche du polygone.
 	private int sommet_gauche() {
@@ -123,7 +116,7 @@ public class Polygone {
 		return produit_vect_Z(P0, P1, M) > 0 && produit_vect_Z(P1, P2, M) > 0 && produit_vect_Z(P2, P0, M) > 0;
 	}
 
-	// Renvoi l'indice du sommet du polygone appartenant au triangle P0, P1, P2 qui est à la plus grande distance du côté P1P2
+	// Renvoi l'indice du sommet du polygone appartenant au triangle P0, P1, P2 et qui est à la plus grande distance du côté P1P2
 	private int indice_sommet_distance_max(Vecteur P0, Vecteur P1, Vecteur P2, int indice_P0, int indice_P1, int indice_P2) {
 		int n = this.points.length;
 		double distance = 0.0;
@@ -144,7 +137,7 @@ public class Polygone {
 		return k;
 	}
 
-	// Renvoi un nouveau polygone en allant de l'indice iStart à iEnd
+	// Renvoi un nouveau polygone constitué des points compris entre l'indice iStart et iEnd
 	private Polygone new_polygone(int iStart, int iEnd) {
 		int n = this.points.length;
 		ArrayList<Vecteur> sommets = new ArrayList<Vecteur>();

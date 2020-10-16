@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="TP3" targetName="TP3" />
@@ -12,51 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0d45c5b-b8e7-4921-9e9d-8a26b41c8685" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TP3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP3_2020.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP_liaison_CHAINTREUIL.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP_liaison_CHAINTREUIL.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp.pkt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$_liaison_CHAINTREUIL.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/TP4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TP4.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/TP4.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/shm_sysv_withoutsem.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/singleprocpipe.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/test_kill_signal.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP4/tp_ipc.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP3.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP3.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP3.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/src/tp2/rendu/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/src/tp2/rendu/Polygone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/src/tp2/rendu/Vecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/TP2/TP2.rendu/src/tp2/rendu/Vecteur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +50,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="TP3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TP3" TARGET_NAME="TP3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TP3" RUN_TARGET_NAME="TP3">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TP3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TP3" TARGET_NAME="TP3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TP3" RUN_TARGET_NAME="TP3">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -109,25 +76,38 @@
       <updated>1602253046935</updated>
       <workItem from="1602253048560" duration="149000" />
       <workItem from="1602253265518" duration="1758000" />
+      <workItem from="1602749494611" duration="4411000" />
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="272" key="GridCell.Tab.0.bottom" timestamp="1602263424455">
-      <screen x="0" y="25" width="1680" height="1025" />
+    <state x="796" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602756723551">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="796" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1602756723551" />
+    <state width="926" height="289" key="GridCell.Tab.0.bottom" timestamp="1602758658177">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="926" height="289" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1602758658177" />
     <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
-    <state width="1638" height="272" key="GridCell.Tab.0.center" timestamp="1602263424455">
-      <screen x="0" y="25" width="1680" height="1025" />
+    <state width="926" height="289" key="GridCell.Tab.0.center" timestamp="1602758658175">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="926" height="289" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1602758658175" />
     <state width="1638" height="272" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
-    <state width="1638" height="272" key="GridCell.Tab.0.left" timestamp="1602263424454">
-      <screen x="0" y="25" width="1680" height="1025" />
+    <state width="926" height="289" key="GridCell.Tab.0.left" timestamp="1602758658175">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="926" height="289" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1602758658175" />
     <state width="1638" height="272" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424454" />
-    <state width="1638" height="272" key="GridCell.Tab.0.right" timestamp="1602263424455">
-      <screen x="0" y="25" width="1680" height="1025" />
+    <state width="926" height="289" key="GridCell.Tab.0.right" timestamp="1602758658176">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="926" height="289" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1602758658176" />
     <state width="1638" height="272" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1602263424455" />
+    <state x="861" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602754687576">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="861" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602754687576" />
   </component>
 </project>

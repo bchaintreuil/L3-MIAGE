@@ -2,7 +2,7 @@ package tp2.rendu;
 
 /**
  * 
- * Classe Vecteur
+ * Classe Vecteur2D
  * @author Benjamin CHAINTREUIL
  *
  */
@@ -104,6 +104,7 @@ public class Vecteur2D {
 	 * 
 	 */
 	
+	@Override
 	public String toString() {
 		return "<" + this.x + ", " + this.y + ">";
 	}

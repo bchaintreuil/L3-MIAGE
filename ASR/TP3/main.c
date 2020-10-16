@@ -12,9 +12,23 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/shm.h>
+#include <sys/sem.h>
+#include <semaphore.h>
+#include <time.h>
+
 #define BUF_SIZE 256
 
-int main(int argc, char *argv[]){
+void make_message(int num, char* message) {
+    char buftime[26];
+    time_t timer;
+    struct tm* tm_info;
+    time(&timer);
+    tm_info = localtime(&timer);
+    strftime(buftime, 26, "%Y-%m-%d %H:%M:%S", tm_info);
+    sprintf(message, "%s %d at %s\n", "Hello, I'm child number", num, buftime);
+}
+
+int main(int argc, char *argv[]) {
     int i;
     int shmid;
     key_t key;
@@ -26,82 +40,105 @@ int main(int argc, char *argv[]){
     /*--------------------------------------------------------
      * Etape 1 : attacher la mem partagee � l'espace d'adressage du  pere */
 
-    key = ftok(argv[0],'R'); /* Generer une cle : Cette clef permettra
+    key = ftok(argv[0], 'R'); /* Generer une cle : Cette clef permettra
                               aux fils de retrouver le segment memoire */
-    shmid = shmget(key, 1024, 0644|IPC_CREAT); /* Creation du segment memoire : 1024 octets */
-    if (0 > shmid){
+    shmid = shmget(key, 1024, 0644 | IPC_CREAT); /* Creation du segment memoire : 1024 octets */
+    if (0 > shmid) {
         perror("Shared Mem creation error\n");
         exit(1);
     }
 
     /* => virtualaddr will be available across fork ! */
-    virtualaddr = shmat(shmid, (void*)0, 0); /* Attachement � l'espace mem du processus :
+    virtualaddr = shmat(shmid, (void *) 0, 0); /* Attachement � l'espace mem du processus :
                                               virtualaddr pointe sur cet espace*/
+
+    sem_t *sem_get;
+    sem_t *sem_put;
+
+    sem_get = sem_open("/get", O_CREAT | O_RDWR, 0644, 1);
+    sem_put = sem_open("/put", O_CREAT | O_RDWR, 0644, 1);
 
     /*--------------------------------------------------------
      * Etape 2 : Cr�ation du fils 1
      *           Il ecrit une information dans la shm et il lit une information
      */
-    switch (fork()){
+    switch(fork()) {
         case -1:
-            printf("Error forking child 1!\n"); exit(1);
+            printf("Error forking child 1!\n");
+            exit(1);
         case 0:
-        {
+            sem_get = sem_open("/get", O_RDWR);
+            sem_put = sem_open("/put", O_RDWR);
+
             char buf[BUF_SIZE];
-            printf("\nChild 1 executing...\n");
+            printf("Child 1 executing...\n");
+            while (1) {
+                /* Child 1 writing in shared mem : adresse h�ritee */
+                sem_wait(sem_get);
+                make_message(1, buf);
+                strcpy(virtualaddr, buf);
+                sem_post(sem_get);
+                printf("Message sent by child 1: %s\n", virtualaddr);
 
-            /* Child 1 writing in shared mem : adresse h�ritee */
-            strcpy (virtualaddr, "Bonjour, Je suis ");
+                // On reset le buffer
+                memset(buf, 0, sizeof(char) * BUF_SIZE);
 
-            sleep(1); /* supposons que la fabrication du message prenne un
-                   certain temps et qu'il soit NON ATOMIC */
+                /* Child 1 reading from shared mem */
+                sem_wait(sem_put);
+                strcpy (buf, virtualaddr);
+                sem_post(sem_put);
+                printf("Message received by child 1: %s\n", buf);
 
-            strcat (virtualaddr, "francais !");
-            printf("Message sent by child 1: %s\n", virtualaddr);
-
-            /* Child 1 reading from shared mem */
-            strcpy (buf, virtualaddr);
-            printf("Message received by child 1: %s\n", buf);
-
-            /* printf("Exiting child 1...\n"); */
-            _exit(0);
-        }
+                // On reset le buffer
+                memset(buf, 0, sizeof(char) * BUF_SIZE);
+                sleep(1);
+            }
             break;
         default:
             break;
     }
+}
 
     /*--------------------------------------------------------
-     * Etape 3 : Cr�ation du fils 2
+     * Etape 3 : Création du fils 2
      *           Lui lit puis ecrit
      */
     switch (fork()){
         case -1:
-            printf("Error forking child 2!\n"); exit(1);
-        case 0:
-        {
-            char buf[BUF_SIZE];
-            printf("\nChild 2 executing...\n");
-
-            /* Child 2 read from shared memory */
-            strcpy (buf, virtualaddr);
-            printf("Message received by child 2: %s\n", buf);
-
-
-
-            /* Child 2 writing in shared mem */
-            strcpy (virtualaddr, "Hello, I'm ");
-            sleep(1); /* supposons que la fabrication du message prenne un peu de temps */
-            strcat (virtualaddr, "english !");
-
-            printf("Message sent by child 2: %s\n", virtualaddr);
-
-            /* printf("Exiting child 2...\n"); */
-            _exit(EXIT_SUCCESS);
-        }
+            printf("Error forking child 2!\n");
+            exit(1);
             break;
-        default: break;
+        case 0:
+            sem_get = sem_open("/get", O_RDWR);
+            sem_put = sem_open("/put", O_RDWR);
+
+            char buf[BUF_SIZE];
+            printf("Child 2 executing...\n");
+            while (1) {
+                /* Child 2 read from shared memory */
+                sem_wait(sem_get);
+                strcpy (buf, virtualaddr);
+                printf("Message received by child 2: %s\n", buf);
+                sem_post(sem_get);
+
+                // On reset le buffer
+                memset(buf, 0, sizeof(char) * BUF_SIZE);
+
+                /* Child 2 writing in shared mem */
+                sem_wait(sem_put);
+                make_message(2, buf);
+                sem_post(sem_put);
+                printf("Message sent by child 2: %s\n", virtualaddr);
+
+                // On reset le buffer
+                memset(buf, 0, sizeof(char) * BUF_SIZE);
+                sleep(1);
+            }
+            break;
+        default:
+            break;
     }
+}
 
     /*--------------------------------------------------------
      *  Etape 4 : Wait
@@ -118,6 +155,6 @@ int main(int argc, char *argv[]){
     /*--------------------------------------------------------
      * Etape 5 : Deleting Shared Memory.
      */
-    shmctl (shmid, IPC_RMID, NULL);
+    shmctl(shmid, IPC_RMID, NULL);
     exit(EXIT_SUCCESS);
 }

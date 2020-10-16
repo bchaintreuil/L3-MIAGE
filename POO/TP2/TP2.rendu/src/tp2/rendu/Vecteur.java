@@ -1,17 +1,13 @@
-/**
-
- * 
- */
 package tp2.rendu;
 
 /**
- * @author benchai
- *
+ * Classe Vecteur
+ * @author Benjamin CHAINTREUIL
+ * @author Thomas DELMARE
  */
 
-// TODO : à commenter
-
 public class Vecteur {
+    // Constructor and constructor variable
 	private double coords[];
 	
 	
@@ -28,6 +24,7 @@ public class Vecteur {
 			}
 	}
 	
+	// Getters and setters
 	public double get(int i) throws RuntimeException{
 		if (i > this.dimension()) {
 			throw new RuntimeException("i > nbr de composantes");
@@ -36,34 +33,43 @@ public class Vecteur {
 		}
 	}
 	
+	/*
+	 * Methods
+	 */
+	
+	// Calcul et renvoi la norme du vecteur
 	public double length() {
 		double length = 0;
-		for(double coord : coords) {
+		for(double coord : this.coords) {
 			length += Math.pow(coord, 2);
 		}
 		return Math.sqrt(length);
 	}
 	
+	// Renvoi la dimension du vecteur
 	public int dimension() {
-		return coords.length;
+		return this.coords.length;
 	}
 	
+	// Calcul et renvoi le vecteur opposé
 	public Vecteur opposé() {
 		double foo[] = new double[this.dimension()];
 		for(int i = 0; i < this.dimension(); i++) {
-			foo[i] -= coords[i];
+			foo[i] -= this.coords[i];
 		}
 		return new Vecteur(foo);
 	}
 	
+	// Renvoi le vecteur résultant de la multiplication par un scalaire k
 	public Vecteur multK(double k) {
 		double bar[] = new double[this.dimension()];
 		for(int i = 0; i < this.dimension(); i++) {
-			bar[i] = coords[i]*k;
+			bar[i] = this.coords[i]*k;
 		}
 		return new Vecteur(bar);
 	}
 	
+	// Renvoi le vecteur transposé
 	public Vecteur transpose() throws RuntimeException{
 		if (this.dimension() == 2) {
 			return new Vecteur(this.coords[1],  this.coords[0]);
@@ -71,6 +77,7 @@ public class Vecteur {
 		throw new RuntimeException("dim != 2");
 	}
 	
+	// Méthode permettant l'addition de n vecteurs
 	public static Vecteur add(Vecteur...vecteurs) throws RuntimeException {
 		int dim = vecteurs[0].dimension();
 		for(Vecteur vecteur:vecteurs) {
@@ -89,6 +96,7 @@ public class Vecteur {
 		return new Vecteur(coords);	
 	}
 
+	// Méthode permettant de soustraire n vecteurs
 	public static Vecteur sub(Vecteur...vecteurs) {
 		Vecteur vect[] = new Vecteur[vecteurs.length];
 		for(int i = 0; i < vecteurs.length; i++) {
@@ -101,6 +109,7 @@ public class Vecteur {
 		return Vecteur.add(vect);
 	}
 	
+	// Méthode permettant de renvoyer le résultat du "produit scalaire" de n vecteurs
 	public static double produitScalaire(Vecteur...vecteurs) throws RuntimeException {
 		int dim = vecteurs[0].dimension();
 		for(Vecteur vecteur:vecteurs) {
@@ -123,6 +132,7 @@ public class Vecteur {
 		return bar;
 	}
 	
+	// Renvoi la norme du produit vectoriel entre deux vecteur v1 et v2 de dimension 3
 	public static Vecteur produitVectoriel(Vecteur v1, Vecteur v2) throws RuntimeException {
 		if (v1.dimension() == 3 && v2.dimension() == 3) {
 			return new Vecteur(v1.get(1)*v2.get(2)-v1.get(2)*v2.get(1), v1.get(2)*v2.get(0)-v1.get(0)*v2.get(2), v1.get(0)*v2.get(1)-v1.get(1)*v2.get(0));
@@ -130,14 +140,15 @@ public class Vecteur {
 		throw new RuntimeException("Dim != 3");
 	}
 	
+	// Affiche les coordonnées du vecteur à l'écran
 	public void print() {
 		System.out.print("<");
-		for(int i = 0; i < coords.length; i++) {
-			if (i <= coords.length-2) {
-				System.out.print(coords[i] + ", ");
+		for(int i = 0; i < this.coords.length; i++) {
+			if (i <= this.coords.length-2) {
+				System.out.print(this.coords[i] + ", ");
 				
 			} else {
-				System.out.print(coords[i]);
+				System.out.print(this.coords[i]);
 			}
 		}
 		System.out.println(">");

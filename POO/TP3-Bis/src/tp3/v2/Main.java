@@ -1,4 +1,4 @@
-package tp3.v2;
+	package tp3.v2;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -69,7 +69,9 @@ public class Main {
 			printHelp();
 		}
 		
-		content = loadFile("C:\\Users\\Benjamin CHAINTREUIL\\Workspace\\L3-MIAGE\\POO\\TP3-Bis\\poly.svg"); //TODO: Args
+		if(content == null) {
+			content = loadFile("poly.svg");
+		}
 		SVGParser input = new SVGParser(content);
 		
 		System.out.println("Nombre de balise : " + input.nbrTags());
@@ -101,7 +103,7 @@ public class Main {
 			System.out.println("Triangulation terminée !");
 			System.out.println(triangulations[i].length + " triangles calculés.");
 			
-			System.out.println("\n----- Triangles du polygone #" + i + " -----");
+			System.out.println("\n----- Triangles du polygone #" + (i+1) + " -----");
 			for(Triangle t: triangulations[i]) {
 				t.OA.print();
 				t.OB.print();

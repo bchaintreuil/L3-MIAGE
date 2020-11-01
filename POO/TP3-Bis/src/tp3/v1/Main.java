@@ -69,49 +69,12 @@ public class Main {
 			printHelp();
 		}
 		
-		content = loadFile("C:\\Users\\Benjamin CHAINTREUIL\\Workspace\\L3-MIAGE\\POO\\TP3-Bis\\poly.svg");
+		if(content == null) {
+			content = loadFile("poly.svg");
+		}
 		SVGParser parser = new SVGParser(content);
 		
 		System.out.println("Nombre de balise : " + parser.nbrTags());
 		parser.displayTags();
 	}
 }
-  
-
-// ==> Load le fichier dans un string mutable 
-//	V1 : Lire et afficher toutes les balises (on pourrait les stocker dans un tableau aussi)
-//	V2 : V1 + enlever les balises <! ...> et <?...?>
-//	Lire une chaîne de caractères au format SVG et construit un Polygone équivalent
-//	Extraire les n-2 triangles du polygone et les affiche au format SVG. On pourra supposer que les polygones sont convexes.
-
-//  regionMatches(int d1, String chaine, int d2, int l);
-//  Compare la chaine à partir de la position d1 avec la chaine chaine à partir de la position d2 sur une longueur I.
-//
-//  String [] split(String pattern);
-//  On peut découper une chaine en fonction d'un caractere de séparation
-//
-//  char charAt(int i);
-//  Permet de savoir le char à une position précise
-//  
-//  String substring(int début, int fin);
-//  String substring(int début);    
-//  Renvoie la chaine de caractères présentes entre les index début et fin ou du début jusqu'à la fin de la chaine
-//
-//  int indexOf(String sousChaine);
-//  int indexOf(String sousChaine, int debut);
-//  Premier emplacement d'une sous chaine
-//
-//  int lastIndexOf(String sousChaine);
-//  int lastIndexOf(String sousChaine, int debut);
-//  Dernier emplacement d'une sous chaine
-//
-//  boolean endsWith(String sousChaine);
-//  boolean startsWtih(String sousChaine);
-//  Pour savoir si une chaine finie ou commence par une autre sous-chaine
-// 
-//  String trim();
-//  Enleve les espaces en début et en fin de string
-//
-//  void delete(int début, int fin);
-//  deleteCharAt(int index);
-//  Permet d'effacer des chars dans un string

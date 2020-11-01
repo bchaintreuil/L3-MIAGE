@@ -1,0 +1,5 @@
+TP réalisé par Benjamin CHAINTREUIL et Thomas DELMARE
+Nous vous fournissons un .jar directement éxecutable:
+
+java -jar ./TP3.jar --help
+java -jar ./TP3.jar --input ./poly.svg

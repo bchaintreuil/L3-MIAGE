@@ -11,21 +11,21 @@ import java.io.StringWriter;
  * @author Thomas DELMARE
  */
 public class Main {
-	// Vars
+	/*
+	 * Vars
+	 */
 	private static String content;
 	
-	// Methods
-	
 	/*
-	 * Help
+	 * Methods
 	 */
+	
+	// Help printer
 	private static void printHelp() {
 		System.out.println("Utilisation :\n --help, -h \n --input <path to svg file> \n Fait par CHAINTREUIL Benjamin et DELMARE Thomas.");
 	}
 
-	/*
-	 * Méthode gérant l'ouverture du fichier puis --> string
-	 */
+	// Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
 	private static String loadFile(String path) {
 	    try {
 	       File file = new File(path);
@@ -70,18 +70,22 @@ public class Main {
 							System.out.println("Error: File is empty.");
 							System.exit(1);
 						} else {
+							// Lecture du fichier
 							SVGParser input = new SVGParser(content);
 							
+							// Affichage des balises
 							System.out.println("Nombre de balise : " + input.nbrTags());
 							System.out.println("----- Balises -----");
 
 							input.displayTags();
 							
+							// Affichage des polygones et leurs propriétés
 							System.out.println("----- Polygones -----");
 							Polygone[] p = input.getPolygones();
 
 							Triangle[][] triangulations = new Triangle[p.length][];
 							
+							// On traite chaque polygone un par un
 							for(int i = 0; i < p.length; i++) {
 								System.out.println("===> Polygone #" + (i + 1));
 								
@@ -95,6 +99,7 @@ public class Main {
 									p[i].getPoint(j).print();
 								}
 								
+								// Triangulation
 								System.out.println("\nTriangulation en cours...");
 								triangulations[i] = p[i].trianguler();
 								System.out.println("Triangulation terminée !");

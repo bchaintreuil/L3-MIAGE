@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
 
-
 /**
  * @author Benjamin CHAINTREUIL
  * @author Thomas DELMARE
@@ -71,15 +70,15 @@ public class Main {
 		}
 		
 		content = loadFile("C:\\Users\\Benjamin CHAINTREUIL\\Workspace\\L3-MIAGE\\POO\\TP3-Bis\\poly.svg"); //TODO: Args
-		SVGParser parser = new SVGParser(content);
+		SVGParser input = new SVGParser(content);
 		
-		System.out.println("Nombre de balise : " + parser.nbrTags());
+		System.out.println("Nombre de balise : " + input.nbrTags());
 		System.out.println("----- Balises -----");
 
-		parser.displayTags();
+		input.displayTags();
 		
 		System.out.println("----- Polygones -----");
-		Polygone[] p = parser.getPolygones();
+		Polygone[] p = input.getPolygones();
 
 		Triangle[][] triangulations = new Triangle[p.length][];
 		
@@ -110,5 +109,15 @@ public class Main {
 				System.out.print("\n");
 			}
 		}
+		
+		// Génération du SVG
+		System.out.println("----- Génération du SVG -----");
+		SVGGenerator output = new SVGGenerator(content);
+		
+		for(Triangle[] triangulation: triangulations) {
+			output.addTriangulation(triangulation);
+		}
+		
+		output.export();
 	}
 }

@@ -87,7 +87,7 @@ public class SVGParser {
 			System.out.println(this.tags[i] + "\n");
 		}
 	}
-	
+
 	public SVGParser(String content) {
 		this.content = new String(content);
 		this.parse();

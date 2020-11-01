@@ -19,8 +19,8 @@ public class Main {
 	/*
 	 * Help
 	 */
-	private static void printHelp() { //TODO: Help method
-		System.out.println("Help");
+	private static void printHelp() {
+		System.out.println("Utilisation :\n --help, -h \n --input <path to svg file> \n Fait par CHAINTREUIL Benjamin et DELMARE Thomas.");
 	}
 
 	/*

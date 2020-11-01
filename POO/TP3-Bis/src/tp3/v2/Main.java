@@ -1,4 +1,4 @@
-	package tp3.v2;
+package tp3.v2;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -26,7 +26,7 @@ public class Main {
 	/*
 	 * Méthode gérant l'ouverture du fichier puis --> string
 	 */
-	public static String loadFile(String path) {
+	private static String loadFile(String path) {
 	    try {
 	       File file = new File(path);
 	       if(file.isFile()) {

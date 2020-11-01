@@ -24,5 +24,4 @@ public class SVGGenerator {
 	public void export() {
 		System.out.println(this.content + "</svg>");
 	}
-	
 }

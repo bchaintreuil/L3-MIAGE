@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tp3.v2;
 
 import java.util.regex.Matcher;
@@ -13,11 +10,8 @@ import java.util.ArrayList;
  */
 public class SVGParser {
 	private final String tagRegex = "<[^>]+>";
-	
 	private String content;
 	private String[] tags;
-
-
 	private Polygone[] polygones;
 
 	private String[] getTags(String str, String regex) {
@@ -25,7 +19,7 @@ public class SVGParser {
 		Matcher m = Pattern.compile(regex).matcher(str);
 		
 		while(m.find()) {
-			// Removing comments and header 
+			// Removing comments and header.
 			if(m.group(0).contains("<?") || m.group(0).contains("<!--")) {
 				continue;
 			}
@@ -51,6 +45,7 @@ public class SVGParser {
 
 				coordsSubStr = tags[i].substring(coordsStart, coordsEnd);
 				
+				// On split les coordonées par rapport au espace/tab/etc...
 				String[] pointsStr = coordsSubStr.split("(\\s+)");
 				
 				points = new ArrayList<Vecteur>();

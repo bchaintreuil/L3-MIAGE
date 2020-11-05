@@ -1,3 +1,0 @@
-/tmp/tmp.Wurw5ZZpyc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.Wurw5ZZpyc/cmake-build-debug/CMakeFiles/edit_cache.dir
-/tmp/tmp.Wurw5ZZpyc/cmake-build-debug/CMakeFiles/TP3.dir

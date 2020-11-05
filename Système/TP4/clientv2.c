@@ -4,13 +4,24 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
-#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
+#include <sys/types.h>
+#include <assert.h>
+
 
 #define PORT 5001
+
+char *sh_read_line(FILE *f) {
+    char *line = NULL;
+    ssize_t bufsize = 0; // donc getline realise l'allocation
+    getline(&line, &bufsize,
+            f); // Extracts characters from is and stores them into str until the delimitation character delim is found (or the newline character, '\n', for (2)).
+    line[strlen(line) - 1] = '\0';
+    return line;
+}
 
 int main(int argc, char *argv[]) {
     /*
@@ -20,7 +31,7 @@ int main(int argc, char *argv[]) {
 	socklen_t len = sizeof(struct sockaddr_in); // Taille des adresses
     // Buffer message
     char msg_in[3] = "0";
-    char msg_out[3] = "0";
+    char* msg_out;
 
     /* Verifications de base : Syntaxe d'appel */
     if (argc != 2){
@@ -69,18 +80,21 @@ int main(int argc, char *argv[]) {
         fprintf(stdout,"Machine %s --> %s \n", hp1->h_name, inet_ntoa(serveraddr.sin_addr));
     }
 	
+    char* input;
+    char** operands;
+    double calcul = 0;
     while(1) {
-		/* Émission */
-		sprintf(msg_out, "%d", i);
+        printf("Saisir le calcul (Espace obligatoire entre opérandes et nombres !): ");
+        msg_out = sh_read_line(stdin);
 
+        /* Émission */
         if (sendto(sockfd, msg_out, sizeof(msg_out), 0, (const struct sockaddr *) &serveraddr, len) > 0) {
-            printf("Client %s:%d envoi : valeur = %s !\n", inet_ntoa(clientaddr.sin_addr), clientaddr.sin_port, &msg_out); 
+            printf("Client %s:%d envoi : valeur = %s !\n", inet_ntoa(clientaddr.sin_addr), clientaddr.sin_port, msg_out); 
         }
 
 		/* Réception de la réponse */
         n = recvfrom(sockfd, msg_in, sizeof(msg_in), 0, (struct sockaddr *) &serveraddr, &len);
         printf("Client %s:%d reçoit : valeur = %s !\n", inet_ntoa(clientaddr.sin_addr), clientaddr.sin_port, &msg_in);
-        i = atoi(msg_in);
         msg_in[0] = '\0';
 
         sleep(1);

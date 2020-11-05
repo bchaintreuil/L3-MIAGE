@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
     struct sockaddr_in adr0, *padr0 = &adr0; /* Adresse  */
 
     /*---- Caracterisation de la socket distante ------*/
-    struct sockaddr_in adr1,*padr1 = &adr1;  /* Adresse du destinataire */
+    struct sockaddr_in adr1, *padr1 = &adr1;  /* Adresse du destinataire */
     struct hostent *hp1;       /* Adresse IP de la machine distante */
 
     /*---- Buffers pour Messages -------------------------------*/
@@ -34,6 +34,7 @@ int main(int argc, char *argv[]){
         fprintf(stderr,"Syntaxe d'appel : a.out nom_du_host_peer \n");
         exit(2);
     }
+
     /* 1) Preparation de  la socket d'émission ================*/
     /* a) Creation : Domaine AF_INET, type DGRAM, proto. par defaut*/
     if ((sd0=socket(AF_INET, SOCK_DGRAM, 0)) == -1)
@@ -80,7 +81,7 @@ int main(int argc, char *argv[]){
             printf("inacheve : %s !\n",msg_out);
         /* b) Reception */
         printf("Attente de reception ... ");
-        if (recvfrom(sd0,msg_in, sizeof(msg_in), 0, (struct sockaddr *)NULL, NULL) == -1)
+        if (recvfrom(sd0,msg_in, sizeof(msg_in), 0, (struct sockaddr *)NULL, ls) == -1)
             printf("inachevee : %s !\n",msg_in);
         else  {
             printf("terminee : valeur = %s !\n",msg_in);

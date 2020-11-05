@@ -1,5 +1,5 @@
 /** Fichier : inc.c (Communication Sockets/UDP)
- *   Les deux processus distants s'envoient un nombre qu'ils 
+ *   Les deux processus distants s'envoient un nombre qu'ils
  *   incrementent successivement : L'un compte en pair, l'autre en impair ...  */
 #include <stdio.h>
 #include <string.h>

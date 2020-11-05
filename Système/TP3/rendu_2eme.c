@@ -1,110 +1,112 @@
-/*  Version "-1" d'un �change SHM System V 
-    entre deux fils.
-    Author : GM
-*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/ipc.h>
-#include <sys/types.h>
-#include <sys/sem.h>
-#include <semaphore.h>
-#include <sys/shm.h>
-#include <time.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<time.h>
 
-#define BUF_SIZE 256
+#define BUF_SIZE 64
 #define READ_END 0
 #define WRITE_END 1
 
-void make_message(int num, char *message){
-  // REMPLIT LE BUFFER MESSAGE
-  char bufftime[26];
+void make_message(int num, char * message){
+  char buftime[26];
   time_t timer;
-  struct tm* tm_info;
+  struct tm * horodatage_info;
   time(&timer);
-  tm_info=localtime(&timer);
-  strftime(bufftime, 26, "%Y-%m-%d %H:%M:%S", tm_info);
-  sprintf(message, "%s %d at %s\n", "Hello, i'm child number", num, bufftime);
-};
+  horodatage_info = localtime (&timer);
+  strftime(buftime, 26, "%Y-%m-%d %H:%M:%S", horodatage_info);
+  sprintf(message, "%s %d at %s\n", "Hello, I'm child number", num , buftime);
+}
 
-int main(int argc, char *argv[]){
-    key_t key = ftok(argv[0],'R');
-    int shmid = shmget(key, 1024, 0644|IPC_CREAT);
-    char * virtualaddr = shmat(shmid, (void*)0, 0);
-    int fd[2];
-    int sd[2];
 
-    switch (fork()){
-        case -1:
-            printf("Error forking child 1!\n"); exit(1);
-        case 0:
-        {
-            int status;
-            char msg[BUF_SIZE];
-            char buf[BUF_SIZE];
-
-            printf("Child 1 executing...\n");
-
-            for(int i=0;i<4;i++)
-            {
-                close(fd[READ_END]);
-                close(sd[WRITE_END]);
-
-                // Ecriture dans le pipe
-                make_message(1,msg);
-                write(fd[WRITE_END], msg, strlen(msg)+1);
-                sleep(1);
-
-                // Affichage du message du fils 2
-                read(sd[READ_END], msg, BUF_SIZE);
-                printf("Message received by child 1 : %s\n", msg);
-            }
-            _exit(0);
-        }
-        break;
-        
-        default:
-        break;
-    }
-
-    switch (fork()){
-        case -1:
-            printf("Error forking child 1!\n"); exit(1);
-        case 0:
-        {
-            int status;
-            char msg[BUF_SIZE];
-            char buf[BUF_SIZE];
-
-            printf("\nChild 2 executing...\n");
-
-            for(int i=0;i<4;i++)
-            {
-                sleep(1);
-                close(fd[WRITE_END]);
-                close(sd[READ_END]);   
-
-                // Affichage du message du fils 2
-                read(fd[READ_END], msg, strlen(msg)+1);
-                printf("Message received by child 2 :  %s\n", msg);
-
-                // Ecriture dans le pipe
-                make_message(2,msg);
-                write(sd[WRITE_END], msg, BUF_SIZE);
-            }
-            _exit(0);
-        }
-        break;
-        
-        default:
-        break;
-    }
+int main(int argc, char * argv[]){
+    int pipe0[2];
+    int pipe1[2];
     
+    if(pipe(pipe0)==-1){
+        printf("Pipe0 creation failed");
+        return 1;
+    }
+
+    if(pipe(pipe1)==-1){
+        printf("Pipe1 creation failed");
+        return 1;
+    }
+
+    // CHILD 1 FORK
+    switch(fork()){
+        case -1:{
+         printf("Error");
+         exit(1);
+        }
+
+        case 0:{
+         char msg[64];
+         printf("Child 1 created !\n");
+
+         // CLOSING THE USELESS SIDES OF PIPES
+         close(pipe0[READ_END]);
+         close(pipe1[WRITE_END]);
+
+         for(int i =0 ; i<10;i++){
+        
+            //WRITE IN THE PIPE
+            make_message(1,msg);
+            write(pipe0[WRITE_END],msg,strlen(msg)+1);
+            sleep(1);
+
+            //SHOWING CHILD 2 MESSAGE
+            read(pipe1[READ_END],msg,BUF_SIZE);
+            printf("Child 1 read : %s\n", msg);
+        }
+        exit(0);
+        }
+    break;
+    default: break;
+    }
+
+    // CHILD 2 FORK
+    switch(fork()){
+        case -1:{
+         printf("Error");
+         exit(1);
+        }
+        case 0:{
+         char buf[BUF_SIZE];
+         char msg[64];
+         
+         printf("Child 2 created !\n");
+
+        // CLOSING THE USELESS SIDES OF PIPES
+         close(pipe0[WRITE_END]);
+         close(pipe1[READ_END]);
+
+        for(int j=0;j<10;j++){
+            char msg[64];
+            sleep(1);
+
+            // SHOWING CHILD 1 MESSAGE
+            read(pipe0[READ_END],msg,BUF_SIZE);
+            printf("Child 2 read : %s\n", msg);
+
+            sleep(1);
+
+            // WRITE IN THE PIPE
+            make_message(2,msg);
+            write(pipe1[WRITE_END],msg,strlen(msg)+1);
+            
+        }
+
+        _exit(EXIT_SUCCESS);   
+    }break;
+    
+    default:;break;
+    }
+
     printf("Parent waiting for children completion...\n");
+    
     for(int i=0;i<=1;i++){
         if (wait(NULL) == -1){ 
             printf("Error waiting.\n");
@@ -113,5 +115,5 @@ int main(int argc, char *argv[]){
     }  
     printf("Parent finishing.\n");
 
-    return 0;
+    exit(EXIT_SUCCESS);
 }

@@ -13,7 +13,8 @@
 #define PORT 5001
 
 #define LSH_TOK_BUFSIZE 64
-#define LSH_TOK_DELIM " \n\t"
+#define BUFFER 256
+#define LSH_TOK_DELIM " "
 
 char **sh_split_line(char *line) { // Fonction qui split les arguments en token
     int bufsize = LSH_TOK_BUFSIZE, position = 0;
@@ -26,7 +27,6 @@ char **sh_split_line(char *line) { // Fonction qui split les arguments en token
     }
 
     token = strtok(line, LSH_TOK_DELIM);
-
     while (token != NULL) {
         tokens[position] = token;
         position++;
@@ -42,7 +42,32 @@ char **sh_split_line(char *line) { // Fonction qui split les arguments en token
         token = strtok(NULL, LSH_TOK_DELIM);
     }
     tokens[position] = NULL;
-    return tokens;
+	for(int i = 0; tokens[i] != NULL; i++) {
+		printf("Token : %s\n", tokens[i]);
+	}
+    return tokens; // 1 + 1 = [1, +, 1]
+}
+
+double calcul(char* msg_in, char** operands) {
+    operands = sh_split_line(msg_in);
+    double c = strtod(operands[0], NULL);
+    if (strlen(operands[1]) == 1 && (char)operands[1][0] < 48) {
+        switch(operands[1][0]) {
+            case 43: // +
+                c += strtod(operands[2], NULL);
+                break;
+            case 47: // /
+                c /= strtod(operands[2], NULL);
+                break;
+            case 45: // -
+                c -= strtod(operands[2], NULL);
+                break;
+            case 42: // *
+                c *= strtod(operands[2], NULL);
+                break;
+        }
+    }
+	return c;
 }
 
 int main(int argc, char *argv[]) { 
@@ -52,8 +77,8 @@ int main(int argc, char *argv[]) {
 	int n, i;
 	socklen_t len = sizeof(struct sockaddr_in); // Taille des adresses
     // Buffer message
-    char msg_in[32] = "0";
-    char msg_out[32] = "0";
+    char msg_in[BUFFER] = "0";
+    char msg_out[BUFFER] = "0";
 
     // Caractérisation du socket serveur
     int sockfd; // Descripteur
@@ -85,56 +110,24 @@ int main(int argc, char *argv[]) {
     // Définition de l'adresse client
 	struct sockaddr_in cliaddr;
 
-    char** operands;
-    double calcul = 0;
+    pid_t pid = -1;
+	char** operands;
     while(1) {
+        pid = -1;
+    
         /* Reception */
         printf("Attente de réception de la part d'un client...\n");
         if ((n = recvfrom(sockfd, msg_in, sizeof(msg_in), 0, (struct sockaddr *) &cliaddr, &len)) == -1) {
             printf("Réception inachevé : %s !\n", msg_in);
         } else {
             printf("Réception de %s:%d !, Valeur = %s\n", inet_ntoa(cliaddr.sin_addr), cliaddr.sin_port, msg_in);
-            if (strcmp(msg_in, "(") == 0) {
-                printf("DONE !!");
-                switch(fork()) {
-                    case -1:
-                        printf("Error forking !\n"); 
-                        exit(1);
-                    case 0:
-                    {
-                        int var;
-                        sprintf(msg_out, "%s", "Session ouverte");
-                        sendto(sockfd, msg_out, sizeof(msg_out), 0, (struct sockaddr *) &cliaddr, len);
-                        break;
-                    }
-                    default:
-                        break;
-                }
-            } else {
+            if (strcmp(msg_in, "(") == 0) { // Le client ouvre une session
+                printf("Le client ouvre une session\n");
+                pid = fork();
+            } else { // Calcul traditionnel, on continue
                 /* Traitement : La reception est bonne, on fait evoluer i */
-                operands = sh_split_line(msg_in);
-                calcul = strtod(operands[0], NULL);
-                for(int j = 0; operands[j] != NULL; j++) {
-                    if (strlen(operands[j]) == 1 && ((char)operands[j][0] < 48 || (char)operands[j][0] == 61)) {
-                        // C'est un opérande
-                        switch(operands[j][0]) {
-                            case 43: // +
-                                calcul += strtod(operands[j + 1], NULL);
-                                break;
-                            case 47: // /
-                                calcul /= strtod(operands[j + 1], NULL);
-                                break;
-                            case 45: // -
-                                calcul -= strtod(operands[j + 1], NULL);
-                                break;
-                            case 42: // *
-                                calcul *= strtod(operands[j + 1], NULL);
-                                break;
-                        }
-                    }
-                }
+            	sprintf(msg_out, "%lf", calcul(msg_in, operands));
             }
-            sprintf(msg_out, "%lf", calcul);
         }
 
         /* Émission de la réponse */

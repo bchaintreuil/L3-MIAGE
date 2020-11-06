@@ -1,3 +1,0 @@
-/tmp/tmp.Nsv14HQKCg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.Nsv14HQKCg/cmake-build-debug/CMakeFiles/edit_cache.dir
-/tmp/tmp.Nsv14HQKCg/cmake-build-debug/CMakeFiles/TP4.dir

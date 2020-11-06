@@ -36,7 +36,6 @@ int main(int argc, char *argv[]){
     int shmid = shmget(key, 1024, 0644|IPC_CREAT);
     char * virtualaddr = shmat(shmid, (void*)0, 0);
     int fd[2];
-    int sd[2];
 
     switch (fork()){
         case -1:
@@ -49,19 +48,24 @@ int main(int argc, char *argv[]){
 
             printf("Child 1 executing...\n");
 
-            for(int i=0;i<4;i++)
+            for(int i=0;i=10;i++)
             {
+                make_message(1, msg);
+                strcpy(virtualaddr, msg);
+                printf("Message sent by child 1: %s\n", virtualaddr);
+
+                // ON FERME LE COTE DU PIPE INUTILE
                 close(fd[READ_END]);
-                close(sd[WRITE_END]);
 
-                // Ecriture dans le pipe
-                make_message(1,msg);
+                // ON ECRIT DANS LE PIPE
                 write(fd[WRITE_END], msg, strlen(msg)+1);
-                sleep(1);
+                fflush(stdout);
 
-                // Affichage du message du fils 2
-                read(sd[READ_END], msg, BUF_SIZE);
-                printf("Message received by child 1 : %s\n", msg);
+                // ON FERME LE COTE DU PIPE ECRITURE
+                close(fd[WRITE_END]);
+                strcpy(buf, virtualaddr);
+                
+                printf("Message received by child 1 : %s\n",buf);
             }
             _exit(0);
         }
@@ -82,19 +86,20 @@ int main(int argc, char *argv[]){
 
             printf("\nChild 2 executing...\n");
 
-            for(int i=0;i<4;i++)
+            for(int i=0;i=10;i++)
             {
-                sleep(1);
+                // ON FERME LE COTE DU PIPE INUTILE
+                close(fd[READ_END]);
+                strcpy(buf, virtualaddr);
+                printf("Message received by child 2 : %s\n", buf);
+
+                // ON ECRIT DANS LE PIPE
+                write(fd[WRITE_END], msg, strlen(msg)+1);
+                make_message(2, msg);
+                strcpy(virtualaddr, msg);
+
+                // ON FERME LE COTE DU PIPE ECRITURE
                 close(fd[WRITE_END]);
-                close(sd[READ_END]);   
-
-                // Affichage du message du fils 2
-                read(fd[READ_END], msg, strlen(msg)+1);
-                printf("Message received by child 2 :  %s\n", msg);
-
-                // Ecriture dans le pipe
-                make_message(2,msg);
-                write(sd[WRITE_END], msg, BUF_SIZE);
             }
             _exit(0);
         }

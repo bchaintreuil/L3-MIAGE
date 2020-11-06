@@ -13,10 +13,11 @@
 
 
 #define PORT 5001
+#define BUFFER 256
 
 char *sh_read_line(FILE *f) {
     char *line = NULL;
-    ssize_t bufsize = 0; // donc getline realise l'allocation
+    ssize_t bufsize = 256; // donc getline realise l'allocation
     getline(&line, &bufsize,
             f); // Extracts characters from is and stores them into str until the delimitation character delim is found (or the newline character, '\n', for (2)).
     line[strlen(line) - 1] = '\0';
@@ -30,7 +31,7 @@ int main(int argc, char *argv[]) {
 	int n, i = 0;
 	socklen_t len = sizeof(struct sockaddr_in); // Taille des adresses
     // Buffer message
-    char msg_in[3] = "0";
+    char msg_in[BUFFER] = "0";
     char* msg_out;
 
     /* Verifications de base : Syntaxe d'appel */
@@ -86,6 +87,7 @@ int main(int argc, char *argv[]) {
     while(1) {
         printf("Saisir le calcul (Espace obligatoire entre opérandes et nombres !): ");
         msg_out = sh_read_line(stdin);
+        printf("%s\n", msg_out);
 
         /* Émission */
         if (sendto(sockfd, msg_out, sizeof(msg_out), 0, (const struct sockaddr *) &serveraddr, len) > 0) {

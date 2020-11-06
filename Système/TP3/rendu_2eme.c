@@ -1,30 +1,19 @@
-/*  Version "-1" d'un �change SHM System V 
-    entre deux fils.
-    Author : GM
-*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/ipc.h>
-#include <sys/types.h>
-#include <sys/sem.h>
-#include <semaphore.h>
-#include <sys/shm.h>
-#include <time.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<time.h>
 
-#define BUF_SIZE 256
+#define BUF_SIZE 64
 #define READ_END 0
 #define WRITE_END 1
 
-void make_message(int num, char *message){
-  // REMPLIT LE BUFFER MESSAGE
-  char bufftime[26];
+void make_message(int num, char * message){
+  char buftime[26];
   time_t timer;
-  struct tm* tm_info;
+  struct tm * horodatage_info;
   time(&timer);
   tm_info=localtime(&timer);
   strftime(bufftime, 26, "%Y-%m-%d %H:%M:%S", tm_info);
@@ -103,13 +92,72 @@ int main(int argc, char *argv[]){
             }
             _exit(0);
         }
-        break;
+
+        case 0:{
+         char msg[64];
+         printf("Child 1 created !\n");
+
+         // CLOSING THE USELESS SIDES OF PIPES
+         close(pipe0[READ_END]);
+         close(pipe1[WRITE_END]);
+
+         for(int i =0 ; i<10;i++){
         
-        default:
-        break;
+            //WRITE IN THE PIPE
+            make_message(1,msg);
+            write(pipe0[WRITE_END],msg,strlen(msg)+1);
+            sleep(1);
+
+            //SHOWING CHILD 2 MESSAGE
+            read(pipe1[READ_END],msg,BUF_SIZE);
+            printf("Child 1 read : %s\n", msg);
+        }
+        exit(0);
+        }
+    break;
+    default: break;
     }
+
+    // CHILD 2 FORK
+    switch(fork()){
+        case -1:{
+         printf("Error");
+         exit(1);
+        }
+        case 0:{
+         char buf[BUF_SIZE];
+         char msg[64];
+         
+         printf("Child 2 created !\n");
+
+        // CLOSING THE USELESS SIDES OF PIPES
+         close(pipe0[WRITE_END]);
+         close(pipe1[READ_END]);
+
+        for(int j=0;j<10;j++){
+            char msg[64];
+            sleep(1);
+
+            // SHOWING CHILD 1 MESSAGE
+            read(pipe0[READ_END],msg,BUF_SIZE);
+            printf("Child 2 read : %s\n", msg);
+
+            sleep(1);
+
+            // WRITE IN THE PIPE
+            make_message(2,msg);
+            write(pipe1[WRITE_END],msg,strlen(msg)+1);
+            
+        }
+
+        _exit(EXIT_SUCCESS);   
+    }break;
     
+    default:;break;
+    }
+
     printf("Parent waiting for children completion...\n");
+    
     for(int i=0;i<=1;i++){
         if (wait(NULL) == -1){ 
             printf("Error waiting.\n");
@@ -118,5 +166,5 @@ int main(int argc, char *argv[]){
     }  
     printf("Parent finishing.\n");
 
-    return 0;
+    exit(EXIT_SUCCESS);
 }

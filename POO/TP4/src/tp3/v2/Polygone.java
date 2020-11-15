@@ -163,7 +163,7 @@ public class Polygone {
 		return triangles;
 	}
 
-	private ArrayList<Triangle> trianguler(ArrayList<Triangle> liste_triangles) {
+	public ArrayList<Triangle> trianguler(ArrayList<Triangle> liste_triangles) {
 		int nbrSommets = this.points.length;
 
 		int indiceP0 = this.sommet_gauche();

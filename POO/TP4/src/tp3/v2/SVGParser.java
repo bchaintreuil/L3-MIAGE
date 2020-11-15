@@ -22,7 +22,7 @@ public class SVGParser {
 	 */
 
 	// Récupération des balises
-	private String[] getTags(String str, String regex) {
+	public String[] getTags(String str, String regex) {
 		ArrayList<String> matches = new ArrayList<String>();
 		Matcher m = Pattern.compile(regex).matcher(str);
 		

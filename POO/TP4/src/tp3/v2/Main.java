@@ -26,7 +26,7 @@ public class Main {
 	}
 
 	// Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
-	private static String loadFile(String path) {
+	public static String loadFile(String path) {
 	    try {
 	       File file = new File(path);
 	       if(file.isFile()) {

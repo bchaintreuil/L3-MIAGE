@@ -2,14 +2,13 @@ package rendu.shapes;
 
 import rendu.interfaces.Shapes;
 import tp3.v2.Triangle;
-import rendu.interfaces.ReadFile;
 
-public class Circle implements Shapes, ReadFile{
+public class Circle implements Shapes{
 
-	@Override
-	public String readContent() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public static void main(String[] args) {
+		
+
 	}
 
 	@Override

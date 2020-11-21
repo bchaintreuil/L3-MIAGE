@@ -49,10 +49,19 @@ public class Polygone extends Shape {
      * Methods
      */
 
+    // Retourne l'aire du Polygone
     @Override
     public double aire() {
-        // TODO : A CODER
-        return 0;
+        double aire = 0;
+
+        ArrayList<Triangle> liste_triangles = new ArrayList<Triangle>();
+        liste_triangles = iTrianguler.trianguler(liste_triangles);
+
+        for(int i=0; i<liste_triangles.size();i++){
+            aire += liste_triangles.get(i).aire();
+        }
+
+        return aire;
     }
 
     // Retourne le nombre de points constituant le polygone

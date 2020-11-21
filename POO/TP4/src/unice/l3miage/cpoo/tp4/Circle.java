@@ -1,20 +1,22 @@
 package unice.l3miage.cpoo.tp4;
 
 public class Circle extends Shape {
+    private Vecteur center;
+    private double radius;
+
     public double aire() {
-        // TODO : A CODER
-        return 0;
+        return Math.pi * Math.pow(radius, 2);
     }
 
-    @Override
-    public Vecteur barycentre() {
-        // TODO : A CODER
-        Vecteur test = new Vecteur(0,0,0);
-        return test;
+    public Vecteur getCenter() {
+        return this.barycentre();
     }
 
-    public double perimetre(){
-        // TODO : A CODER
-        return 2;
+    public Vecteur barycentre(){
+        return this.center;
+    }
+
+    public double getRadius() {
+        return this.radius;
     }
 }

@@ -20,12 +20,15 @@ public class Triangle extends Shape {
         this.OA = OA;
         this.OB = OB;
         this.OC = OC;
-
     }
 
+    /**
+     * Détermination de l'aire du triangle
+     * @return L'aire du triangle
+     */
+
     public double aire() {
-        // TODO : A CODER
-        return 2;
+        return 1/2 *(Vecteur.produitVectoriel(OA, OB).length()+Vecteur.produitVectoriel(OA, OC).length());
     }
 
     /**

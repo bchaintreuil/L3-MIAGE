@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TP4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/CircleBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/EllipseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/LineBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolygoneBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolylineBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/RectangleBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Vecteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp4.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/Compte-rendu.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/TP3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/poly.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v1/SVGParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Polygone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/SVGGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/SVGParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Vecteur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/rendu/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/rendu/SVGParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/interfaces/Shapes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Ellipse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Polygon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Polyline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Rect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Polygone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/SVGGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/SVGParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Vecteur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp4/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1kLNYAHHCuBft2E3fNeRMqLqc6J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
+      <module name="TP4" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="" />
+      <created>1605475959389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605475959389</updated>
+      <workItem from="1605475961926" duration="5968000" />
+      <workItem from="1605975846804" duration="1073000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="621" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605478282955">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="621" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478282955" />
+    <state x="1060" y="426" key="FileChooserDialogImpl" timestamp="1605476824451">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="426" key="FileChooserDialogImpl/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605476824451" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1605478442957">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1605478442957">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1605478442957">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1605478442957">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
+    <state x="995" y="609" key="refactoring.ChangeSignatureDialog" timestamp="1605478748021">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="995" y="609" key="refactoring.ChangeSignatureDialog/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478748021" />
+  </component>
+</project>

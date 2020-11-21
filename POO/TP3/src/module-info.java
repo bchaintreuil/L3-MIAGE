@@ -1,7 +1,2 @@
-/**
- * @author benchai
- *
- */
-module TP3 {
-	
+module tp3 {
 }

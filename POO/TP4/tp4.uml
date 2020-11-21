@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>unice.l3miage.cpoo.tp4</OriginalElement>
+  <nodes>
+    <node x="768.0" y="973.0">unice.l3miage.cpoo.tp4.ShapeBuilder</node>
+    <node x="166.0" y="442.0">unice.l3miage.cpoo.tp4.Circle</node>
+    <node x="512.5" y="190.0">unice.l3miage.cpoo.tp4.Polygone</node>
+    <node x="188.0" y="225.0">unice.l3miage.cpoo.tp4.Ellipse</node>
+    <node x="-20.0" y="345.0">unice.l3miage.cpoo.tp4.Rectangle</node>
+    <node x="772.0" y="625.0">unice.l3miage.cpoo.tp4.LineBuilder</node>
+    <node x="436.0" y="985.0">unice.l3miage.cpoo.tp4.PolygoneBuilder</node>
+    <node x="286.5" y="1213.0">unice.l3miage.cpoo.tp4.Main</node>
+    <node x="544.0" y="1225.0">unice.l3miage.cpoo.tp4.Polyline</node>
+    <node x="760.0" y="1225.0">unice.l3miage.cpoo.tp4.Line</node>
+    <node x="353.0" y="-20.0">unice.l3miage.cpoo.tp4.Triangle</node>
+    <node x="192.0" y="785.0">unice.l3miage.cpoo.tp4.RectangleBuilder</node>
+    <node x="760.0" y="1105.0">unice.l3miage.cpoo.tp4.EllipseBuilder</node>
+    <node x="166.0" y="322.0">unice.l3miage.cpoo.tp4.iShape</node>
+    <node x="212.0" y="985.0">unice.l3miage.cpoo.tp4.iTrianguler</node>
+    <node x="476.0" y="865.0">unice.l3miage.cpoo.tp4.PolylineBuilder</node>
+    <node x="-30.0" y="1242.0">unice.l3miage.cpoo.tp4.SVGGenerator</node>
+    <node x="1011.0" y="638.0">unice.l3miage.cpoo.tp4.SVGParser</node>
+    <node x="-36.0" y="705.0">unice.l3miage.cpoo.tp4.CircleBuilder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="unice.l3miage.cpoo.tp4.RectangleBuilder" target="unice.l3miage.cpoo.tp4.iTrianguler">
+      <point x="0.0" y="15.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.PolygoneBuilder" target="unice.l3miage.cpoo.tp4.iTrianguler">
+      <point x="-84.0" y="-0.0" />
+      <point x="68.0" y="-0.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.EllipseBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.Rectangle" target="unice.l3miage.cpoo.tp4.iShape">
+      <point x="60.0" y="-0.0" />
+      <point x="-74.0" y="-0.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.CircleBuilder" target="unice.l3miage.cpoo.tp4.iTrianguler">
+      <point x="0.0" y="15.0" />
+      <point x="40.0" y="1000.0" />
+      <point x="-68.0" y="-0.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.PolylineBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="84.0" y="-0.0" />
+      <point x="800.0" y="880.0" />
+      <point x="-40.0" y="-27.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.Polygone" target="unice.l3miage.cpoo.tp4.iShape">
+      <point x="-207.5" y="-0.0" />
+      <point x="74.0" y="-0.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.RectangleBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="88.0" y="-0.0" />
+      <point x="813.3333333333334" y="800.0" />
+      <point x="-26.66666666666663" y="-27.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.EllipseBuilder" target="unice.l3miage.cpoo.tp4.iTrianguler">
+      <point x="-80.0" y="-0.0" />
+      <point x="280.0" y="1120.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.Circle" target="unice.l3miage.cpoo.tp4.iShape">
+      <point x="0.0" y="-38.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.PolygoneBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="84.0" y="-0.0" />
+      <point x="-72.0" y="-0.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.Triangle" target="unice.l3miage.cpoo.tp4.iShape">
+      <point x="0.0" y="60.0" />
+      <point x="440.0" y="340.0" />
+      <point x="74.0" y="-20.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.Ellipse" target="unice.l3miage.cpoo.tp4.iShape">
+      <point x="0.0" y="15.0" />
+      <point x="0.0" y="-38.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.LineBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="0.0" y="15.0" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="unice.l3miage.cpoo.tp4.CircleBuilder" target="unice.l3miage.cpoo.tp4.ShapeBuilder">
+      <point x="76.0" y="-0.0" />
+      <point x="826.6666666666666" y="720.0" />
+      <point x="-13.333333333333371" y="-27.0" />
+    </edge>
+  </edges>
+  <settings layout="Directed Orthogonal" zoom="0.7353982300884953" x="485.9505354411016" y="431.42427332993367" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Thomas DELMARE
  */
 
-public class Polygone implements iShape {
+public class Polygone extends Shape {
     // Constructor and constructor variable
     private Vecteur[] points;
 

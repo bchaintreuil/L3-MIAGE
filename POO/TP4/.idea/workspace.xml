@@ -20,75 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TP4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/CircleBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/EllipseBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/LineBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolygoneBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolylineBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/RectangleBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Vecteur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tp4.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/Compte-rendu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/TP3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/poly.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v1/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v1/SVGParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Polygone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/SVGGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/SVGParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3-Bis/src/tp3/v2/Vecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/src/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/rendu/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/src/tp3/rendu/SVGParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/interfaces/Shapes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Ellipse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Line.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Polygon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Polyline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rendu/shapes/Rect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Polygone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/SVGGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/SVGParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp3/v2/Vecteur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp4/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp4.uml" beforeDir="false" afterPath="$PROJECT_DIR$/tp4.uml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605475959389</updated>
       <workItem from="1605475961926" duration="5968000" />
-      <workItem from="1605975846804" duration="1073000" />
+      <workItem from="1605975846804" duration="2030000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 package unice.l3miage.cpoo.tp4;
 
-public class Circle implements iShape {
+public class Circle extends Shape {
     public double aire() {
 
     }

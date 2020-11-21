@@ -6,7 +6,7 @@ package unice.l3miage.cpoo.tp4;
  *
  */
 
-public class Triangle implements iShape {
+public class Triangle extends Shape {
     public Vecteur OA, OB, OC;
 
     /**

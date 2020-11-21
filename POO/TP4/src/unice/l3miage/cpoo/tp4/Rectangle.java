@@ -1,4 +1,4 @@
 package unice.l3miage.cpoo.tp4;
 
-public class Rectangle implements iShape {
+public class Rectangle extends Shape {
 }

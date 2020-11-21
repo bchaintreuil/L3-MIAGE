@@ -23,17 +23,9 @@ public class Triangle extends Shape {
 
     }
 
-    /**
-     * Calcul du périmètre du triangle
-     * @return Le périmètre
-     */
-
     public double aire() {
-
-    }
-
-    public double perimetre() {
-        return Vecteur.add(OA, OB.opposé()).length() + Vecteur.add(OA, OC.opposé()).length() + Vecteur.add(OC, OB.opposé()).length();
+        // TODO : A CODER
+        return 2;
     }
 
     /**

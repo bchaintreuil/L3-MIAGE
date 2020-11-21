@@ -30,12 +30,6 @@ public class Polygone extends Shape {
 
     // Getters and setters
 
-    public Vecteur[] getPoints() {
-        Vecteur[] foo = new Vecteur[this.points.length];
-        System.arraycopy(this.points, 0, foo, 0, this.points.length);
-        return foo;
-    }
-
     public Vecteur getPoint(int i) throws RuntimeException{
         if (i > this.points.length) {
             throw new RuntimeException("i > nbr de points");
@@ -55,6 +49,12 @@ public class Polygone extends Shape {
      * Methods
      */
 
+    @Override
+    public double aire() {
+        // TODO : A CODER
+        return 0;
+    }
+
     // Retourne le nombre de points constituant le polygone
     public int nbrPoints() {
         return this.points.length;
@@ -64,20 +64,6 @@ public class Polygone extends Shape {
     public Vecteur barycentre() {
         Vecteur foo = Vecteur.add(this.points);
         return foo.multK(1.0/this.points.length);
-    }
-
-    // Calcul et renvoi le périmètre du polygone
-    public double perimetre() {
-        double perimetre = 0;
-
-        for(int i = 0; i < this.points.length; i++) {
-            if (i < this.points.length - 1) {
-                perimetre += Vecteur.add(this.points[i], this.points[i+1].opposé()).length();
-            } else {
-                perimetre += Vecteur.add(this.points[i], this.points[0].opposé()).length();
-            }
-        }
-        return perimetre;
     }
 
     /*

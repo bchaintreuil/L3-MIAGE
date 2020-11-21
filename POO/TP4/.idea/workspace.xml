@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +60,15 @@
       <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
       <module name="TP4" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,10 +108,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1605984630363">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-3840.-297.2560.1400@0.0.1920.1040" timestamp="1605984630363" />
     <state x="621" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605478282955">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -139,10 +132,6 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
-    <state x="-3981" y="18" width="1390" height="717" key="dock-window-1" timestamp="1605990688180">
-      <screen x="-3840" y="-297" width="2560" height="1400" />
-    </state>
-    <state x="-3981" y="18" width="1390" height="717" key="dock-window-1/0.0.1920.1040/-3840.-297.2560.1400@0.0.1920.1040" timestamp="1605990688180" />
     <state x="995" y="609" key="refactoring.ChangeSignatureDialog" timestamp="1605478748021">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

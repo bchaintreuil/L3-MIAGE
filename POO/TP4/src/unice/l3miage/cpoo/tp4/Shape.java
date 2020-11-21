@@ -1,7 +1,7 @@
 package unice.l3miage.cpoo.tp4;
 
 abstract class Shape {
-    private Vecteur[] points;
+    protected Vecteur[] points;
 
     /**
      * Calcul de l'aire de la forme donnée

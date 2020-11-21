@@ -9,7 +9,9 @@ public class Circle extends Shape {
     }
 
     public Vecteur getCenter() {
+
         return this.barycentre();
+
     }
 
     public Vecteur barycentre(){

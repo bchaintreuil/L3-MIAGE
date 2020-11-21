@@ -6,7 +6,7 @@ public class Ellipse extends Shape {
     private double radiusY;
 
     public double aire() {
-        return Math.pi * radiusX * radiusY;
+        return Math.PI * radiusX * radiusY;
     }
 
     public Vecteur barycentre(){

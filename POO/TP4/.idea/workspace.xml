@@ -20,10 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/unice/l3miage/untitled/ChildBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/unice/l3miage/untitled/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygoneBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectangleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/ShapeBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,17 +173,21 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1011" y="462" key="extract.method.dialog/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606067776590" />
+    <state x="872" y="321" key="new project wizard" timestamp="1606080973008">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="321" key="new project wizard/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606080973008" />
     <state x="995" y="609" key="refactoring.ChangeSignatureDialog" timestamp="1605478748021">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="995" y="609" key="refactoring.ChangeSignatureDialog/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478748021" />
-    <state x="937" y="331" key="run.anything.popup" timestamp="1606067100659">
+    <state x="937" y="331" key="run.anything.popup" timestamp="1606083048866">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="937" y="331" key="run.anything.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606067100659" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606065304462">
+    <state x="937" y="331" key="run.anything.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606083048866" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606081835055">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606065304462" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606081835055" />
   </component>
 </project>

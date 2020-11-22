@@ -4,11 +4,11 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 
 import java.util.ArrayList;
 
-public class PolygoneBuilder extends ShapeBuilder implements iTrianguler {
+public class PolygonBuilder extends ShapeBuilder implements iTrianguler {
     String[] tags;
     Polygone[] polygones;
 
-    public PolygoneBuilder(String[] tags) {
+    public PolygonBuilder(String[] tags) {
         this.tags = new String[tags.length];
         System.arraycopy(tags, 0, this.tags, 0, tags.length);
         polygones = this.generatePolygones();
@@ -38,11 +38,11 @@ public class PolygoneBuilder extends ShapeBuilder implements iTrianguler {
                 for(String point: pointsStr) {
                     points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
                 }
-                p.add(new Polygone(points.toArray(new Vecteur[0])));
+                p.add(new Polygone(points.toArray(new Vecteur[points.size()])));
             }
 
         }
-        return p.toArray(new Polygone[0]);
+        return p.toArray(new Polygone[p.size()]);
     }
 
     // Renvoi un tableau contenant l'ensemble des polygones définis dans le fichier SVG

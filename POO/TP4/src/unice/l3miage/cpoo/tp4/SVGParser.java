@@ -16,30 +16,35 @@ public class SVGParser {
     private String content;
     private String[] tags;
 
+    // Getters and setters
+    public String[] getTags() {
+        String[] foo = new String[this.tags.length];
+        System.arraycopy(this.tags, 0, foo, 0, this.tags.length);
+        return foo;
+    }
+
     /*
      * Methods
      */
 
     // Récupération des balises
-    private String[] getTags(String str, String regex) {
+    private String[] extractTags() {
         ArrayList<String> matches = new ArrayList<String>();
-        Matcher m = Pattern.compile(regex).matcher(str);
+        Matcher m = Pattern.compile(this.tagRegex).matcher(this.content);
 
         while(m.find()) {
             // Removing comments and header.
             if(m.group(0).contains("<?") || m.group(0).contains("<!--")) {
                 continue;
             }
-
             matches.add(m.group(0));
         }
-
-        return matches.toArray(new String[0]);
+        return matches.toArray(new String[matches.size()]);
     }
 
     // Parsing function
     private void parse() {
-        this.tags = this.getTags(this.content, this.tagRegex);
+        this.tags = this.extractTags();
     }
 
     // Renvoi le nombre de balise contenu dans le fichier SVG
@@ -60,5 +65,4 @@ public class SVGParser {
         this.content = new String(content);
         this.parse();
     }
-
 }

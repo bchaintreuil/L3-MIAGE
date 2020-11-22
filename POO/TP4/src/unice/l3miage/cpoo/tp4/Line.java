@@ -1,7 +1,7 @@
 package unice.l3miage.cpoo.tp4;
 
 public class Line {
-    public Vecteur OA, OB;
+    private Vecteur OA, OB;
 
     /**
      * Constructeur de la classe
@@ -9,9 +9,10 @@ public class Line {
      * @param OB : Vecteur-point d'arrivée de la ligne
      */
 
-    public Line(Vecteur OA, Vecteur OB)
-    {
-        this.OA=OA;
-        this.OB=OB;
+    public Line(Vecteur OA, Vecteur OB) { // TODO: Copy, not referencing - see triangle too
+        this.OA = OA;
+        this.OB = OB;
     }
+
+    // TODO: getters and setters
 }

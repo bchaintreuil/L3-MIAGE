@@ -24,6 +24,8 @@ public class Rectangle extends Shape implements iToPolygone {
     public double perimètre() { return 2 * (this.height + this.width); }
     public Vecteur barycentre() { return new Vecteur(2, anchor.get(0) + 1/2 * width, anchor.get(1) + 1/2 * height); }
 
+    // TODO: getters and setters
+
     public Polygone toPolygone() {
         Vecteur[] points = new Vecteur[4];
 

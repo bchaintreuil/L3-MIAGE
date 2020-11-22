@@ -4,8 +4,10 @@ public class Polyline {
     // Constructor and constructor variable
     private Vecteur[] points;
 
-    public Polyline(Vecteur... points) throws RuntimeException{
+    public Polyline(Vecteur... points) {
         this.points = new Vecteur[points.length];
         System.arraycopy(points, 0, this.points, 0, points.length);
     }
+
+    // TODO: getters and setters
 }

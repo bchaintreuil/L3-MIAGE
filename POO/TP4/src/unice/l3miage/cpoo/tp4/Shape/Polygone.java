@@ -1,6 +1,6 @@
-package unice.l3miage.cpoo.tp4;
+package unice.l3miage.cpoo.tp4.Shape;
 
-import java.util.ArrayList;
+import unice.l3miage.cpoo.tp4.Vecteur;
 
 /**
  * Classe Polygone
@@ -9,9 +9,10 @@ import java.util.ArrayList;
  */
 
 public class Polygone extends Shape {
-    // Constructor and constructor variable
+    // Fields
     private Vecteur[] points;
 
+    // Constructor
     public Polygone(Vecteur... points) throws RuntimeException{
         if (points.length < 3) {
             throw new RuntimeException("Nbr de points < 3");
@@ -29,6 +30,11 @@ public class Polygone extends Shape {
     }
 
     // Getters and setters
+    public Vecteur[] getPoints() {
+        Vecteur[] foo = new Vecteur[this.points.length];
+        System.arraycopy(this.points, 0, foo, 0, this.points.length);
+        return foo;
+    }
 
     public Vecteur getPoint(int i) throws RuntimeException{
         if (i > this.points.length) {
@@ -45,24 +51,7 @@ public class Polygone extends Shape {
         return new Polygone(new_points);
     }
 
-    /*
-     * Methods
-     */
-
-    // Retourne l'aire du Polygone
-    @Override
-    public double aire() {
-        double aire = 0;
-
-        ArrayList<Triangle> liste_triangles = new ArrayList<Triangle>();
-        liste_triangles = iTrianguler.trianguler(liste_triangles);
-
-        for(int i=0; i<liste_triangles.size();i++){
-            aire += liste_triangles.get(i).aire();
-        }
-
-        return aire;
-    }
+    // Methods
 
     // Retourne le nombre de points constituant le polygone
     public int nbrPoints() {
@@ -73,6 +62,24 @@ public class Polygone extends Shape {
     public Vecteur barycentre() {
         Vecteur foo = Vecteur.add(this.points);
         return foo.multK(1.0/this.points.length);
+    }
+
+    // Calcul et renvoi le périmètre du polygone
+    public double perimètre() { // TODO: à tester
+        double perimètre = 0;
+
+        for(int i = 0; i < this.points.length; i++) {
+            if (i < this.points.length - 1) {
+                perimètre += Vecteur.add(this.points[i], this.points[i+1].opposé()).length();
+            } else {
+                perimètre += Vecteur.add(this.points[i], this.points[0].opposé()).length();
+            }
+        }
+        return perimètre;
+    }
+
+    public double aire() { // TODO: à implémenter (avec triangulation)
+        return 0;
     }
 }
 

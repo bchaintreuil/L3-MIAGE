@@ -1,4 +1,8 @@
-package unice.l3miage.cpoo.tp4;
+package unice.l3miage.cpoo.tp4.ShapeBuilder;
+
+import unice.l3miage.cpoo.tp4.Shape.Polygone;
+import unice.l3miage.cpoo.tp4.Shape.Triangle;
+import unice.l3miage.cpoo.tp4.Vecteur;
 
 import java.util.ArrayList;
 
@@ -21,7 +25,7 @@ public interface iTrianguler {
     }
 
     // Retourne l'indice du sommet voisin � celui de l'indice en fonction du d�placement
-    default static int voisin_sommet(int nbrSommets, int indice, int dep) {
+    static int voisin_sommet(int nbrSommets, int indice, int dep) {
         int indiceVoisin = (indice + dep) % nbrSommets;
         if (indiceVoisin == -1) {
             indiceVoisin += nbrSommets;
@@ -30,12 +34,12 @@ public interface iTrianguler {
     }
 
     // Renvoi la norme de la composante Z du produit vectoriel de POP1 et POPM
-    default static double produit_vect_Z (Vecteur P0, Vecteur P1, Vecteur M) {
+    static double produit_vect_Z (Vecteur P0, Vecteur P1, Vecteur M) {
         return (P1.get(0) - P0.get(0)) * (M.get(1) - P0.get(1)) - (P1.get(1) - P0.get(1)) * (M.get(0) - P0.get(0));
     }
 
     // Renvoi un bool�en traduisant de la pr�sence du point M dans le triangle d�limit� par P0, P1, P2
-    default static boolean point_dans_triangle(Vecteur P0, Vecteur P1, Vecteur P2, Vecteur M) {
+    static boolean point_dans_triangle(Vecteur P0, Vecteur P1, Vecteur P2, Vecteur M) {
         return produit_vect_Z(P0, P1, M) > 0 && produit_vect_Z(P1, P2, M) > 0 && produit_vect_Z(P2, P0, M) > 0;
     }
 

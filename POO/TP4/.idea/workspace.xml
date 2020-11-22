@@ -20,10 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/iToPolygone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polyline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/CircleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/EllipseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/LineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Polygone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolygoneBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygoneBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/PolylineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/RectangleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectangleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/ShapeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/iTrianguler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +66,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="unice.l3miage.cpoo.tp4" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="unice.l3miage.cpoo.tp4.Shape" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -101,6 +128,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1086" y="407" key="#com.intellij.ide.util.MemberChooser" timestamp="1606065519237">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1086" y="407" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606065519237" />
+    <state x="1064" y="595" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606043164500">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1064" y="595" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606043164500" />
     <state x="621" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605478282955">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -125,6 +160,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606062820612">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606062820612" />
+    <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606060603986">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606060603986" />
     <state x="-2828" y="-98" width="1390" height="717" key="dock-window-2" timestamp="1605991802255">
       <screen x="-3840" y="-297" width="2560" height="1400" />
     </state>
@@ -133,9 +176,21 @@
       <screen x="-3840" y="-297" width="2560" height="1400" />
     </state>
     <state x="-2889" y="-82" width="1390" height="717" key="dock-window-3/0.0.1920.1040/-3840.-297.2560.1400@0.0.1920.1040" timestamp="1605992090571" />
+    <state x="1011" y="462" key="extract.method.dialog" timestamp="1606067776590">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1011" y="462" key="extract.method.dialog/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606067776590" />
     <state x="995" y="609" key="refactoring.ChangeSignatureDialog" timestamp="1605478748021">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="995" y="609" key="refactoring.ChangeSignatureDialog/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478748021" />
+    <state x="937" y="331" key="run.anything.popup" timestamp="1606067100659">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="937" y="331" key="run.anything.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606067100659" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606065304462">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606065304462" />
   </component>
 </project>

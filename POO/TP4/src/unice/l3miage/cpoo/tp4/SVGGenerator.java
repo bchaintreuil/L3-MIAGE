@@ -1,5 +1,7 @@
 package unice.l3miage.cpoo.tp4;
 
+import unice.l3miage.cpoo.tp4.Shape.Triangle;
+
 /**
  * @author Benjamin CHAINTREUIL
  * @author Thomas DELMARE

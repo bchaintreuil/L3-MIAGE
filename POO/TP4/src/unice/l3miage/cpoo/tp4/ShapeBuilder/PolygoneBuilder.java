@@ -1,4 +1,7 @@
-package unice.l3miage.cpoo.tp4;
+package unice.l3miage.cpoo.tp4.ShapeBuilder;
+import unice.l3miage.cpoo.tp4.Shape.Polygone;
+import unice.l3miage.cpoo.tp4.Vecteur;
+
 import java.util.ArrayList;
 
 public class PolygoneBuilder extends ShapeBuilder implements iTrianguler {

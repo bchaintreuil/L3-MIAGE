@@ -87,12 +87,17 @@ public class Main {
 
 
                             // Test pour Polygone
-                            // PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
-                            // Polygone[] p = pBuilder.getShapes();
+                            PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
+                            Polygone[] p = pBuilder.getShapes();
+
+                            for(int i = 0;i<p.length;i++)
+                            {
+                                p[i].toString();
+                            }
 
                             // Test pour Circle
-                            CircleBuilder cBuilder = new CircleBuilder(input.getTags());
-                            Circle[] p = cBuilder.getShapes();
+                            // CircleBuilder cBuilder = new CircleBuilder(input.getTags());
+                            // Circle[] p = cBuilder.getShapes();
 
                             // Test pour Ellipse
                             // EllipseBuilder eBuilder = new EllipseBuilder(input.getTags());
@@ -110,7 +115,7 @@ public class Main {
                             // RectBuilder rBuilder = new RectBuilder(input.getTags());
                             // Rectangle[] r = rBuilder.getShapes();
 
-
+                            /*
                             if (p != null) {
                                 Triangle[][] triangulations = new Triangle[p.length][];
 
@@ -154,6 +159,7 @@ public class Main {
                             output.export();
                             }
                             System.out.println("\n----- All done ! =D -----");
+                             */
                         }
                         break;
                     }

@@ -25,13 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/ellipse.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/polygon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/polyline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/rect.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +80,15 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="unice.l3miage.cpoo.tp4.Shape" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\School\MIAGE\Git\L3-MIAGE\POO\TP4\src\unice\l3miage\cpoo\tp4" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
       <module name="TP4" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="--input polygon.svg" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -118,7 +122,7 @@
       <updated>1605475959389</updated>
       <workItem from="1605475961926" duration="5968000" />
       <workItem from="1605975846804" duration="2030000" />
-      <workItem from="1606148158421" duration="7777000" />
+      <workItem from="1606148158421" duration="8747000" />
     </task>
     <servers />
   </component>
@@ -141,6 +145,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="594" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606162866010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="594" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606162866010" />
     <state x="1086" y="407" key="#com.intellij.ide.util.MemberChooser" timestamp="1606097500773">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -165,28 +173,32 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="426" key="FileChooserDialogImpl/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605476824451" />
-    <state width="2517" height="405" key="GridCell.Tab.0.bottom" timestamp="1606130273671">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1878" height="283" key="GridCell.Tab.0.bottom" timestamp="1606163295558">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.bottom/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
+    <state width="1878" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606163295558" />
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606097949231" />
-    <state width="2517" height="405" key="GridCell.Tab.0.center" timestamp="1606130273671">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1878" height="283" key="GridCell.Tab.0.center" timestamp="1606163295558">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.center/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
+    <state width="1878" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606163295558" />
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606097949231" />
-    <state width="2517" height="405" key="GridCell.Tab.0.left" timestamp="1606130273670">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1878" height="283" key="GridCell.Tab.0.left" timestamp="1606163295557">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.left/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273670" />
+    <state width="1878" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606163295557" />
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606097949231" />
-    <state width="2517" height="405" key="GridCell.Tab.0.right" timestamp="1606130273671">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1878" height="283" key="GridCell.Tab.0.right" timestamp="1606163295558">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.right/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
+    <state width="1878" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606163295558" />
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606097949231" />
     <state x="488" y="38" key="SettingsEditor" timestamp="1606148267301">

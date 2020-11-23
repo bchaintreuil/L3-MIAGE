@@ -85,9 +85,31 @@ public class Main {
                             // Affichage des polygones et leurs propri�t�s
                             System.out.println("----- Polygones -----");
 
-                            PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
 
-                            Polygone[] p = pBuilder.getShapes();
+                            // Test pour Polygone
+                            // PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
+                            // Polygone[] p = pBuilder.getShapes();
+
+                            // Test pour Circle
+                            CircleBuilder cBuilder = new CircleBuilder(input.getTags());
+                            Circle[] p = cBuilder.getShapes();
+
+                            // Test pour Ellipse
+                            // EllipseBuilder eBuilder = new EllipseBuilder(input.getTags());
+                            // Ellipse[] e = eBuilder.getShapes();
+
+                            // Test pour Line
+                            // LineBuilder lBuilder = new LineBuilder(input.getTags());
+                            // Line[] l = lBuilder.getShapes();
+
+                            // Test pour Polyline
+                            // PolylineBuilder plBuilder = new PolylineBuilder(input.getTags());
+                            // Polyline[] pl = plBuilder.getShapes();
+
+                            // Test pour Rect
+                            // RectBuilder rBuilder = new RectBuilder(input.getTags());
+                            // Rectangle[] r = rBuilder.getShapes();
+
 
                             if (p != null) {
                                 Triangle[][] triangulations = new Triangle[p.length][];

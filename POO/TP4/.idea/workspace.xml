@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="TP4:jar" />
+      <artifact name="tp4" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -27,7 +27,11 @@
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +65,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -85,6 +91,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -101,8 +118,12 @@
       <updated>1605475959389</updated>
       <workItem from="1605475961926" duration="5968000" />
       <workItem from="1605975846804" duration="2030000" />
+      <workItem from="1606148158421" duration="7777000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -136,6 +157,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="621" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478282955" />
+    <state x="1171" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1606150943495">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1171" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606150943495" />
     <state x="1060" y="426" key="FileChooserDialogImpl" timestamp="1605476824451">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -164,9 +189,10 @@
     <state width="2517" height="405" key="GridCell.Tab.0.right/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606097949231" />
-    <state x="761" y="275" key="SettingsEditor" timestamp="1606096231217">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="488" y="38" key="SettingsEditor" timestamp="1606148267301">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="488" y="38" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606148267301" />
     <state x="761" y="275" key="SettingsEditor/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606096231217" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606062820612">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -176,6 +202,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606060603986" />
+    <state x="0" y="0" width="776" height="1025" key="dock-window-1" timestamp="1606154499247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="776" height="1025" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1606154499247" />
     <state x="-2828" y="-98" width="1390" height="717" key="dock-window-2" timestamp="1605991802255">
       <screen x="-3840" y="-297" width="2560" height="1400" />
     </state>

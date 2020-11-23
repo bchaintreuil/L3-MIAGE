@@ -86,38 +86,40 @@ public class Main {
                             System.out.println("----- Polygones -----");
 
                             PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
+
                             Polygone[] p = pBuilder.getShapes();
 
-                            Triangle[][] triangulations = new Triangle[p.length][];
+                            if (p != null) {
+                                Triangle[][] triangulations = new Triangle[p.length][];
 
-                            // On traite chaque polygone un par un
-                            for(int i = 0; i < p.length; i++) {
-                                System.out.println("===> Polygone #" + (i + 1));
+                                // On traite chaque polygone un par un
+                                for (int i = 0; i < p.length; i++) {
+                                    System.out.println("===> Polygone #" + (i + 1));
 
-                                System.out.println("Nombre de points : " + p[i].nbrPoints());
-                                System.out.println("P�rim�tre : " + p[i].perimètre());
-                                System.out.print("Barycentre : ");
-                                p[i].barycentre().print();
+                                    System.out.println("Nombre de points : " + p[i].nbrPoints());
+                                    System.out.println("P�rim�tre : " + p[i].perimètre());
+                                    System.out.print("Barycentre : ");
+                                    p[i].barycentre().print();
 
-                                System.out.println("\nListe de points :");
-                                for(int j = 0; j < p[i].nbrPoints(); j++) {
-                                    p[i].getPoint(j).print();
+                                    System.out.println("\nListe de points :");
+                                    for (int j = 0; j < p[i].nbrPoints(); j++) {
+                                        p[i].getPoint(j).print();
+                                    }
+
+                                    // Triangulation
+                                    System.out.println("\nTriangulation en cours...");
+                                    triangulations[i] = p[i].trianguler();
+                                    System.out.println("Triangulation termin�e !");
+                                    System.out.println(triangulations[i].length + " triangles calcul�s.");
+
+                                    System.out.println("\n----- Triangles du polygone #" + (i + 1) + " -----");
+                                    for (Triangle t : triangulations[i]) {
+                                        t.OA.print();
+                                        t.OB.print();
+                                        t.OC.print();
+                                        System.out.print("\n");
+                                    }
                                 }
-
-                                // Triangulation
-                                System.out.println("\nTriangulation en cours...");
-                                triangulations[i] = p[i].trianguler();
-                                System.out.println("Triangulation termin�e !");
-                                System.out.println(triangulations[i].length + " triangles calcul�s.");
-
-                                System.out.println("\n----- Triangles du polygone #" + (i + 1) + " -----");
-                                for(Triangle t: triangulations[i]) {
-                                    t.OA.print();
-                                    t.OB.print();
-                                    t.OC.print();
-                                    System.out.print("\n");
-                                }
-                            }
 
                             // G�n�ration du SVG
                             System.out.println("----- G�n�ration du SVG -----");
@@ -128,7 +130,7 @@ public class Main {
                             }
 
                             output.export();
-
+                            }
                             System.out.println("\n----- All done ! =D -----");
                         }
                         break;

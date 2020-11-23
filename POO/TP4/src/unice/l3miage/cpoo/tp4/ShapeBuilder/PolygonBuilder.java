@@ -40,8 +40,12 @@ public class PolygonBuilder extends ShapeBuilder {
     }
 
     public Polygone[] getShapes() {
-        Polygone[] s = new Polygone[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
+        if(this.shapes != null) {
+            Polygone[] s = new Polygone[this.shapes.length];
+            System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+            return s;
+        } else {
+            return null;
+        }
     }
 }

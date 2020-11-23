@@ -1,6 +1,7 @@
 package unice.l3miage.cpoo.tp4.Shape;
 
 import unice.l3miage.cpoo.tp4.Vecteur;
+import unice.l3miage.cpoo.tp4.iTrianguler;
 
 /**
  * Classe Polygone
@@ -8,7 +9,7 @@ import unice.l3miage.cpoo.tp4.Vecteur;
  * @author Thomas DELMARE
  */
 
-public class Polygone extends Shape {
+public class Polygone extends Shape implements iTrianguler {
     // Fields
     private Vecteur[] points;
 

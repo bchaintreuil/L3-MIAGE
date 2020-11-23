@@ -1,4 +1,4 @@
-package unice.l3miage.cpoo.tp4.ShapeBuilder;
+package unice.l3miage.cpoo.tp4;
 
 import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Shape.Triangle;
@@ -7,17 +7,19 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public interface iTrianguler {
+    public Vecteur getPoint(int i);
+    public Vecteur[] getPoints();
     /*
      * Triangulation
      */
 
     // Renvoi l'indice du sommet le plus � gauche du polygone.
     default int sommet_gauche() {
-        double x = this.points[0].get(0);
+        double x = this.getPoint(0).get(0);
         int k = 0;
-        for(int i = 1; i < this.points.length; i++) {
-            if(this.points[i].get(0) < x) {
-                x = this.points[i].get(0);
+        for(int i = 1; i < this.getPoints().length; i++) {
+            if(this.getPoint(i).get(0) < x) {
+                x = this.getPoint(i).get(0);
                 k = i;
             }
         }
@@ -45,13 +47,13 @@ public interface iTrianguler {
 
     // Renvoi l'indice du sommet du polygone appartenant au triangle P0, P1, P2 et qui est � la plus grande distance du c�t� P1P2
     default int indice_sommet_distance_max(Vecteur P0, Vecteur P1, Vecteur P2, int indice_P0, int indice_P1, int indice_P2) {
-        int n = this.points.length;
+        int n = this.getPoints().length;
         double distance = 0.0;
         int k = -1;
 
         for(int i = 0; i < n; i++) {
             if (i != indice_P0 && i != indice_P1 && i != indice_P2) {
-                Vecteur M = this.points[i];
+                Vecteur M = this.getPoint(i);
                 if (point_dans_triangle(P0, P1, P2, M)) {
                     double d = Math.abs(produit_vect_Z(P1, P2, M));
                     if (d > distance) {
@@ -66,14 +68,14 @@ public interface iTrianguler {
 
     // Renvoi un nouveau polygone constitu� des points compris entre l'indice iStart et iEnd
     default Polygone new_polygone(int iStart, int iEnd) {
-        int n = this.points.length;
+        int n = this.getPoints().length;
         ArrayList<Vecteur> sommets = new ArrayList<Vecteur>();
         int i = iStart;
         while(i != iEnd) {
-            sommets.add(this.points[i]);
+            sommets.add(this.getPoint(i));
             i = voisin_sommet(n, i, 1);
         }
-        sommets.add(this.points[iEnd]);
+        sommets.add(this.getPoint(iEnd));
 
         Vecteur[] s = new Vecteur[sommets.size()];
         s = sommets.toArray(s);
@@ -91,22 +93,22 @@ public interface iTrianguler {
     }
 
     default ArrayList<Triangle> trianguler(ArrayList<Triangle> liste_triangles) {
-        int nbrSommets = this.points.length;
+        int nbrSommets = this.getPoints().length;
 
         int indiceP0 = this.sommet_gauche();
         int indiceP1 = voisin_sommet(nbrSommets, indiceP0, 1);
         int indiceP2 = voisin_sommet(nbrSommets, indiceP0, -1);
 
-        Vecteur P0 = this.points[indiceP0];
-        Vecteur P1 = this.points[indiceP1];
-        Vecteur P2 = this.points[indiceP2];
+        Vecteur P0 = this.getPoint(indiceP0);
+        Vecteur P1 = this.getPoint(indiceP1);
+        Vecteur P2 = this.getPoint(indiceP2);
 
         int j = this.indice_sommet_distance_max(P0, P1, P2, indiceP0, indiceP1, indiceP2);
         if (j == -1) {
             liste_triangles.add(new Triangle(P0, P1, P2));
 
             Polygone polygone1 = this.new_polygone(indiceP1, indiceP2);
-            if (polygone1.points.length == 3) {
+            if (polygone1.getPoints().length == 3) {
                 liste_triangles.add(new Triangle(polygone1.getPoint(0), polygone1.getPoint(1), polygone1.getPoint(2)));
             } else {
                 polygone1.trianguler(liste_triangles);
@@ -115,13 +117,13 @@ public interface iTrianguler {
             Polygone polygone1 = this.new_polygone(indiceP0, j);
             Polygone polygone2 = this.new_polygone(j, indiceP0);
 
-            if (polygone1.points.length == 3) {
+            if (polygone1.getPoints().length == 3) {
                 liste_triangles.add(new Triangle(polygone1.getPoint(0), polygone1.getPoint(1), polygone1.getPoint(2)));
             } else {
                 polygone1.trianguler(liste_triangles);
             }
 
-            if (polygone2.points.length == 3) {
+            if (polygone2.getPoints().length == 3) {
                 liste_triangles.add(new Triangle(polygone2.getPoint(0), polygone2.getPoint(1), polygone2.getPoint(2)));
             } else {
                 polygone2.trianguler(liste_triangles);

@@ -8,7 +8,11 @@ public abstract class ShapeBuilder {
     protected String[] shapeTags;
     protected Shape[] shapes;
 
-    public ShapeBuilder(String[] tags) {
+    protected ShapeBuilder(String[] tags) {
+        // Default to null for child differenciation
+        this.shapeTags = null;
+        this.shapes = null;
+
         ArrayList<String> extractedTags = new ArrayList<String>();
 
         // This part is very tricky
@@ -20,12 +24,17 @@ public abstract class ShapeBuilder {
             }
         }
 
-        if(!extractedTags.isEmpty()) { //
+        if(!extractedTags.isEmpty()) { // TODO: Check in case of none
             this.shapeTags = extractedTags.toArray(new String[extractedTags.size()]);
-            this.shapes = new Shape[shapeTags.length];
+            this.shapes = this.buildShapes();
         }
     }
 
-    abstract private buildShape();
-    
+    abstract protected Shape[] buildShapes();
+
+    public Shape[] getShapes() {
+        Shape[] s = new Shape[this.shapes.length];
+        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+        return s;
+    }
 }

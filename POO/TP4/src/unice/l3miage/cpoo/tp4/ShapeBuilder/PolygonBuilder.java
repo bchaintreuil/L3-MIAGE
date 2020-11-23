@@ -4,18 +4,13 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 
 import java.util.ArrayList;
 
-public class PolygonBuilder extends ShapeBuilder implements iTrianguler {
-    String[] tags;
-    Polygone[] polygones;
-
+public class PolygonBuilder extends ShapeBuilder {
     public PolygonBuilder(String[] tags) {
-        this.tags = new String[tags.length];
-        System.arraycopy(tags, 0, this.tags, 0, tags.length);
-        polygones = this.generatePolygones();
+        super(tags);
     }
 
     // Génération des polygones extraits du fichier SVG
-    private Polygone[] generatePolygones() {
+    protected Polygone[] buildShapes() {
         ArrayList<Polygone> p = new ArrayList<Polygone>();
         int coordsStart;
         int coordsEnd;
@@ -23,32 +18,23 @@ public class PolygonBuilder extends ShapeBuilder implements iTrianguler {
         ArrayList<Vecteur> points;
 
         // Récupération des points
-        for(int i = 0; i < this.tags.length; i++) {
-            if(tags[i].contains("polygon")) {
-                coordsStart = tags[i].indexOf("points=\"");
-                coordsEnd = tags[i].indexOf("\"", coordsStart + 9);
-                coordsStart += 8;
+        for(String tag: shapeTags) {
+            coordsStart = tag.indexOf("points=\"");
+            coordsEnd = tag.indexOf("\"", coordsStart + 9);
+            coordsStart += 8;
 
-                coordsSubStr = tags[i].substring(coordsStart, coordsEnd);
+            coordsSubStr = tag.substring(coordsStart, coordsEnd);
 
-                // On split les coordonées par rapport au espace/tab/etc...
-                String[] pointsStr = coordsSubStr.split("(\\s+)");
+            // On split les coordonées par rapport au espace/tab/etc...
+            String[] pointsStr = coordsSubStr.split("(\\s+)");
 
-                points = new ArrayList<Vecteur>();
-                for(String point: pointsStr) {
-                    points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
-                }
-                p.add(new Polygone(points.toArray(new Vecteur[points.size()])));
+            points = new ArrayList<Vecteur>();
+            for(String point: pointsStr) {
+                points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
-
+            p.add(new Polygone(points.toArray(new Vecteur[points.size()])));
         }
-        return p.toArray(new Polygone[p.size()]);
-    }
 
-    // Renvoi un tableau contenant l'ensemble des polygones définis dans le fichier SVG
-    public Polygone[] getPolygones() {
-        Polygone[] p = new Polygone[this.polygones.length];
-        System.arraycopy(this.polygones, 0, p, 0, this.polygones.length);
-        return p;
+        return p.toArray(new Polygone[p.size()]);
     }
 }

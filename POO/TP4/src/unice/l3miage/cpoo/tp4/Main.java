@@ -1,5 +1,8 @@
 package unice.l3miage.cpoo.tp4;
 
+import unice.l3miage.cpoo.tp4.Shape.*;
+import unice.l3miage.cpoo.tp4.ShapeBuilder.*;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -79,10 +82,11 @@ public class Main {
 
                             input.displayTags();
 
-                            /*
                             // Affichage des polygones et leurs propri�t�s
                             System.out.println("----- Polygones -----");
-                            Polygone[] p = input.getPolygones();
+
+                            PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
+                            Polygone[] p = pBuilder.getShapes();
 
                             Triangle[][] triangulations = new Triangle[p.length][];
 
@@ -91,7 +95,7 @@ public class Main {
                                 System.out.println("===> Polygone #" + (i + 1));
 
                                 System.out.println("Nombre de points : " + p[i].nbrPoints());
-                                System.out.println("P�rim�tre : " + p[i].perimetre());
+                                System.out.println("P�rim�tre : " + p[i].perimètre());
                                 System.out.print("Barycentre : ");
                                 p[i].barycentre().print();
 
@@ -126,7 +130,6 @@ public class Main {
                             output.export();
 
                             System.out.println("\n----- All done ! =D -----");
-                        */
                         }
                         break;
                     }

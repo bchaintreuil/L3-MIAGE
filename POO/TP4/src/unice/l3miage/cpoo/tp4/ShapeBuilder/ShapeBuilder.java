@@ -32,9 +32,5 @@ public abstract class ShapeBuilder {
 
     abstract protected Shape[] buildShapes();
 
-    public Shape[] getShapes() {
-        Shape[] s = new Shape[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
-    }
+    abstract public Shape[] getShapes();
 }

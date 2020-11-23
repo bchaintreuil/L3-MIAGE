@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: unice.l3miage.cpoo.tp4.Main
+

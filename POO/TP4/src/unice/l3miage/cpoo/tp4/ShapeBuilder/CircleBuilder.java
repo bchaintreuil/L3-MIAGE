@@ -11,7 +11,7 @@ public class CircleBuilder extends ShapeBuilder {
     }
 
     protected Circle[] buildShapes() {
-        ArrayList<Circle> c = new ArrayList<Circle>();
+        ArrayList<Circle> c = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -46,7 +46,7 @@ public class CircleBuilder extends ShapeBuilder {
             c.add(new Circle(new Vecteur(2, cx, cy), radius));
         }
 
-        return c.toArray(new Circle[c.size()]);
+        return c.toArray(new Circle[0]);
     }
 
     public Circle[] getShapes() {

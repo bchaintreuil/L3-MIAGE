@@ -1,6 +1,6 @@
 package unice.l3miage.cpoo.tp4.ShapeBuilder;
+
 import unice.l3miage.cpoo.tp4.Shape.Polygone;
-import unice.l3miage.cpoo.tp4.Shape.Shape;
 import unice.l3miage.cpoo.tp4.Vecteur;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class PolygonBuilder extends ShapeBuilder {
 
     // Génération des polygones extraits du fichier SVG
     protected Polygone[] buildShapes() {
-        ArrayList<Polygone> p = new ArrayList<Polygone>();
+        ArrayList<Polygone> p = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -29,14 +29,14 @@ public class PolygonBuilder extends ShapeBuilder {
             // On split les coordonées par rapport au espace/tab/etc...
             String[] pointsStr = coordsSubStr.split("(\\s+)");
 
-            points = new ArrayList<Vecteur>();
+            points = new ArrayList<>();
             for(String point: pointsStr) {
                 points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
-            p.add(new Polygone(points.toArray(new Vecteur[points.size()])));
+            p.add(new Polygone(points.toArray(new Vecteur[0])));
         }
 
-        return p.toArray(new Polygone[p.size()]);
+        return p.toArray(new Polygone[0]);
     }
 
     public Polygone[] getShapes() {

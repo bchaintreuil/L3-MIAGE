@@ -5,23 +5,24 @@ import unice.l3miage.cpoo.tp4.iTrianguler;
 
 /**
  * Classe Polygone
+ *
  * @author Benjamin CHAINTREUIL
  * @author Thomas DELMARE
  */
 
 public class Polygone extends Shape implements iTrianguler {
     // Fields
-    private Vecteur[] points;
+    private final Vecteur[] points;
 
     // Constructor
-    public Polygone(Vecteur... points) throws RuntimeException{
+    public Polygone(Vecteur... points) throws RuntimeException {
         if (points.length < 3) {
             throw new RuntimeException("Nbr de points < 3");
         }
 
         int dim = points[0].dimension();
-        for(Vecteur point: points) {
-            if(point.dimension() != dim) {
+        for (Vecteur point : points) {
+            if (point.dimension() != dim) {
                 throw new RuntimeException("Vecteurs de dim différentes");
             }
         }
@@ -37,7 +38,7 @@ public class Polygone extends Shape implements iTrianguler {
         return foo;
     }
 
-    public Vecteur getPoint(int i) throws RuntimeException{
+    public Vecteur getPoint(int i) throws RuntimeException {
         if (i > this.points.length) {
             throw new RuntimeException("i > nbr de points");
         } else {
@@ -62,16 +63,16 @@ public class Polygone extends Shape implements iTrianguler {
     // Détermine et renvoi le barycentre du polygone
     public Vecteur barycentre() {
         Vecteur foo = Vecteur.add(this.points);
-        return foo.multK(1.0/this.points.length);
+        return foo.multK(1.0 / this.points.length);
     }
 
     // Calcul et renvoi le périmètre du polygone
-    public double perimètre() { // TODO: à tester
+    public double perimètre() {
         double perimètre = 0;
 
-        for(int i = 0; i < this.points.length; i++) {
+        for (int i = 0; i < this.points.length; i++) {
             if (i < this.points.length - 1) {
-                perimètre += Vecteur.add(this.points[i], this.points[i+1].opposé()).length();
+                perimètre += Vecteur.add(this.points[i], this.points[i + 1].opposé()).length();
             } else {
                 perimètre += Vecteur.add(this.points[i], this.points[0].opposé()).length();
             }
@@ -79,8 +80,13 @@ public class Polygone extends Shape implements iTrianguler {
         return perimètre;
     }
 
-    public double aire() { // TODO: à implémenter (avec triangulation)
-        return 0;
+    public double aire() {
+        double aire = 0;
+        Triangle[] triangulation = this.trianguler();
+        for (Triangle t : triangulation) {
+            aire += t.aire();
+        }
+        return aire;
     }
 }
 

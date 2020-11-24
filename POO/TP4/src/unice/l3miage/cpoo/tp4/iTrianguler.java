@@ -2,13 +2,13 @@ package unice.l3miage.cpoo.tp4;
 
 import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Shape.Triangle;
-import unice.l3miage.cpoo.tp4.Vecteur;
 
 import java.util.ArrayList;
 
 public interface iTrianguler {
-    public Vecteur getPoint(int i);
-    public Vecteur[] getPoints();
+    Vecteur getPoint(int i);
+
+    Vecteur[] getPoints();
     /*
      * Triangulation
      */
@@ -17,8 +17,8 @@ public interface iTrianguler {
     default int sommet_gauche() {
         double x = this.getPoint(0).get(0);
         int k = 0;
-        for(int i = 1; i < this.getPoints().length; i++) {
-            if(this.getPoint(i).get(0) < x) {
+        for (int i = 1; i < this.getPoints().length; i++) {
+            if (this.getPoint(i).get(0) < x) {
                 x = this.getPoint(i).get(0);
                 k = i;
             }
@@ -69,7 +69,7 @@ public interface iTrianguler {
     // Renvoi un nouveau polygone constitu� des points compris entre l'indice iStart et iEnd
     default Polygone new_polygone(int iStart, int iEnd) {
         int n = this.getPoints().length;
-        ArrayList<Vecteur> sommets = new ArrayList<Vecteur>();
+        ArrayList<Vecteur> sommets = new ArrayList<>();
         int i = iStart;
         while(i != iEnd) {
             sommets.add(this.getPoint(i));
@@ -84,7 +84,7 @@ public interface iTrianguler {
 
     // M�thodes pour trianguler un polygone
     default Triangle[] trianguler() {
-        ArrayList<Triangle> liste_triangles = new ArrayList<Triangle>();
+        ArrayList<Triangle> liste_triangles = new ArrayList<>();
         liste_triangles = this.trianguler(liste_triangles);
 
         Triangle[] triangles = new Triangle[liste_triangles.size()];

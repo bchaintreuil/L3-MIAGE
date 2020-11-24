@@ -20,7 +20,7 @@ public class SVGGenerator {
 
     // Constructor
     public SVGGenerator(String template) {
-        this.content = new String(template).replace("</svg>", "");
+        this.content = template.replace("</svg>", "");
     }
 
     // Ajoute la triangulation passée en argument au fichier SVG
@@ -33,7 +33,7 @@ public class SVGGenerator {
     }
 
     // Affiche le SVG résultant
-    public void export() {
-        System.out.println(this.content + "</svg>");
+    public String export() {
+        return this.content + "</svg>";
     }
 }

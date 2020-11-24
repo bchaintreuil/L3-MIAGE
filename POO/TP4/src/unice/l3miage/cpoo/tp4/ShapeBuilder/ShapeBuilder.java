@@ -1,6 +1,7 @@
 package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
-import unice.l3miage.cpoo.tp4.Shape.*;
+import unice.l3miage.cpoo.tp4.Shape.Shape;
+
 import java.util.ArrayList;
 
 
@@ -13,19 +14,19 @@ public abstract class ShapeBuilder {
         this.shapeTags = null;
         this.shapes = null;
 
-        ArrayList<String> extractedTags = new ArrayList<String>();
+        ArrayList<String> extractedTags = new ArrayList<>();
 
         // This part is very tricky
         String childName = this.getClass().getSimpleName().replace("Builder", "").toLowerCase();
 
-        for(String tag: tags) {
-            if(tag.contains(childName)) {
+        for (String tag : tags) {
+            if (tag.contains(childName)) {
                 extractedTags.add(tag);
             }
         }
 
-        if(!extractedTags.isEmpty()) { // TODO: Check in case of none
-            this.shapeTags = extractedTags.toArray(new String[extractedTags.size()]);
+        if (!extractedTags.isEmpty()) {
+            this.shapeTags = extractedTags.toArray(new String[0]);
             this.shapes = this.buildShapes();
         }
     }

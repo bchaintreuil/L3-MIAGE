@@ -2,6 +2,7 @@ package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
 import unice.l3miage.cpoo.tp4.Shape.Rectangle;
 import unice.l3miage.cpoo.tp4.Vecteur;
+
 import java.util.ArrayList;
 
 public class RectBuilder extends ShapeBuilder {
@@ -10,7 +11,7 @@ public class RectBuilder extends ShapeBuilder {
     }
 
     protected Rectangle[] buildShapes() {
-        ArrayList<Rectangle> r = new ArrayList<Rectangle>();
+        ArrayList<Rectangle> r = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -53,7 +54,7 @@ public class RectBuilder extends ShapeBuilder {
             r.add(new Rectangle(new Vecteur(2, x, y), width, height));
         }
 
-        return r.toArray(new Rectangle[r.size()]);
+        return r.toArray(new Rectangle[0]);
     }
 
     public Rectangle[] getShapes() {

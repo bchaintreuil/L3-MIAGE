@@ -2,6 +2,7 @@ package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
 import unice.l3miage.cpoo.tp4.Shape.Ellipse;
 import unice.l3miage.cpoo.tp4.Vecteur;
+
 import java.util.ArrayList;
 
 public class EllipseBuilder extends ShapeBuilder {
@@ -10,7 +11,7 @@ public class EllipseBuilder extends ShapeBuilder {
     }
 
     protected Ellipse[] buildShapes() {
-        ArrayList<Ellipse> e = new ArrayList<Ellipse>();
+        ArrayList<Ellipse> e = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -52,7 +53,7 @@ public class EllipseBuilder extends ShapeBuilder {
             e.add(new Ellipse(new Vecteur(2, cx, cy), rx, ry));
         }
 
-        return e.toArray(new Ellipse[e.size()]);
+        return e.toArray(new Ellipse[0]);
     }
 
     public Ellipse[] getShapes() {

@@ -1,15 +1,9 @@
 package unice.l3miage.cpoo.tp4;
 
 import unice.l3miage.cpoo.tp4.Shape.*;
-import unice.l3miage.cpoo.tp4.Shape.Rectangle;
 import unice.l3miage.cpoo.tp4.ShapeBuilder.*;
 
-import java.awt.*;
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.StringWriter;
+import java.io.*;
 
 /**
  * @author Benjamin CHAINTREUIL
@@ -27,19 +21,20 @@ public class Main {
 
     // Help printer
     private static void printHelp() {
-        System.out.println("Utilisation :\n --help, -h \n --input <path to svg file> \n Fait par CHAINTREUIL Benjamin et DELMARE Thomas.");
+        System.out.println("---- TP n°4 - Polymorphisme ----");
+        System.out.println("Ce fichier génère un fichier \"filename-out.svg\" comprenant la triangulation.");
+        System.out.println("Utilisation :\n --help, -h \n --input <path to svg file> \nFait par CHAINTREUIL Benjamin et DELMARE Thomas.");
     }
 
-    // M�thode g�rant l'ouverture et l'extraction du contenu du fichier .svg en un String
-    private static String loadFile(String path) {
+    // Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
+    private static String loadFile(File file) throws IOException {
         try {
-            File file = new File(path);
-            if(file.isFile()) {
+            if (file.isFile()) {
                 BufferedInputStream in = new BufferedInputStream(new FileInputStream(file));
                 StringWriter out = new StringWriter();
                 int b;
 
-                while ((b=in.read()) != -1) {
+                while ((b = in.read()) != -1) {
                     out.write(b);
                 }
 
@@ -60,18 +55,15 @@ public class Main {
     // Main
     public static void main(String[] args) throws IOException {
         if (args.length > 1) {
-            switch(args[0]) {
-                case "-h":
-                    printHelp();
-                    break;
-                case "--help":
-                    printHelp();
-                    break;
-                case "--input":
-                    if(args.length == 2) {
-                        content = loadFile(args[1]);
+            switch (args[0]) {
+                case "-h" -> printHelp();
+                case "--help" -> printHelp();
+                case "--input" -> {
+                    if (args.length == 2) {
+                        final File file = new File(args[1]);
+                        content = loadFile(file);
 
-                        if(content == null || content.isBlank()) {
+                        if (content == null || content.isBlank()) {
                             System.out.println("Error: File is empty.");
                             System.exit(1);
                         } else {
@@ -91,7 +83,7 @@ public class Main {
                             // Affichage des shapes et de leurs propriétés
 
                             /*
-                            ** Polygones
+                             ** Polygones
                              */
                             System.out.println("----- Polygones -----");
 
@@ -106,6 +98,7 @@ public class Main {
 
                                     System.out.println("Nombre de points : " + polygones[i].nbrPoints());
                                     System.out.println("Périmètre : " + polygones[i].perimètre());
+                                    System.out.println("Aire : " + polygones[i].aire());
                                     System.out.print("Barycentre : ");
                                     polygones[i].barycentre().print();
 
@@ -133,24 +126,24 @@ public class Main {
                             }
 
                             /*
-                            ** Circle
+                             ** Circle
                              */
-                            System.out.println("----- Circles -----");
+                            System.out.println("----- Cercles -----");
 
                             CircleBuilder circleBuilder = new CircleBuilder(input.getTags());
                             Circle[] circles;
                             if ((circles = circleBuilder.getShapes()) == null) {
-                                System.out.println("Aucun circle dans le fichier svg !");
+                                System.out.println("Aucun cercle dans le fichier svg !");
                             } else {
                                 for (int i = 0; i < circles.length; i++) {
                                     // Description du circle
-                                    System.out.println("===> Circle #" + (i + 1));
+                                    System.out.println("===> Cercle #" + (i + 1));
 
                                     System.out.println("Centre : ");
                                     circles[i].getCenter().print();
                                     System.out.println("Rayon : " + circles[i].getRadius());
                                     System.out.println("Périmètre : " + circles[i].perimètre());
-                                    // TODO: Add area
+                                    System.out.println("Aire : " + circles[i].aire());
 
                                     // Triangulation
                                     System.out.println("\nTriangulation en cours...");
@@ -189,7 +182,7 @@ public class Main {
                                     System.out.println("Rx : " + ellipses[i].getRadiusX());
                                     System.out.println("Ry : " + ellipses[i].getRadiusY());
                                     System.out.println("Périmètre : " + ellipses[i].perimètre());
-                                    // TODO: Add area
+                                    System.out.println("Aire : " + ellipses[i].aire());
 
                                     // Triangulation
                                     System.out.println("\nTriangulation en cours...");
@@ -223,9 +216,10 @@ public class Main {
                                     // Description du rectangle
                                     System.out.println("===> Rectangle #" + (i + 1));
 
-                                    // TODO: add barycentre
+                                    System.out.print("Barycentre : ");
+                                    rectangles[i].barycentre().print();
                                     System.out.println("Périmètre : " + rectangles[i].perimètre());
-                                    // TODO: Add area
+                                    System.out.println("Aire : " + rectangles[i].aire());
 
                                     System.out.println("\nListe de points :");
                                     for (int j = 0; j < 4; j++) {
@@ -261,9 +255,9 @@ public class Main {
                                 System.out.println("Aucune line dans le fichier svg !");
                             } else {
                                 for (int i = 0; i < lines.length; i++) {
-                                    // Description du rectangle
+                                    // Description de la line
                                     System.out.println("===> Line #" + (i + 1));
-
+                                    System.out.println("Longueur : " + lines[i].length());
                                     System.out.println("\nListe de points :");
                                     for (Vecteur p : lines[i].getPoints()) {
                                         p.print();
@@ -282,9 +276,9 @@ public class Main {
                                 System.out.println("Aucune polyline dans le fichier svg !");
                             } else {
                                 for (int i = 0; i < polylines.length; i++) {
-                                    // Description du rectangle
+                                    // Description de la polyline
                                     System.out.println("===> Polyline #" + (i + 1));
-
+                                    System.out.println("Longueur : " + polylines[i].length());
                                     System.out.println("\nListe de points :");
                                     for (Vecteur p : polylines[i].getPoints()) {
                                         p.print();
@@ -294,15 +288,23 @@ public class Main {
 
                             // Génération du SVG
                             System.out.println("----- Génération du SVG -----");
-                            output.export();
+                            System.out.println(output.export());
+
+                            // Export du SVG
+                            String fileName = file.getName();
+                            int foo = fileName.lastIndexOf(".");
+                            if (foo > 0) {
+                                fileName = fileName.substring(0, foo);
+                            }
+                            try (PrintWriter out = new PrintWriter(fileName + "-out.svg")) {
+                                out.println(output.export());
+                            }
                         }
                         break;
                     }
                     printHelp();
-                    break;
-                default:
-                    printHelp();
-                    break;
+                }
+                default -> printHelp();
             }
         } else {
             printHelp();

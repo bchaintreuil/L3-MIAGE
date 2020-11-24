@@ -1,8 +1,8 @@
 package unice.l3miage.cpoo.tp4;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.ArrayList;
 
 /**
  * @author Benjamin CHAINTREUIL
@@ -13,7 +13,7 @@ public class SVGParser {
      * Vars
      */
     private final String tagRegex = "<[^>]+>"; // Regex matchant les balises d'un fichier SVG
-    private String content;
+    private final String content;
     private String[] tags;
 
     // Getters and setters
@@ -27,19 +27,10 @@ public class SVGParser {
      * Methods
      */
 
-    // Récupération des balises
-    private String[] extractTags() {
-        ArrayList<String> matches = new ArrayList<String>();
-        Matcher m = Pattern.compile(this.tagRegex).matcher(this.content);
-
-        while(m.find()) {
-            // Removing comments and header.
-            if(m.group(0).contains("<?") || m.group(0).contains("<!--")) {
-                continue;
-            }
-            matches.add(m.group(0));
-        }
-        return matches.toArray(new String[matches.size()]);
+    // Constructor
+    public SVGParser(String content) {
+        this.content = content;
+        this.parse();
     }
 
     // Parsing function
@@ -54,15 +45,24 @@ public class SVGParser {
 
     // Affiche à l'écran l'ensemble des balises contenus dans le fichier SVG
     public void displayTags() {
-        for(int i = 0; i < this.nbrTags(); i++) {
+        for (int i = 0; i < this.nbrTags(); i++) {
             System.out.println("[Balise n°" + (i + 1) + "]");
             System.out.println(this.tags[i] + "\n");
         }
     }
 
-    // Constructor
-    public SVGParser(String content) {
-        this.content = new String(content);
-        this.parse();
+    // Récupération des balises
+    private String[] extractTags() {
+        ArrayList<String> matches = new ArrayList<>();
+        Matcher m = Pattern.compile(this.tagRegex).matcher(this.content);
+
+        while (m.find()) {
+            // Removing comments and header.
+            if (m.group(0).contains("<?") || m.group(0).contains("<!--")) {
+                continue;
+            }
+            matches.add(m.group(0));
+        }
+        return matches.toArray(new String[0]);
     }
 }

@@ -11,7 +11,7 @@ public class PolylineBuilder extends ShapeBuilder {
     }
 
     protected Polyline[] buildShapes() {
-        ArrayList<Polyline> p = new ArrayList<Polyline>();
+        ArrayList<Polyline> p = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -28,15 +28,15 @@ public class PolylineBuilder extends ShapeBuilder {
             // On split les coordonées par rapport au espace/tab/etc...
             String[] pointsStr = coordsSubStr.split("(\\s+)");
 
-            points = new ArrayList<Vecteur>();
+            points = new ArrayList<>();
             for(String point: pointsStr) {
                 points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
 
-            p.add(new Polyline(points.toArray(new Vecteur[points.size()])));
+            p.add(new Polyline(points.toArray(new Vecteur[0])));
         }
 
-        return p.toArray(new Polyline[p.size()]);
+        return p.toArray(new Polyline[0]);
     }
 
     public Polyline[] getShapes() {

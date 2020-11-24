@@ -11,7 +11,7 @@ public class LineBuilder extends ShapeBuilder {
     }
 
     protected Line[] buildShapes() {
-        ArrayList<Line> l = new ArrayList<Line>();
+        ArrayList<Line> l = new ArrayList<>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -53,7 +53,7 @@ public class LineBuilder extends ShapeBuilder {
             l.add(new Line(new Vecteur(2, x1, y1), new Vecteur(2, x2, y2)));
         }
 
-        return l.toArray(new Line[l.size()]);
+        return l.toArray(new Line[0]);
     }
 
     public Line[] getShapes() {

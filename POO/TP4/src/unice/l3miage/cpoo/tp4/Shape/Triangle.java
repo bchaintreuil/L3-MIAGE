@@ -28,10 +28,17 @@ public class Triangle extends Shape {
     // Methods
     /**
      * Détermination de l'aire du triangle
+     *
      * @return L'aire du triangle
      */
 
-    public double aire() { return 1/2 * Vecteur.produitVectoriel(Vecteur.add(this.OA.opposé(), this.OB), Vecteur.add(this.OA.opposé(), this.OC)).length(); }
+    public double aire() {
+        double AB = Vecteur.add(this.OB, this.OA.opposé()).length();
+        double BC = Vecteur.add(this.OC, this.OB.opposé()).length();
+        double CA = Vecteur.add(this.OA, this.OC.opposé()).length();
+        double p = (AB + BC + CA) / 2;
+        return Math.sqrt(p * (p - AB) * (p - BC) * (p - CA)); // Formule d'Héron
+    }
 
     /**
      * Détermination du barycentre du triangle

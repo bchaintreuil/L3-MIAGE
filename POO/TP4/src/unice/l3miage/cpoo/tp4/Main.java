@@ -1,6 +1,7 @@
 package unice.l3miage.cpoo.tp4;
 
 import unice.l3miage.cpoo.tp4.Shape.*;
+import unice.l3miage.cpoo.tp4.Shape.Rectangle;
 import unice.l3miage.cpoo.tp4.ShapeBuilder.*;
 
 import java.awt.*;
@@ -83,111 +84,217 @@ public class Main {
 
                             input.displayTags();
 
-                            // Affichage des polygones et leurs propri�t�s
-                            System.out.println("----- Polygones -----");
-
-
-                            // Test pour Polygone
-                            PolygonBuilder cBuilder = new PolygonBuilder(input.getTags());
-                            Polygone[] s = cBuilder.getShapes();
-
-                            System.out.println(s == null);
-
-                            for(Polygone l: s) {
-                                for (Vecteur p: l.getPoints()) {
-                                    System.out.println(p.get(0));
-                                    System.out.println(p.get(1));
-                                }
-                            }
-
-                            Triangle[] triangulation = new Triangle[0];
-                            for(Polygone shape: s)
-                            {
-                                System.out.println("Nombre de points : " + shape.nbrPoints());
-                                triangulation = shape.trianguler();
-                                System.out.println(triangulation.length);
-                                for (Triangle t : triangulation) {
-                                    t.OA.print();
-                                    t.OB.print();
-                                    t.OC.print();
-                                    System.out.print("\n");
-                                }
-                            }
-
-
-
-                            System.out.println("----- G�n�ration du SVG -----");
+                            // Initialisation de la triangulation
+                            Triangle[] triangulation;
                             SVGGenerator output = new SVGGenerator(content);
 
-                            output.addTriangulation(triangulation);
-
-                            output.export();
-
-                            // Test pour Circle
-                            // CircleBuilder cBuilder = new CircleBuilder(input.getTags());
-                            // Circle[] p = cBuilder.getShapes();
-
-                            // Test pour Ellipse
-                            // EllipseBuilder eBuilder = new EllipseBuilder(input.getTags());
-                            // Ellipse[] e = eBuilder.getShapes();
-
-                            // Test pour Line
-                            // LineBuilder lBuilder = new LineBuilder(input.getTags());
-                            // Line[] l = lBuilder.getShapes();
-
-                            // Test pour Polyline
-                            // PolylineBuilder plBuilder = new PolylineBuilder(input.getTags());
-                            // Polyline[] pl = plBuilder.getShapes();
-
-                            // Test pour Rect
-                            // RectBuilder rBuilder = new RectBuilder(input.getTags());
-                            // Rectangle[] r = rBuilder.getShapes();
+                            // Affichage des shapes et de leurs propriétés
 
                             /*
-                            if (p != null) {
-                                Triangle[][] triangulations = new Triangle[p.length][];
+                            ** Polygones
+                             */
+                            System.out.println("----- Polygones -----");
 
-                                // On traite chaque polygone un par un
-                                for (int i = 0; i < p.length; i++) {
+                            PolygonBuilder polygoneBuilder = new PolygonBuilder(input.getTags());
+                            Polygone[] polygones;
+                            if ((polygones = polygoneBuilder.getShapes()) == null) {
+                                System.out.println("Aucun polygone dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < polygones.length; i++) {
+                                    // Description du polygone
                                     System.out.println("===> Polygone #" + (i + 1));
 
-                                    System.out.println("Nombre de points : " + p[i].nbrPoints());
-                                    System.out.println("P�rim�tre : " + p[i].perimètre());
+                                    System.out.println("Nombre de points : " + polygones[i].nbrPoints());
+                                    System.out.println("Périmètre : " + polygones[i].perimètre());
                                     System.out.print("Barycentre : ");
-                                    p[i].barycentre().print();
+                                    polygones[i].barycentre().print();
 
                                     System.out.println("\nListe de points :");
-                                    for (int j = 0; j < p[i].nbrPoints(); j++) {
-                                        p[i].getPoint(j).print();
+                                    for (int j = 0; j < polygones[i].nbrPoints(); j++) {
+                                        polygones[i].getPoint(j).print();
                                     }
 
                                     // Triangulation
                                     System.out.println("\nTriangulation en cours...");
-                                    triangulations[i] = p[i].trianguler();
-                                    System.out.println("Triangulation termin�e !");
-                                    System.out.println(triangulations[i].length + " triangles calcul�s.");
+                                    triangulation = polygones[i].trianguler();
+                                    System.out.println("Triangulation terminée !");
+                                    System.out.println(triangulation.length + " triangles calculés.");
 
                                     System.out.println("\n----- Triangles du polygone #" + (i + 1) + " -----");
-                                    for (Triangle t : triangulations[i]) {
+                                    for (Triangle t : triangulation) {
                                         t.OA.print();
                                         t.OB.print();
                                         t.OC.print();
                                         System.out.print("\n");
                                     }
+
+                                    output.addTriangulation(triangulation);
                                 }
-
-                            // G�n�ration du SVG
-                            System.out.println("----- G�n�ration du SVG -----");
-                            SVGGenerator output = new SVGGenerator(content);
-
-                            for(Triangle[] triangulation: triangulations) {
-                                output.addTriangulation(triangulation);
                             }
 
-                            output.export();
-                            }
-                            System.out.println("\n----- All done ! =D -----");
+                            /*
+                            ** Circle
                              */
+                            System.out.println("----- Circles -----");
+
+                            CircleBuilder circleBuilder = new CircleBuilder(input.getTags());
+                            Circle[] circles;
+                            if ((circles = circleBuilder.getShapes()) == null) {
+                                System.out.println("Aucun circle dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < circles.length; i++) {
+                                    // Description du circle
+                                    System.out.println("===> Circle #" + (i + 1));
+
+                                    System.out.println("Centre : ");
+                                    circles[i].getCenter().print();
+                                    System.out.println("Rayon : " + circles[i].getRadius());
+                                    System.out.println("Périmètre : " + circles[i].perimètre());
+                                    // TODO: Add area
+
+                                    // Triangulation
+                                    System.out.println("\nTriangulation en cours...");
+                                    triangulation = circles[i].toPolygone().trianguler();
+                                    System.out.println("Triangulation terminée !");
+                                    System.out.println(triangulation.length + " triangles calculés.");
+
+                                    System.out.println("\n----- Triangles du cercle #" + (i + 1) + " -----");
+                                    for (Triangle t : triangulation) {
+                                        t.OA.print();
+                                        t.OB.print();
+                                        t.OC.print();
+                                        System.out.print("\n");
+                                    }
+
+                                    output.addTriangulation(triangulation);
+                                }
+                            }
+
+                            /*
+                             ** Ellipses
+                             */
+                            System.out.println("----- Ellipses -----");
+
+                            EllipseBuilder ellipseBuilder = new EllipseBuilder(input.getTags());
+                            Ellipse[] ellipses;
+                            if ((ellipses = ellipseBuilder.getShapes()) == null) {
+                                System.out.println("Aucune ellipse dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < ellipses.length; i++) {
+                                    // Description de l'ellipse
+                                    System.out.println("===> Ellipse #" + (i + 1));
+
+                                    System.out.println("Centre : ");
+                                    ellipses[i].getCenter().print();
+                                    System.out.println("Rx : " + ellipses[i].getRadiusX());
+                                    System.out.println("Ry : " + ellipses[i].getRadiusY());
+                                    System.out.println("Périmètre : " + ellipses[i].perimètre());
+                                    // TODO: Add area
+
+                                    // Triangulation
+                                    System.out.println("\nTriangulation en cours...");
+                                    triangulation = ellipses[i].toPolygone().trianguler();
+                                    System.out.println("Triangulation terminée !");
+                                    System.out.println(triangulation.length + " triangles calculés.");
+
+                                    System.out.println("\n----- Triangles de l'ellipse #" + (i + 1) + " -----");
+                                    for (Triangle t : triangulation) {
+                                        t.OA.print();
+                                        t.OB.print();
+                                        t.OC.print();
+                                        System.out.print("\n");
+                                    }
+
+                                    output.addTriangulation(triangulation);
+                                }
+                            }
+
+                            /*
+                             ** Rectangles
+                             */
+                            System.out.println("----- Rectangles -----");
+
+                            RectBuilder rectangleBuilder = new RectBuilder(input.getTags());
+                            Rectangle[] rectangles;
+                            if ((rectangles = rectangleBuilder.getShapes()) == null) {
+                                System.out.println("Aucun rectangle dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < rectangles.length; i++) {
+                                    // Description du rectangle
+                                    System.out.println("===> Rectangle #" + (i + 1));
+
+                                    // TODO: add barycentre
+                                    System.out.println("Périmètre : " + rectangles[i].perimètre());
+                                    // TODO: Add area
+
+                                    System.out.println("\nListe de points :");
+                                    for (int j = 0; j < 4; j++) {
+                                        rectangles[i].toPolygone().getPoint(j).print();
+                                    }
+
+                                    // Triangulation
+                                    System.out.println("\nTriangulation en cours...");
+                                    triangulation = rectangles[i].toPolygone().trianguler();
+                                    System.out.println("Triangulation terminée !");
+                                    System.out.println(triangulation.length + " triangles calculés.");
+
+                                    System.out.println("\n----- Triangles du rectangle #" + (i + 1) + " -----");
+                                    for (Triangle t : triangulation) {
+                                        t.OA.print();
+                                        t.OB.print();
+                                        t.OC.print();
+                                        System.out.print("\n");
+                                    }
+
+                                    output.addTriangulation(triangulation);
+                                }
+                            }
+
+                            /*
+                             ** Lines
+                             */
+                            System.out.println("----- Lines -----");
+
+                            LineBuilder lineBuilder = new LineBuilder(input.getTags());
+                            Line[] lines;
+                            if ((lines = lineBuilder.getShapes()) == null) {
+                                System.out.println("Aucune line dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < lines.length; i++) {
+                                    // Description du rectangle
+                                    System.out.println("===> Line #" + (i + 1));
+
+                                    System.out.println("\nListe de points :");
+                                    for (Vecteur p : lines[i].getPoints()) {
+                                        p.print();
+                                    }
+                                }
+                            }
+
+                            /*
+                             ** Polylines
+                             */
+                            System.out.println("----- Polylines -----");
+
+                            PolylineBuilder polylineBuilder = new PolylineBuilder(input.getTags());
+                            Polyline[] polylines;
+                            if ((polylines = polylineBuilder.getShapes()) == null) {
+                                System.out.println("Aucune polyline dans le fichier svg !");
+                            } else {
+                                for (int i = 0; i < polylines.length; i++) {
+                                    // Description du rectangle
+                                    System.out.println("===> Polyline #" + (i + 1));
+
+                                    System.out.println("\nListe de points :");
+                                    for (Vecteur p : polylines[i].getPoints()) {
+                                        p.print();
+                                    }
+                                }
+                            }
+
+                            // Génération du SVG
+                            System.out.println("----- Génération du SVG -----");
+                            output.export();
                         }
                         break;
                     }

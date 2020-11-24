@@ -25,27 +25,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TP1/.idea/TP1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP2/.idea/TP2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/AllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/CircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/EllipseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/LineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/PolygoneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/PolylineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/RectangleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/TriangleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/SVGParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Polygone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/iToPolygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/iToPolygone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolygonBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/ShapeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Vecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Vecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/iTrianguler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP4.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +77,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -99,7 +96,7 @@
       <recent name="D:\School\MIAGE\Git\L3-MIAGE\POO\TP4\src\unice\l3miage\cpoo\tp4" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CircleTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
       <module name="TP4" />
@@ -122,8 +119,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unice.l3miage.cpoo.tp4.ShapesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests" />
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.CircleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleTest.testAire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unice.l3miage.cpoo.tp4.ShapesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests" />
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.CircleTest" />
+      <option name="METHOD_NAME" value="testAire" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolygoneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unice.l3miage.cpoo.tp4.ShapesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests" />
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.PolygoneTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolygoneTest.testAire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unice.l3miage.cpoo.tp4.ShapesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests" />
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.PolygoneTest" />
+      <option name="METHOD_NAME" value="testAire" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CircleTest" />
+        <item itemvalue="JUnit.PolygoneTest" />
+        <item itemvalue="JUnit.CircleTest.testAire" />
+        <item itemvalue="JUnit.PolygoneTest.testAire" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -139,7 +202,7 @@
       <workItem from="1605475961926" duration="5968000" />
       <workItem from="1605975846804" duration="2030000" />
       <workItem from="1606148158421" duration="8747000" />
-      <workItem from="1606247090060" duration="6511000" />
+      <workItem from="1606247090060" duration="9388000" />
     </task>
     <servers />
   </component>
@@ -166,6 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="594" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606162866010" />
+    <state x="93" y="93" width="1733" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1606256383665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="93" y="93" width="1733" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606256383665" />
     <state x="1086" y="407" key="#com.intellij.ide.util.MemberChooser" timestamp="1606097500773">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -190,51 +257,53 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1029" y="556" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606230610124" />
-    <state x="1060" y="426" key="FileChooserDialogImpl" timestamp="1606233163573">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="795" y="316" key="FileChooserDialogImpl" timestamp="1606253840834">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="795" y="316" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606253840834" />
     <state x="1060" y="426" key="FileChooserDialogImpl/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605476824451" />
     <state x="1060" y="426" key="FileChooserDialogImpl/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606233163573" />
-    <state width="1878" height="283" key="GridCell.Tab.0.bottom" timestamp="1606247169745">
+    <state width="1878" height="283" key="GridCell.Tab.0.bottom" timestamp="1606256559305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.bottom/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
-    <state width="1878" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606247169745" />
+    <state width="1878" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606256559305" />
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="404" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606233959895" />
-    <state width="1878" height="283" key="GridCell.Tab.0.center" timestamp="1606247169745">
+    <state width="1878" height="283" key="GridCell.Tab.0.center" timestamp="1606256559305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.center/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
-    <state width="1878" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606247169745" />
+    <state width="1878" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606256559305" />
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="404" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606233959895" />
-    <state width="1878" height="283" key="GridCell.Tab.0.left" timestamp="1606247169745">
+    <state width="1878" height="283" key="GridCell.Tab.0.left" timestamp="1606256559305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.left/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273670" />
-    <state width="1878" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606247169745" />
+    <state width="1878" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606256559305" />
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="404" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606233959894" />
-    <state width="1878" height="283" key="GridCell.Tab.0.right" timestamp="1606247169745">
+    <state width="1878" height="283" key="GridCell.Tab.0.right" timestamp="1606256559305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="2517" height="405" key="GridCell.Tab.0.right/-1920.1080.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1606130273671" />
-    <state width="1878" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606247169745" />
+    <state width="1878" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606256559305" />
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1068.1920.1040/3840.1065.1280.680@0.0.2560.1400" timestamp="1605478442957" />
     <state width="2517" height="404" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606233959895" />
-    <state x="488" y="38" key="SettingsEditor" timestamp="1606148267301">
+    <state x="488" y="38" key="SettingsEditor" timestamp="1606256482914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="488" y="38" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606148267301" />
+    <state x="488" y="38" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606256482914" />
     <state x="761" y="275" key="SettingsEditor/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606096231217" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606062820612">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606062820612" />
-    <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606060603986">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="762" y="441" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606253947419">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="762" y="441" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1606253947419" />
     <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606060603986" />
     <state x="0" y="0" width="776" height="1025" key="dock-window-1" timestamp="1606154499247">
       <screen x="0" y="0" width="1920" height="1040" />

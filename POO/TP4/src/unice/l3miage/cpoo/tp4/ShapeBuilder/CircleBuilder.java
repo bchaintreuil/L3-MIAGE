@@ -22,6 +22,7 @@ public class CircleBuilder extends ShapeBuilder {
             double cx = 0;
             if ((coordsStart = tag.indexOf("cx=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsStart += 4;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
                 cx = Double.parseDouble(coordsSubStr);
             }
@@ -30,6 +31,7 @@ public class CircleBuilder extends ShapeBuilder {
             double cy = 0;
             if ((coordsStart = tag.indexOf("cy=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsStart += 4;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
                 cy = Double.parseDouble(coordsSubStr);
             }
@@ -37,6 +39,7 @@ public class CircleBuilder extends ShapeBuilder {
             // Pour radius
             coordsStart = tag.indexOf("r=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 4);
+            coordsStart += 3;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double radius = Double.parseDouble(coordsSubStr);
 

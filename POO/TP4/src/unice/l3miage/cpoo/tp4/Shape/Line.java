@@ -24,5 +24,9 @@ public class Line extends Shape {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    public Vecteur[] getPoints() {
+        Vecteur[] points = {this.OA, this.OB};
+        return points;
+    }
     // TODO: getters and setters
 }

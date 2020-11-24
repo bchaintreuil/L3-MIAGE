@@ -3,6 +3,7 @@ package unice.l3miage.cpoo.tp4;
 import unice.l3miage.cpoo.tp4.Shape.*;
 import unice.l3miage.cpoo.tp4.ShapeBuilder.*;
 
+import java.awt.*;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -87,13 +88,40 @@ public class Main {
 
 
                             // Test pour Polygone
-                            PolygonBuilder pBuilder = new PolygonBuilder(input.getTags());
-                            Polygone[] p = pBuilder.getShapes();
+                            PolygonBuilder cBuilder = new PolygonBuilder(input.getTags());
+                            Polygone[] s = cBuilder.getShapes();
 
-                            for(int i = 0;i<p.length;i++)
-                            {
-                                p[i].toString();
+                            System.out.println(s == null);
+
+                            for(Polygone l: s) {
+                                for (Vecteur p: l.getPoints()) {
+                                    System.out.println(p.get(0));
+                                    System.out.println(p.get(1));
+                                }
                             }
+
+                            Triangle[] triangulation = new Triangle[0];
+                            for(Polygone shape: s)
+                            {
+                                System.out.println("Nombre de points : " + shape.nbrPoints());
+                                triangulation = shape.trianguler();
+                                System.out.println(triangulation.length);
+                                for (Triangle t : triangulation) {
+                                    t.OA.print();
+                                    t.OB.print();
+                                    t.OC.print();
+                                    System.out.print("\n");
+                                }
+                            }
+
+
+
+                            System.out.println("----- G�n�ration du SVG -----");
+                            SVGGenerator output = new SVGGenerator(content);
+
+                            output.addTriangulation(triangulation);
+
+                            output.export();
 
                             // Test pour Circle
                             // CircleBuilder cBuilder = new CircleBuilder(input.getTags());

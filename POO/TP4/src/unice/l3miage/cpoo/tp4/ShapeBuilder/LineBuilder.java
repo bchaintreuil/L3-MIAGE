@@ -18,27 +18,35 @@ public class LineBuilder extends ShapeBuilder {
 
         // Récupération des points
         for(String tag: shapeTags) {
+            if (tag.contains("polyline")) { // Exclusion for polyline tag
+                continue;
+            }
+
             // Pour x1
             coordsStart = tag.indexOf("x1=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double x1 = Double.parseDouble(coordsSubStr);
 
             // Pour y1
             coordsStart = tag.indexOf("y1=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double y1 = Double.parseDouble(coordsSubStr);
 
             // Pour x2
             coordsStart = tag.indexOf("x2=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double x2 = Double.parseDouble(coordsSubStr);
 
             // Pour y2
             coordsStart = tag.indexOf("y2=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double y2 = Double.parseDouble(coordsSubStr);
 

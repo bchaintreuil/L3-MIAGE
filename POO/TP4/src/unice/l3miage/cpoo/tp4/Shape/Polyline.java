@@ -19,5 +19,11 @@ public class Polyline extends Shape {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    public Vecteur[] getPoints() {
+        Vecteur[] points = new Vecteur[this.points.length];
+        System.arraycopy(this.points, 0, points, 0, this.points.length);
+        return points;
+    }
+
     // TODO: getters and setters
 }

@@ -29,7 +29,7 @@ public class Circle extends Shape implements iToPolygone {
 
     public Polygone toPolygone() {
         ArrayList<Vecteur> points = new ArrayList<Vecteur>();
-        IntStream intervalAngle = IntStream.range(0, 360);
+        IntStream intervalAngle = IntStream.range(0, 360).filter(x -> x % 10 == 0);
 
         intervalAngle.forEach(angle -> {
             double x = center.get(0) + radius * Math.cos(Math.toRadians(angle));

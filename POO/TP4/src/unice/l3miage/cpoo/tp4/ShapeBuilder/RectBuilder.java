@@ -21,6 +21,7 @@ public class RectBuilder extends ShapeBuilder {
             double x = 0;
             if ((coordsStart = tag.indexOf("x=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 4);
+                coordsStart += 3;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
 
                 x = Double.parseDouble(coordsSubStr);
@@ -30,6 +31,7 @@ public class RectBuilder extends ShapeBuilder {
             double y = 0;
             if ((coordsStart = tag.indexOf("y=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 4);
+                coordsStart += 3;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
                 y = Double.parseDouble(coordsSubStr);
             }
@@ -37,12 +39,14 @@ public class RectBuilder extends ShapeBuilder {
             // Pour width
             coordsStart = tag.indexOf("width=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 8);
+            coordsStart += 7;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double width = Double.parseDouble(coordsSubStr);
 
             // Pour height
             coordsStart = tag.indexOf("height=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 9);
+            coordsStart += 8;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double height = Double.parseDouble(coordsSubStr);
 

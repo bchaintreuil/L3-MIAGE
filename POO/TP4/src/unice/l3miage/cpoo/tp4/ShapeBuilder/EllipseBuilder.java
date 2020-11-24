@@ -21,6 +21,7 @@ public class EllipseBuilder extends ShapeBuilder {
             double cx = 0;
             if ((coordsStart = tag.indexOf("cx=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsStart += 4;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
                 cx = Double.parseDouble(coordsSubStr);
             }
@@ -29,6 +30,7 @@ public class EllipseBuilder extends ShapeBuilder {
             double cy = 0;
             if ((coordsStart = tag.indexOf("cy=\"")) != -1) {
                 coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsStart += 4;
                 coordsSubStr = tag.substring(coordsStart, coordsEnd);
                 cy = Double.parseDouble(coordsSubStr);
             }
@@ -36,12 +38,14 @@ public class EllipseBuilder extends ShapeBuilder {
             // Pour rx
             coordsStart = tag.indexOf("rx=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double rx = Double.parseDouble(coordsSubStr);
 
             // Pour ry
             coordsStart = tag.indexOf("ry=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsStart += 4;
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
             double ry = Double.parseDouble(coordsSubStr);
 

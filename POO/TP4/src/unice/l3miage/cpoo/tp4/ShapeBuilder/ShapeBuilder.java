@@ -9,6 +9,10 @@ public abstract class ShapeBuilder {
     protected String[] shapeTags;
     protected Shape[] shapes;
 
+    /**
+     * Constructeur de la classe ShapeBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     protected ShapeBuilder(String[] tags) {
         // Default to null for child differenciation
         this.shapeTags = null;
@@ -31,7 +35,17 @@ public abstract class ShapeBuilder {
         }
     }
 
+    // Methods
+
+    /**
+     * Renvoie un tableau de la Shape utilisée crée à partir des Tags du fichier SVG
+     * @return Tableau de la Shape utilisée extrait du fichier SVG
+     */
     abstract protected Shape[] buildShapes();
 
+    /**
+     * Renvoie le tableau de Shape utilisée crée à partir de la méthode buildShapes()
+     * @return Tableau de la Shape utilisée
+     */
     abstract public Shape[] getShapes();
 }

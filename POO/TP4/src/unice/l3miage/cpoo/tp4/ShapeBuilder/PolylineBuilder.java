@@ -6,10 +6,21 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class PolylineBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe PolylineBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public PolylineBuilder(String[] tags) {
         super(tags);
     }
 
+    // Methods
+
+    /**
+     * Renvoie un tableau de Polyline crée à partir des Tags du fichier SVG
+     * @return Tableau de Polyline extrait du fichier SVG
+     */
     protected Polyline[] buildShapes() {
         ArrayList<Polyline> p = new ArrayList<>();
         int coordsStart;
@@ -39,6 +50,10 @@ public class PolylineBuilder extends ShapeBuilder {
         return p.toArray(new Polyline[0]);
     }
 
+    /**
+     * Renvoie le tableau de Polyline crée à partir de la méthode buildShapes()
+     * @return Tableau de Polyline
+     */
     public Polyline[] getShapes() {
         if (this.shapes != null) {
             Polyline[] s = new Polyline[this.shapes.length];

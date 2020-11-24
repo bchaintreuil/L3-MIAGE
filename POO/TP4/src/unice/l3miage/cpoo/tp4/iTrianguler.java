@@ -6,14 +6,15 @@ import unice.l3miage.cpoo.tp4.Shape.Triangle;
 import java.util.ArrayList;
 
 public interface iTrianguler {
-    Vecteur getPoint(int i);
 
-    Vecteur[] getPoints();
     /*
      * Triangulation
      */
 
-    // Renvoi l'indice du sommet le plus � gauche du polygone.
+    /**
+     * Renvoie l'indice du sommet le plus à gauche
+     * @return Indice du sommet le plus à gauche
+     */
     default int sommet_gauche() {
         double x = this.getPoint(0).get(0);
         int k = 0;
@@ -26,7 +27,10 @@ public interface iTrianguler {
         return k;
     }
 
-    // Retourne l'indice du sommet voisin � celui de l'indice en fonction du d�placement
+    /**
+     * Retourne l'indice du sommet voisin à celui de l'indice en fonction du déplacement
+     * @return Indice du sommet voisin
+     */
     static int voisin_sommet(int nbrSommets, int indice, int dep) {
         int indiceVoisin = (indice + dep) % nbrSommets;
         if (indiceVoisin == -1) {
@@ -35,17 +39,39 @@ public interface iTrianguler {
         return indiceVoisin;
     }
 
-    // Renvoi la norme de la composante Z du produit vectoriel de POP1 et POPM
+    /**
+     * Renvoi la norme de la composante Z du produit vectoriel de POP1 et POPM
+     * @param P0 : Premier point du Triangle
+     * @param P1 : Deuxième point du Triangle
+     * @param M : Deuxième point du produit vectoriel
+     * @return Norme de la composante Z
+     */
     static double produit_vect_Z (Vecteur P0, Vecteur P1, Vecteur M) {
         return (P1.get(0) - P0.get(0)) * (M.get(1) - P0.get(1)) - (P1.get(1) - P0.get(1)) * (M.get(0) - P0.get(0));
     }
 
-    // Renvoi un bool�en traduisant de la pr�sence du point M dans le triangle d�limit� par P0, P1, P2
+    /**
+     * Renvoi un booléen traduisant de la présence du point M dans le triangle délimité par P0, P1, P2
+     * @param P0 : Premier point du Triangle
+     * @param P1 : Deuxième point du Triangle
+     * @param P2 : Troisième point du Triangle
+     * @param M : Point à comparer
+     * @return Booléen retournant la présence du point M dans le triangle P0, P1 ou P2
+     */
     static boolean point_dans_triangle(Vecteur P0, Vecteur P1, Vecteur P2, Vecteur M) {
         return produit_vect_Z(P0, P1, M) > 0 && produit_vect_Z(P1, P2, M) > 0 && produit_vect_Z(P2, P0, M) > 0;
     }
 
-    // Renvoi l'indice du sommet du polygone appartenant au triangle P0, P1, P2 et qui est � la plus grande distance du c�t� P1P2
+    /**
+     * Renvoi l'indice du sommet du polygone appartenant au triangle P0, P1, P2 et qui est à la plus grande distance du côté P1P2
+     * @param P0 : Premier point du triangle
+     * @param P1 : Deuxième point du triangle
+     * @param P2 : Troisième point du triangle
+     * @param indice_P0 : Indice du sommet du premier triangle
+     * @param indice_P1 : Indice du sommet du deuxième triangle
+     * @param indice_P2 : Indice du sommet du troisième triangle
+     * @return Indice du sommet
+     */
     default int indice_sommet_distance_max(Vecteur P0, Vecteur P1, Vecteur P2, int indice_P0, int indice_P1, int indice_P2) {
         int n = this.getPoints().length;
         double distance = 0.0;
@@ -66,7 +92,13 @@ public interface iTrianguler {
         return k;
     }
 
-    // Renvoi un nouveau polygone constitu� des points compris entre l'indice iStart et iEnd
+    /**
+     * Renvoi un nouveau polygone constitué des points compris entre l'indice iStart et iEnd
+     * @param iStart : Indice du premier sommet
+     * @param iEnd : Indice du dernier sommet
+     * @return Nouveau Polygone crée à partir des points entre iStart et iEnd
+     */
+    //
     default Polygone new_polygone(int iStart, int iEnd) {
         int n = this.getPoints().length;
         ArrayList<Vecteur> sommets = new ArrayList<>();
@@ -82,7 +114,10 @@ public interface iTrianguler {
         return new Polygone(s);
     }
 
-    // M�thodes pour trianguler un polygone
+    /**
+     * Ensemble des méthodes pour trianguler un polygone
+     * @return Tableau de Triangle crée à partir du polygone
+     */
     default Triangle[] trianguler() {
         ArrayList<Triangle> liste_triangles = new ArrayList<>();
         liste_triangles = this.trianguler(liste_triangles);
@@ -92,6 +127,10 @@ public interface iTrianguler {
         return triangles;
     }
 
+    /**
+     * Méthode utilisée pour trianguler un polygone
+     * @return ArrayList d'objet Triangle
+     */
     default ArrayList<Triangle> trianguler(ArrayList<Triangle> liste_triangles) {
         int nbrSommets = this.getPoints().length;
 
@@ -131,4 +170,18 @@ public interface iTrianguler {
         }
         return liste_triangles;
     }
+
+    // Getters
+
+    /**
+     * Renvoie le vecteur point à l'indice I
+     * @return Vecteur point à l'indice I
+     */
+    Vecteur getPoint(int i);
+
+    /**
+     * Renvoie un tableau de Vecteur nécessaire à la triangulation
+     * @return Tableau de Vecteur
+     */
+    Vecteur[] getPoints();
 }

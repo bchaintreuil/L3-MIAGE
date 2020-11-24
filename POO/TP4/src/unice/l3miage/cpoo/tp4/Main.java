@@ -19,14 +19,19 @@ public class Main {
      * Methods
      */
 
-    // Help printer
+    /**
+     * Afficher l'helper du projet dans le terminal
+     */
     private static void printHelp() {
         System.out.println("---- TP n°4 - Polymorphisme ----");
         System.out.println("Ce fichier génère un fichier \"filename-out.svg\" comprenant la triangulation.");
         System.out.println("Utilisation :\n --help, -h \n --input <path to svg file> \nFait par CHAINTREUIL Benjamin et DELMARE Thomas.");
     }
 
-    // Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
+    /**
+     * Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
+     * @return String contenant l'ensemble du contenu du fichier svg
+     */
     private static String loadFile(File file) throws IOException {
         try {
             if (file.isFile()) {

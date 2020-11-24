@@ -6,11 +6,21 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class PolygonBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe PolygonBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public PolygonBuilder(String[] tags) {
         super(tags);
     }
 
-    // Génération des polygones extraits du fichier SVG
+    // Methods
+
+    /**
+     * Renvoie un tableau de Polygone crée à partir des Tags du fichier SVG
+     * @return Tableau de Polygone extrait du fichier SVG
+     */
     protected Polygone[] buildShapes() {
         ArrayList<Polygone> p = new ArrayList<>();
         int coordsStart;
@@ -39,6 +49,10 @@ public class PolygonBuilder extends ShapeBuilder {
         return p.toArray(new Polygone[0]);
     }
 
+    /**
+     * Renvoie le tableau de Polygone crée à partir de la méthode buildShapes()
+     * @return Tableau de Polygone
+     */
     public Polygone[] getShapes() {
         if(this.shapes != null) {
             Polygone[] s = new Polygone[this.shapes.length];

@@ -6,10 +6,21 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class CircleBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe CircleBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public CircleBuilder(String[] tags) {
         super(tags);
     }
 
+    // Methods
+
+    /**
+     * Renvoie un tableau de Circle crée à partir des Tags du fichier SVG
+     * @return Tableau de Circle extrait du fichier SVG
+     */
     protected Circle[] buildShapes() {
         ArrayList<Circle> c = new ArrayList<>();
         int coordsStart;
@@ -49,6 +60,10 @@ public class CircleBuilder extends ShapeBuilder {
         return c.toArray(new Circle[0]);
     }
 
+    /**
+     * Renvoie le tableau de Circle crée à partir de la méthode buildShapes()
+     * @return Tableau de Circle
+     */
     public Circle[] getShapes() {
         if(this.shapes != null) {
             Circle[] s = new Circle[this.shapes.length];

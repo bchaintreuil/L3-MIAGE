@@ -6,10 +6,21 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class LineBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe LineBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public LineBuilder(String[] tags) {
         super(tags);
     }
 
+    // Methods
+
+    /**
+     * Renvoie un tableau de Line crée à partir des Tags du fichier SVG
+     * @return Tableau de Line extrait du fichier SVG
+     */
     protected Line[] buildShapes() {
         ArrayList<Line> l = new ArrayList<>();
         int coordsStart;
@@ -56,6 +67,10 @@ public class LineBuilder extends ShapeBuilder {
         return l.toArray(new Line[0]);
     }
 
+    /**
+     * Renvoie le tableau de Line crée à partir de la méthode buildShapes()
+     * @return Tableau de Line
+     */
     public Line[] getShapes() {
         if (this.shapes != null) {
             Line[] s = new Line[this.shapes.length];

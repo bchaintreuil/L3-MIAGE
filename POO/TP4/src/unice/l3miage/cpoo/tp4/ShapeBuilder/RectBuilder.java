@@ -6,10 +6,21 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class RectBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe RectBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public RectBuilder(String[] tags) {
         super(tags);
     }
 
+    // Methods
+
+    /**
+     * Renvoie un tableau de Rectangle crée à partir des Tags du fichier SVG
+     * @return Tableau de Rectangle extrait du fichier SVG
+     */
     protected Rectangle[] buildShapes() {
         ArrayList<Rectangle> r = new ArrayList<>();
         int coordsStart;
@@ -57,6 +68,10 @@ public class RectBuilder extends ShapeBuilder {
         return r.toArray(new Rectangle[0]);
     }
 
+    /**
+     * Renvoie le tableau de Rectangle crée à partir de la méthode buildShapes()
+     * @return Tableau de Rectangle
+     */
     public Rectangle[] getShapes() {
         if (this.shapes != null) {
             Rectangle[] s = new Rectangle[this.shapes.length];

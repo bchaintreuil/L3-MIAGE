@@ -18,12 +18,17 @@ public class SVGGenerator {
      * Methods
      */
 
-    // Constructor
+    /*
+     * Constructeur de la classe SVGGenerator
+     * @param template : Sring du fichier SVG
+     */
     public SVGGenerator(String template) {
         this.content = template.replace("</svg>", "");
     }
 
-    // Ajoute la triangulation passée en argument au fichier SVG
+    /**
+     * Ajoute la triangulation passée en argument au fichier SVG
+     */
     public void addTriangulation(Triangle[] triangulation) {
         for(Triangle t: triangulation) {
             this.content += "<polygon fill=\"" + colors[this.nextColor] + "\" stroke=\"blue\" stroke-width=\"0\" points=\"";
@@ -32,7 +37,10 @@ public class SVGGenerator {
         }
     }
 
-    // Affiche le SVG résultant
+    /**
+     * Affiche le SVG résultant
+     * @return Le SVG final au format String
+     */
     public String export() {
         return this.content + "</svg>";
     }

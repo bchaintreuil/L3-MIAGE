@@ -6,11 +6,15 @@ import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class Circle extends Shape implements iToPolygone {
-    // Fields
+    // Constructor fields
     private final Vecteur center;
     private final double radius;
 
-    // Constructor
+    /**
+     * Constructeur de la classe Cercle
+     * @param center : Vecteur-point du centre du cercle
+     * @param radius : Radius du cercle
+     */
     public Circle(Vecteur center, double radius) throws RuntimeException {
         if (center.dimension() != 2 || radius <= 0) {
             throw new RuntimeException("Vecteur de dimension != 2 ou rayon nul/négatif !");
@@ -20,24 +24,28 @@ public class Circle extends Shape implements iToPolygone {
         }
     }
 
-    // Getters & Setters
-    public double getRadius() {
-        return this.radius;
-    }
-
-    public Vecteur getCenter() {
-        return this.center;
-    }
-
     // Methods
+
+    /**
+     * Détermination de l'aire du cercle
+     * @return Aire du cercle
+     */
     public double aire() {
         return Math.PI * Math.pow(radius, 2);
     }
 
+    /**
+     * Détermination du périmètre du cercle
+     * @return Périmètre du cercle
+     */
     public double perimètre() {
         return Math.PI * 2 * radius;
     }
 
+    /**
+     * Convertir un objet cercle en objet Polygone
+     * @return L'objet Polygone crée à partir du cercle
+     */
     public Polygone toPolygone() {
         ArrayList<Vecteur> points = new ArrayList<>();
         IntStream intervalAngle = IntStream.range(0, 360).filter(x -> x % 10 == 0);
@@ -51,5 +59,13 @@ public class Circle extends Shape implements iToPolygone {
         });
 
         return new Polygone(points.toArray(new Vecteur[0]));
+    }
+
+    // Getters
+    public double getRadius() {
+        return this.radius;
+    }
+    public Vecteur getCenter() {
+        return this.center;
     }
 }

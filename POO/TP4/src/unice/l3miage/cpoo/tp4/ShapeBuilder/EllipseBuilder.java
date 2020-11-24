@@ -6,10 +6,22 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 import java.util.ArrayList;
 
 public class EllipseBuilder extends ShapeBuilder {
+
+    /**
+     * Constructeur de la classe EllipseBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     * @param tags : Liste de String constituant les tags de la Shape
+     */
     public EllipseBuilder(String[] tags) {
         super(tags);
     }
 
+
+    // Methods
+
+    /**
+     * Renvoie un tableau de Ellipse crée à partir des Tags du fichier SVG
+     * @return Tableau de Ellipse extrait du fichier SVG
+     */
     protected Ellipse[] buildShapes() {
         ArrayList<Ellipse> e = new ArrayList<>();
         int coordsStart;
@@ -56,6 +68,10 @@ public class EllipseBuilder extends ShapeBuilder {
         return e.toArray(new Ellipse[0]);
     }
 
+    /**
+     * Renvoie le tableau de Ellipse crée à partir de la méthode buildShapes()
+     * @return Tableau de Ellipse
+     */
     public Ellipse[] getShapes() {
         if (this.shapes != null) {
             Ellipse[] s = new Ellipse[this.shapes.length];

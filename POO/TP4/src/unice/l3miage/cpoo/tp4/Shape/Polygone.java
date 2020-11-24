@@ -11,10 +11,13 @@ import unice.l3miage.cpoo.tp4.iTrianguler;
  */
 
 public class Polygone extends Shape implements iTrianguler {
-    // Fields
+    // Constructor variables
     private final Vecteur[] points;
 
-    // Constructor
+    /**
+     * Constructeur de la classe Polygone
+     * @param points : Tableau de Vecteur permettant de construire l'objet Polygone
+     */
     public Polygone(Vecteur... points) throws RuntimeException {
         if (points.length < 3) {
             throw new RuntimeException("Nbr de points < 3");
@@ -31,42 +34,29 @@ public class Polygone extends Shape implements iTrianguler {
         System.arraycopy(points, 0, this.points, 0, points.length);
     }
 
-    // Getters and setters
-    public Vecteur[] getPoints() {
-        Vecteur[] foo = new Vecteur[this.points.length];
-        System.arraycopy(this.points, 0, foo, 0, this.points.length);
-        return foo;
-    }
-
-    public Vecteur getPoint(int i) throws RuntimeException {
-        if (i > this.points.length) {
-            throw new RuntimeException("i > nbr de points");
-        } else {
-            return this.points[i];
-        }
-    }
-
-    public Polygone setPoint(Vecteur... points) {
-        Vecteur[] new_points = new Vecteur[points.length + this.points.length];
-        System.arraycopy(this.points, 0, new_points, 0, this.points.length);
-        System.arraycopy(points, 0, new_points, this.points.length, points.length);
-        return new Polygone(new_points);
-    }
-
     // Methods
 
-    // Retourne le nombre de points constituant le polygone
+    /**
+     * Renvoie le nombre de points dans le Polygone
+     * @return Le nombre de points dans le Polygone
+     */
     public int nbrPoints() {
         return this.points.length;
     }
 
-    // Détermine et renvoi le barycentre du polygone
+    /**
+     * Renvoie le vecteur Barycentre du Polygone
+     * @return Le vecteur Barycentre du Polygone
+     */
     public Vecteur barycentre() {
         Vecteur foo = Vecteur.add(this.points);
         return foo.multK(1.0 / this.points.length);
     }
 
-    // Calcul et renvoi le périmètre du polygone
+    /**
+     * Calcul du périmètre du Polygone
+     * @return Le périmètre du Polygone
+     */
     public double perimètre() {
         double perimètre = 0;
 
@@ -80,6 +70,10 @@ public class Polygone extends Shape implements iTrianguler {
         return perimètre;
     }
 
+    /**
+     * Calcule l'aire du Polygone
+     * @return L'aire du Polygone
+     */
     public double aire() {
         double aire = 0;
         Triangle[] triangulation = this.trianguler();
@@ -87,6 +81,41 @@ public class Polygone extends Shape implements iTrianguler {
             aire += t.aire();
         }
         return aire;
+    }
+
+    // Getters and setters
+
+    /**
+     * Renvoie un tableau de Vecteur qui composent l'objet Polygone
+     * @return Tableau de Vecteur composant l'objet Polygone
+     */
+    public Vecteur[] getPoints() {
+        Vecteur[] foo = new Vecteur[this.points.length];
+        System.arraycopy(this.points, 0, foo, 0, this.points.length);
+        return foo;
+    }
+
+    /**
+     * Renvoie un Vecteur correspondant au point numéro i du Polygone
+     * @return Le point i du Polygone, sous forme de Vecteur
+     */
+    public Vecteur getPoint(int i) throws RuntimeException {
+        if (i > this.points.length) {
+            throw new RuntimeException("i > nbr de points");
+        } else {
+            return this.points[i];
+        }
+    }
+
+    /**
+     * Renvoie l'objet Polygone crée à partir de la modification du Polygone actuel
+     * @return Objet Polygone
+     */
+    public Polygone setPoint(Vecteur... points) {
+        Vecteur[] new_points = new Vecteur[points.length + this.points.length];
+        System.arraycopy(this.points, 0, new_points, 0, this.points.length);
+        System.arraycopy(points, 0, new_points, this.points.length, points.length);
+        return new Polygone(new_points);
     }
 }
 

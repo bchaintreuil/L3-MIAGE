@@ -13,11 +13,10 @@ public class RectBuilder extends ShapeBuilder {
     }
 
     protected Rectangle[] buildShapes() {
-        ArrayList<Rectangle> r = new ArrayList<>();
+        ArrayList<Rectangle> r = new ArrayList<Rectangle>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
-        ArrayList<Double> pointsDouble = new ArrayList<>();
 
         // Récupération des points
         for(String tag: shapeTags) {
@@ -25,38 +24,39 @@ public class RectBuilder extends ShapeBuilder {
             coordsStart = tag.indexOf("x=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 4);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double x = Double.parseDouble(coordsSubStr);
 
             // Pour y
             coordsStart = tag.indexOf("y=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 4);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double y = Double.parseDouble(coordsSubStr);
 
             // Pour width
             coordsStart = tag.indexOf("width=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 8);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double width = Double.parseDouble(coordsSubStr);
 
             // Pour height
             coordsStart = tag.indexOf("height=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 9);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double height = Double.parseDouble(coordsSubStr);
 
-
-            for(Double point: pointsDouble) {
-                r.add(new Rectangle(new Vecteur(pointsDouble.get(0), pointsDouble.get(1)), pointsDouble.get(2), pointsDouble.get(3)));
-            }
+            r.add(new Rectangle(new Vecteur(2, x, y), width, height));
         }
 
         return r.toArray(new Rectangle[r.size()]);
     }
 
     public Rectangle[] getShapes() {
-        Rectangle[] s = new Rectangle[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
+        if (this.shapes != null) {
+            Rectangle[] s = new Rectangle[this.shapes.length];
+            System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+            return s;
+        } else {
+            return null;
+        }
     }
 }

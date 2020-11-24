@@ -25,14 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/circle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/ellipse.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/polygon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/polyline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/svgFiles/rect.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/CircleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/EllipseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/LineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/PolylineBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapeBuilder/RectBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,16 +83,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
-      <module name="TP4" />
-      <option name="PROGRAM_PARAMETERS" value="--input polygon.svg" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -102,6 +90,16 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.Main" />
+      <module name="TP4" />
+      <option name="PROGRAM_PARAMETERS" value="--input polygon.svg" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

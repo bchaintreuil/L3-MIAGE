@@ -1,6 +1,5 @@
 package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
-import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Shape.Polyline;
 import unice.l3miage.cpoo.tp4.Vecteur;
 
@@ -12,7 +11,7 @@ public class PolylineBuilder extends ShapeBuilder {
     }
 
     protected Polyline[] buildShapes() {
-        ArrayList<Polyline> p = new ArrayList<>();
+        ArrayList<Polyline> p = new ArrayList<Polyline>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
@@ -33,6 +32,7 @@ public class PolylineBuilder extends ShapeBuilder {
             for(String point: pointsStr) {
                 points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
+            
             p.add(new Polyline(points.toArray(new Vecteur[points.size()])));
         }
 
@@ -40,8 +40,12 @@ public class PolylineBuilder extends ShapeBuilder {
     }
 
     public Polyline[] getShapes() {
-        Polyline[] s = new Polyline[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
+        if (this.shapes != null) {
+            Polyline[] s = new Polyline[this.shapes.length];
+            System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+            return s;
+        } else {
+            return null;
+        }
     }
 }

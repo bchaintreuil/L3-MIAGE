@@ -11,11 +11,10 @@ public class LineBuilder extends ShapeBuilder {
     }
 
     protected Line[] buildShapes() {
-        ArrayList<Line> l = new ArrayList<>();
+        ArrayList<Line> l = new ArrayList<Line>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
-        ArrayList<Double> pointsDouble = new ArrayList<>();
 
         // Récupération des points
         for(String tag: shapeTags) {
@@ -23,37 +22,39 @@ public class LineBuilder extends ShapeBuilder {
             coordsStart = tag.indexOf("x1=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double x1 = Double.parseDouble(coordsSubStr);
 
             // Pour y1
             coordsStart = tag.indexOf("y1=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double y1 = Double.parseDouble(coordsSubStr);
 
             // Pour x2
             coordsStart = tag.indexOf("x2=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double x2 = Double.parseDouble(coordsSubStr);
 
             // Pour y2
             coordsStart = tag.indexOf("y2=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double y2 = Double.parseDouble(coordsSubStr);
 
-            for(Double point: pointsDouble) {
-                l.add(new Line(new Vecteur(pointsDouble.get(0), pointsDouble.get(1)), new Vecteur(pointsDouble.get(2), pointsDouble.get(3))));
-            }
+            l.add(new Line(new Vecteur(2, x1, y1), new Vecteur(2, x2, y2)));
         }
 
         return l.toArray(new Line[l.size()]);
     }
 
     public Line[] getShapes() {
-        Line[] s = new Line[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
+        if (this.shapes != null) {
+            Line[] s = new Line[this.shapes.length];
+            System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+            return s;
+        } else {
+            return null;
+        }
     }
 }

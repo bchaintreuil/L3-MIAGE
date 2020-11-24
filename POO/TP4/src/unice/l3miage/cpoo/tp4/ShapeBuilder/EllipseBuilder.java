@@ -1,10 +1,7 @@
 package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
 import unice.l3miage.cpoo.tp4.Shape.Ellipse;
-import unice.l3miage.cpoo.tp4.Shape.Line;
-import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Vecteur;
-
 import java.util.ArrayList;
 
 public class EllipseBuilder extends ShapeBuilder {
@@ -13,49 +10,50 @@ public class EllipseBuilder extends ShapeBuilder {
     }
 
     protected Ellipse[] buildShapes() {
-        ArrayList<Ellipse> e = new ArrayList<>();
+        ArrayList<Ellipse> e = new ArrayList<Ellipse>();
         int coordsStart;
         int coordsEnd;
         String coordsSubStr;
-        ArrayList<Double> pointsDouble = new ArrayList<>();
 
         // Récupération des points
         for(String tag: shapeTags) {
-            // Pour cx et cy
-            coordsStart = tag.indexOf("translate(");
-            coordsEnd = tag.indexOf(")", coordsStart + 11)-2;
-            // Il va récupérer les deux données du centre
+            // Pour cx
+            coordsStart = tag.indexOf("cx=\"");
+            coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
+            double cx = Double.parseDouble(coordsSubStr);
 
-            // On split les coordonées par rapport au espace/tab/etc...
-            String[] pointsStr = coordsSubStr.split("(\\s+)");
-
-            pointsDouble.add(Double.parseDouble(pointsStr[0]));
-            pointsDouble.add(Double.parseDouble(pointsStr[1]));
+            // Pour cy
+            coordsStart = tag.indexOf("cy=\"");
+            coordsEnd = tag.indexOf("\"", coordsStart + 5);
+            coordsSubStr = tag.substring(coordsStart, coordsEnd);
+            double cy = Double.parseDouble(coordsSubStr);
 
             // Pour rx
             coordsStart = tag.indexOf("rx=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double rx = Double.parseDouble(coordsSubStr);
 
             // Pour ry
             coordsStart = tag.indexOf("ry=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 5);
             coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            pointsDouble.add(Double.parseDouble(coordsSubStr));
+            double ry = Double.parseDouble(coordsSubStr);
 
-            for(Double point: pointsDouble) {
-                e.add(new Ellipse(new Vecteur(pointsDouble.get(0), pointsDouble.get(1)), pointsDouble.get(2), pointsDouble.get(3)));
-            }
+            e.add(new Ellipse(new Vecteur(2, cx, cy), rx, ry));
         }
 
         return e.toArray(new Ellipse[e.size()]);
     }
 
     public Ellipse[] getShapes() {
-        Ellipse[] s = new Ellipse[this.shapes.length];
-        System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
-        return s;
+        if (this.shapes != null) {
+            Ellipse[] s = new Ellipse[this.shapes.length];
+            System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
+            return s;
+        } else {
+            return null;
+        }
     }
 }

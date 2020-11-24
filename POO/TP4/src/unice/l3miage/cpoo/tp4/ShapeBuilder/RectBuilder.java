@@ -1,10 +1,7 @@
 package unice.l3miage.cpoo.tp4.ShapeBuilder;
 
-import unice.l3miage.cpoo.tp4.Shape.Circle;
-import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Shape.Rectangle;
 import unice.l3miage.cpoo.tp4.Vecteur;
-
 import java.util.ArrayList;
 
 public class RectBuilder extends ShapeBuilder {
@@ -21,16 +18,21 @@ public class RectBuilder extends ShapeBuilder {
         // Récupération des points
         for(String tag: shapeTags) {
             // Pour x
-            coordsStart = tag.indexOf("x=\"");
-            coordsEnd = tag.indexOf("\"", coordsStart + 4);
-            coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            double x = Double.parseDouble(coordsSubStr);
+            double x = 0;
+            if ((coordsStart = tag.indexOf("x=\"")) != -1) {
+                coordsEnd = tag.indexOf("\"", coordsStart + 4);
+                coordsSubStr = tag.substring(coordsStart, coordsEnd);
+
+                x = Double.parseDouble(coordsSubStr);
+            }
 
             // Pour y
-            coordsStart = tag.indexOf("y=\"");
-            coordsEnd = tag.indexOf("\"", coordsStart + 4);
-            coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            double y = Double.parseDouble(coordsSubStr);
+            double y = 0;
+            if ((coordsStart = tag.indexOf("y=\"")) != -1) {
+                coordsEnd = tag.indexOf("\"", coordsStart + 4);
+                coordsSubStr = tag.substring(coordsStart, coordsEnd);
+                y = Double.parseDouble(coordsSubStr);
+            }
 
             // Pour width
             coordsStart = tag.indexOf("width=\"");

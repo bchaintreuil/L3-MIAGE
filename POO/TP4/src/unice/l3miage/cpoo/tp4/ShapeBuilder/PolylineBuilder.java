@@ -32,7 +32,7 @@ public class PolylineBuilder extends ShapeBuilder {
             for(String point: pointsStr) {
                 points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
-            
+
             p.add(new Polyline(points.toArray(new Vecteur[points.size()])));
         }
 

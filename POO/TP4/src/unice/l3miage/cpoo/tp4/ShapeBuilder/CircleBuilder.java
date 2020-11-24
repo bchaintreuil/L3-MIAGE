@@ -19,16 +19,20 @@ public class CircleBuilder extends ShapeBuilder {
         // Récupération des points
         for(String tag: shapeTags) {
             // Pour cx
-            coordsStart = tag.indexOf("cx=\"");
-            coordsEnd = tag.indexOf("\"", coordsStart + 5);
-            coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            double cx = Double.parseDouble(coordsSubStr);
+            double cx = 0;
+            if ((coordsStart = tag.indexOf("cx=\"")) != -1) {
+                coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsSubStr = tag.substring(coordsStart, coordsEnd);
+                cx = Double.parseDouble(coordsSubStr);
+            }
 
             // Pour cy
-            coordsStart = tag.indexOf("cy=\"");
-            coordsEnd = tag.indexOf("\"", coordsStart + 5);
-            coordsSubStr = tag.substring(coordsStart, coordsEnd);
-            double cy = Double.parseDouble(coordsSubStr);
+            double cy = 0;
+            if ((coordsStart = tag.indexOf("cy=\"")) != -1) {
+                coordsEnd = tag.indexOf("\"", coordsStart + 5);
+                coordsSubStr = tag.substring(coordsStart, coordsEnd);
+                cy = Double.parseDouble(coordsSubStr);
+            }
 
             // Pour radius
             coordsStart = tag.indexOf("r=\"");

@@ -16,6 +16,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Constructeur de la classe Polygone
+     *
      * @param points : Tableau de Vecteur permettant de construire l'objet Polygone
      */
     public Polygone(Vecteur... points) throws RuntimeException {
@@ -38,6 +39,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Renvoie le nombre de points dans le Polygone
+     *
      * @return Le nombre de points dans le Polygone
      */
     public int nbrPoints() {
@@ -46,6 +48,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Renvoie le vecteur Barycentre du Polygone
+     *
      * @return Le vecteur Barycentre du Polygone
      */
     public Vecteur barycentre() {
@@ -55,6 +58,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Calcul du périmètre du Polygone
+     *
      * @return Le périmètre du Polygone
      */
     public double perimètre() {
@@ -72,6 +76,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Calcule l'aire du Polygone
+     *
      * @return L'aire du Polygone
      */
     public double aire() {
@@ -87,6 +92,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Renvoie un tableau de Vecteur qui composent l'objet Polygone
+     *
      * @return Tableau de Vecteur composant l'objet Polygone
      */
     public Vecteur[] getPoints() {
@@ -97,6 +103,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Renvoie un Vecteur correspondant au point numéro i du Polygone
+     *
      * @return Le point i du Polygone, sous forme de Vecteur
      */
     public Vecteur getPoint(int i) throws RuntimeException {
@@ -109,6 +116,7 @@ public class Polygone extends Shape implements iTrianguler {
 
     /**
      * Renvoie l'objet Polygone crée à partir de la modification du Polygone actuel
+     *
      * @return Objet Polygone
      */
     public Polygone setPoint(Vecteur... points) {

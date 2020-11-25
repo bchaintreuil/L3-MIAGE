@@ -9,6 +9,7 @@ public class EllipseBuilder extends ShapeBuilder {
 
     /**
      * Constructeur de la classe EllipseBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     *
      * @param tags : Liste de String constituant les tags de la Shape
      */
     public EllipseBuilder(String[] tags) {
@@ -20,6 +21,7 @@ public class EllipseBuilder extends ShapeBuilder {
 
     /**
      * Renvoie un tableau de Ellipse crée à partir des Tags du fichier SVG
+     *
      * @return Tableau de Ellipse extrait du fichier SVG
      */
     protected Ellipse[] buildShapes() {
@@ -29,7 +31,7 @@ public class EllipseBuilder extends ShapeBuilder {
         String coordsSubStr;
 
         // Récupération des points
-        for(String tag: shapeTags) {
+        for (String tag : shapeTags) {
             // Pour cx
             double cx = 0;
             if ((coordsStart = tag.indexOf("cx=\"")) != -1) {
@@ -70,6 +72,7 @@ public class EllipseBuilder extends ShapeBuilder {
 
     /**
      * Renvoie le tableau de Ellipse crée à partir de la méthode buildShapes()
+     *
      * @return Tableau de Ellipse
      */
     public Ellipse[] getShapes() {

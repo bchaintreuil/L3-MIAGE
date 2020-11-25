@@ -9,6 +9,7 @@ public class PolylineBuilder extends ShapeBuilder {
 
     /**
      * Constructeur de la classe PolylineBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     *
      * @param tags : Liste de String constituant les tags de la Shape
      */
     public PolylineBuilder(String[] tags) {
@@ -19,6 +20,7 @@ public class PolylineBuilder extends ShapeBuilder {
 
     /**
      * Renvoie un tableau de Polyline crée à partir des Tags du fichier SVG
+     *
      * @return Tableau de Polyline extrait du fichier SVG
      */
     protected Polyline[] buildShapes() {
@@ -29,7 +31,7 @@ public class PolylineBuilder extends ShapeBuilder {
         ArrayList<Vecteur> points;
 
         // Récupération des points
-        for(String tag: shapeTags) {
+        for (String tag : shapeTags) {
             coordsStart = tag.indexOf("points=\"");
             coordsEnd = tag.indexOf("\"", coordsStart + 9);
             coordsStart += 8;
@@ -40,7 +42,7 @@ public class PolylineBuilder extends ShapeBuilder {
             String[] pointsStr = coordsSubStr.split("(\\s+)");
 
             points = new ArrayList<>();
-            for(String point: pointsStr) {
+            for (String point : pointsStr) {
                 points.add(new Vecteur(Double.parseDouble(point.split(",")[0]), Double.parseDouble(point.split(",")[1])));
             }
 
@@ -52,6 +54,7 @@ public class PolylineBuilder extends ShapeBuilder {
 
     /**
      * Renvoie le tableau de Polyline crée à partir de la méthode buildShapes()
+     *
      * @return Tableau de Polyline
      */
     public Polyline[] getShapes() {

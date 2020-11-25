@@ -30,6 +30,7 @@ public class Main {
 
     /**
      * Méthode gérant l'ouverture et l'extraction du contenu du fichier .svg en un String
+     *
      * @return String contenant l'ensemble du contenu du fichier svg
      */
     private static String loadFile(File file) throws IOException {

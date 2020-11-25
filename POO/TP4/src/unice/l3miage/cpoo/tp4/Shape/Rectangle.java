@@ -10,8 +10,9 @@ public class Rectangle extends Shape implements iToPolygone {
 
     /**
      * Constructeur de la classe Rectangle
+     *
      * @param anchor : Vecteur-point de l'ancre du Rectangle
-     * @param width : Largeur du Rectangle
+     * @param width  : Largeur du Rectangle
      * @param height : Hauteur du Rectangle
      */
     public Rectangle(Vecteur anchor, double width, double height) throws RuntimeException {
@@ -28,24 +29,34 @@ public class Rectangle extends Shape implements iToPolygone {
 
     /**
      * Calcul l'aire du Rectangle
+     *
      * @return L'aire du Rectangle
      */
-    public double aire() { return width * height; }
+    public double aire() {
+        return width * height;
+    }
 
     /**
      * Calcul du périmètre du Rectangle
+     *
      * @return Le périmètre du Rectangle
      */
-    public double perimètre() { return 2 * (this.height + this.width); }
+    public double perimètre() {
+        return 2 * (this.height + this.width);
+    }
 
     /**
      * Calcul du point barycentre du Rectangle
+     *
      * @return Le Vecteur-barycentre du Rectangle
      */
-    public Vecteur barycentre() { return new Vecteur(2, anchor.get(0) + 0.5 * width, anchor.get(1) + 0.5 * height); }
+    public Vecteur barycentre() {
+        return new Vecteur(2, anchor.get(0) + 0.5 * width, anchor.get(1) + 0.5 * height);
+    }
 
     /**
      * Calcul de l'objet Polygone crée à partir de l'objet Rectangle
+     *
      * @return L'objet Polygone crée à partir de l'objet Rectangle
      */
     public Polygone toPolygone() {

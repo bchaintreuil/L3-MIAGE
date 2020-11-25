@@ -12,6 +12,7 @@ public class Circle extends Shape implements iToPolygone {
 
     /**
      * Constructeur de la classe Cercle
+     *
      * @param center : Vecteur-point du centre du cercle
      * @param radius : Radius du cercle
      */
@@ -28,6 +29,7 @@ public class Circle extends Shape implements iToPolygone {
 
     /**
      * Détermination de l'aire du cercle
+     *
      * @return Aire du cercle
      */
     public double aire() {
@@ -36,6 +38,7 @@ public class Circle extends Shape implements iToPolygone {
 
     /**
      * Détermination du périmètre du cercle
+     *
      * @return Périmètre du cercle
      */
     public double perimètre() {
@@ -44,6 +47,7 @@ public class Circle extends Shape implements iToPolygone {
 
     /**
      * Convertir un objet cercle en objet Polygone
+     *
      * @return L'objet Polygone crée à partir du cercle
      */
     public Polygone toPolygone() {
@@ -65,6 +69,7 @@ public class Circle extends Shape implements iToPolygone {
     public double getRadius() {
         return this.radius;
     }
+
     public Vecteur getCenter() {
         return this.center;
     }

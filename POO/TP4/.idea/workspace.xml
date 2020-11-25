@@ -27,12 +27,6 @@
     <list default="true" id="545cf420-c0d1-4063-8867-e4cbab5ecf43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/Shape/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/EllipseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/EllipseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/LineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/LineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/PolylineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/PolylineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unice/l3miage/cpoo/tp4/ShapesTests/RectangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <recent name="D:\School\MIAGE\Git\L3-MIAGE\POO\TP4\src\unice\l3miage\cpoo\tp4" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RectangleTest">
+  <component name="RunManager" selected="JUnit.AllTests">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -102,16 +96,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolylineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unice.l3miage.cpoo.tp4.ShapesTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests" />
-      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.PolylineTest" />
+      <option name="MAIN_CLASS_NAME" value="unice.l3miage.cpoo.tp4.ShapesTests.AllTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AllTests" />
         <item itemvalue="JUnit.RectangleTest" />
         <item itemvalue="JUnit.RectangleTest.testBarycentre" />
         <item itemvalue="JUnit.RectangleTest.testAire" />
         <item itemvalue="JUnit.RectangleTest.testPerimetre" />
-        <item itemvalue="JUnit.PolylineTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +191,8 @@
       <workItem from="1606148158421" duration="8747000" />
       <workItem from="1606247090060" duration="9388000" />
       <workItem from="1606320484848" duration="3192000" />
+      <workItem from="1606337642909" duration="468000" />
+      <workItem from="1606338322956" duration="3431000" />
     </task>
     <servers />
   </component>
@@ -300,11 +290,12 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606062820612" />
-    <state x="762" y="441" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606320789512">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1016" y="594" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606341096088">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="762" y="441" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1606320789512" />
     <state x="1016" y="593" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606060603986" />
+    <state x="1016" y="594" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/3840.1065.1280.680/0.0.2560.1400/-1920.1080.1920.1040@0.0.2560.1400" timestamp="1606341096088" />
     <state x="0" y="0" width="776" height="1025" key="dock-window-1" timestamp="1606154499247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

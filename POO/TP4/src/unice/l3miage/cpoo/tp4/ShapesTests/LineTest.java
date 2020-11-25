@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class LineTest {
 
     @Test
-    public void testLongueur(){
+    public void testLongueur() {
         Line uneLigne = new Line(new Vecteur(0.0, 0.0), new Vecteur(0.0, 1.0));
         assertEquals(1, uneLigne.length(), 10.e-1);
     }

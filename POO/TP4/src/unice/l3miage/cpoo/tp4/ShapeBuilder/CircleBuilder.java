@@ -9,6 +9,7 @@ public class CircleBuilder extends ShapeBuilder {
 
     /**
      * Constructeur de la classe CircleBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     *
      * @param tags : Liste de String constituant les tags de la Shape
      */
     public CircleBuilder(String[] tags) {
@@ -19,6 +20,7 @@ public class CircleBuilder extends ShapeBuilder {
 
     /**
      * Renvoie un tableau de Circle crée à partir des Tags du fichier SVG
+     *
      * @return Tableau de Circle extrait du fichier SVG
      */
     protected Circle[] buildShapes() {
@@ -28,7 +30,7 @@ public class CircleBuilder extends ShapeBuilder {
         String coordsSubStr;
 
         // Récupération des points
-        for(String tag: shapeTags) {
+        for (String tag : shapeTags) {
             // Pour cx
             double cx = 0;
             if ((coordsStart = tag.indexOf("cx=\"")) != -1) {
@@ -62,10 +64,11 @@ public class CircleBuilder extends ShapeBuilder {
 
     /**
      * Renvoie le tableau de Circle crée à partir de la méthode buildShapes()
+     *
      * @return Tableau de Circle
      */
     public Circle[] getShapes() {
-        if(this.shapes != null) {
+        if (this.shapes != null) {
             Circle[] s = new Circle[this.shapes.length];
             System.arraycopy(this.shapes, 0, s, 0, this.shapes.length);
             return s;

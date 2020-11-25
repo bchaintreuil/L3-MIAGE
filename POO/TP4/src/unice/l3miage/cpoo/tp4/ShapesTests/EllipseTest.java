@@ -10,7 +10,7 @@ public class EllipseTest {
 
     @Test
     public void testAire() {
-        Ellipse uneEllipse = new Ellipse(new Vecteur(0.0, 0.0), 10,8);
+        Ellipse uneEllipse = new Ellipse(new Vecteur(0.0, 0.0), 10, 8);
         assertEquals(251.32741, uneEllipse.aire(), 10.e-1);
     }
 

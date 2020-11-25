@@ -2,6 +2,7 @@ package unice.l3miage.cpoo.tp4;
 
 /**
  * Classe Vecteur
+ *
  * @author Benjamin CHAINTREUIL
  * @author Thomas DELMARE
  */
@@ -35,41 +36,22 @@ public class Vecteur {
      */
 
     /**
-     * Calcul et renvoi la norme du vecteur
-     * @return Norme du vecteur
-     */
-    public double length() {
-        double length = 0;
-        for(double coord : this.coords) {
-            length += Math.pow(coord, 2);
-        }
-        return Math.sqrt(length);
-    }
-
-    /**
-     * Calcul et renvoi la dimension du vecteur
-     * @return Dimension du vecteur
-     */
-    public int dimension() {
-        return this.coords.length;
-    }
-
-    /**
      * Méthode permettant l'addition de n vecteurs
+     *
      * @param vecteurs : Liste des vecteurs à ajouter
      * @return Vecteur résultant de l'addition des vecteurs données en paramètres
      */
-    public static Vecteur add(Vecteur...vecteurs) throws RuntimeException {
+    public static Vecteur add(Vecteur... vecteurs) throws RuntimeException {
         int dim = vecteurs[0].dimension();
-        for(Vecteur vecteur:vecteurs) {
+        for (Vecteur vecteur : vecteurs) {
             if (vecteur.dimension() != dim) {
                 throw new RuntimeException("Dim différentes !");
             }
         }
 
         double[] coords = new double[dim];
-        for (Vecteur vecteur: vecteurs) {
-            for(int i = 0; i < dim; i++) {
+        for (Vecteur vecteur : vecteurs) {
+            for (int i = 0; i < dim; i++) {
                 coords[i] += vecteur.coords[i];
             }
         }
@@ -79,11 +61,12 @@ public class Vecteur {
 
     /**
      * Méthode permettant de soustraire n vecteurs
+     *
      * @param vecteurs : Liste des vecteurs à soustraire
      * @return Vecteur résultant de la soustraction des vecteurs donnés en paramètre
      */
     //
-    public static Vecteur sub(Vecteur...vecteurs) {
+    public static Vecteur sub(Vecteur... vecteurs) {
         Vecteur[] vect = new Vecteur[vecteurs.length];
         for (int i = 0; i < vecteurs.length; i++) {
             if (i > 0) {
@@ -97,6 +80,7 @@ public class Vecteur {
 
     /**
      * Méthode permettant de renvoyer le résultat du "produit scalaire" de n vecteurs
+     *
      * @param vecteurs : Vecteurs utilisés pour le produit scalaire
      * @return Produit scalaire des n vecteurs
      */
@@ -110,8 +94,8 @@ public class Vecteur {
 
         double[] foo = new double[dim];
         System.arraycopy(foo, 0, vecteurs[0].coords, 0, vecteurs[0].dimension());
-        for(int i = 1; i < vecteurs.length; i++) {
-            for(double coord: vecteurs[i].coords) {
+        for (int i = 1; i < vecteurs.length; i++) {
+            for (double coord : vecteurs[i].coords) {
                 foo[i] *= coord;
             }
         }
@@ -124,6 +108,7 @@ public class Vecteur {
 
     /**
      * Renvoi la norme du produit vectoriel entre deux vecteur v1 et v2 de dimension 3
+     *
      * @param v1 : Premier vecteur utilisé pour le calcul
      * @param v2 : Deuxième vecteur utilisé pour le calcul
      * @return Vecteur résultant du produit vectoriel
@@ -136,7 +121,30 @@ public class Vecteur {
     }
 
     /**
+     * Calcul et renvoi la norme du vecteur
+     *
+     * @return Norme du vecteur
+     */
+    public double length() {
+        double length = 0;
+        for (double coord : this.coords) {
+            length += Math.pow(coord, 2);
+        }
+        return Math.sqrt(length);
+    }
+
+    /**
+     * Calcul et renvoi la dimension du vecteur
+     *
+     * @return Dimension du vecteur
+     */
+    public int dimension() {
+        return this.coords.length;
+    }
+
+    /**
      * Renvoi le vecteur transposé
+     *
      * @return Vecteur transposé
      */
     public Vecteur transpose() throws RuntimeException {
@@ -148,6 +156,7 @@ public class Vecteur {
 
     /**
      * Calcul et renvoi le vecteur opposé
+     *
      * @return Vecteur opposé
      */
     public Vecteur opposé() {
@@ -160,6 +169,7 @@ public class Vecteur {
 
     /**
      * Renvoi le vecteur résultant de la multiplication par un scalaire k
+     *
      * @param k : Scalaire de la multiplication
      * @return Vecteur résultant de la multiplication
      */
@@ -176,8 +186,8 @@ public class Vecteur {
      */
     public void print() {
         System.out.print("<");
-        for(int i = 0; i < this.coords.length; i++) {
-            if (i <= this.coords.length-2) {
+        for (int i = 0; i < this.coords.length; i++) {
+            if (i <= this.coords.length - 2) {
                 System.out.print(this.coords[i] + ", ");
 
             } else {
@@ -191,9 +201,10 @@ public class Vecteur {
 
     /**
      * Renvoie la composante i du Vecteur
+     *
      * @return Valeur de la composante i
      */
-    public double get(int i) throws RuntimeException{
+    public double get(int i) throws RuntimeException {
         if (i > this.dimension()) {
             throw new RuntimeException("i > nbr de composantes");
         } else {

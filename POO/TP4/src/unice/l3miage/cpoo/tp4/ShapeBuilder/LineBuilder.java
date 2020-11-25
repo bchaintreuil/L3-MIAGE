@@ -9,6 +9,7 @@ public class LineBuilder extends ShapeBuilder {
 
     /**
      * Constructeur de la classe LineBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     *
      * @param tags : Liste de String constituant les tags de la Shape
      */
     public LineBuilder(String[] tags) {
@@ -19,6 +20,7 @@ public class LineBuilder extends ShapeBuilder {
 
     /**
      * Renvoie un tableau de Line crée à partir des Tags du fichier SVG
+     *
      * @return Tableau de Line extrait du fichier SVG
      */
     protected Line[] buildShapes() {
@@ -28,7 +30,7 @@ public class LineBuilder extends ShapeBuilder {
         String coordsSubStr;
 
         // Récupération des points
-        for(String tag: shapeTags) {
+        for (String tag : shapeTags) {
             if (tag.contains("polyline")) { // Exclusion for polyline tag
                 continue;
             }
@@ -69,6 +71,7 @@ public class LineBuilder extends ShapeBuilder {
 
     /**
      * Renvoie le tableau de Line crée à partir de la méthode buildShapes()
+     *
      * @return Tableau de Line
      */
     public Line[] getShapes() {

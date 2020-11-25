@@ -9,6 +9,7 @@ public class RectBuilder extends ShapeBuilder {
 
     /**
      * Constructeur de la classe RectBuilder qui va permettre de créer les tableaux de Shapes et les tags de la Shape associée
+     *
      * @param tags : Liste de String constituant les tags de la Shape
      */
     public RectBuilder(String[] tags) {
@@ -19,6 +20,7 @@ public class RectBuilder extends ShapeBuilder {
 
     /**
      * Renvoie un tableau de Rectangle crée à partir des Tags du fichier SVG
+     *
      * @return Tableau de Rectangle extrait du fichier SVG
      */
     protected Rectangle[] buildShapes() {
@@ -28,7 +30,7 @@ public class RectBuilder extends ShapeBuilder {
         String coordsSubStr;
 
         // Récupération des points
-        for(String tag: shapeTags) {
+        for (String tag : shapeTags) {
             // Pour x
             double x = 0;
             if ((coordsStart = tag.indexOf("x=\"")) != -1) {
@@ -70,6 +72,7 @@ public class RectBuilder extends ShapeBuilder {
 
     /**
      * Renvoie le tableau de Rectangle crée à partir de la méthode buildShapes()
+     *
      * @return Tableau de Rectangle
      */
     public Rectangle[] getShapes() {

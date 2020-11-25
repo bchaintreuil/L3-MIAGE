@@ -3,6 +3,7 @@ package unice.l3miage.cpoo.tp4.ShapesTests;
 import org.junit.Test;
 import unice.l3miage.cpoo.tp4.Shape.Circle;
 import unice.l3miage.cpoo.tp4.Vecteur;
+
 import static org.junit.Assert.assertEquals;
 
 public class CircleTest {

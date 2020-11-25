@@ -22,6 +22,7 @@ public class Line extends Shape {
 
     /**
      * Calcul impossible de l'aire d'un objet Line
+     *
      * @return Operation Exception
      */
     public double aire() throws UnsupportedOperationException {
@@ -30,6 +31,7 @@ public class Line extends Shape {
 
     /**
      * Calcul impossible du périmètre d'un objet Line
+     *
      * @return Operation Exception
      */
     public double perimètre() throws UnsupportedOperationException {
@@ -38,6 +40,7 @@ public class Line extends Shape {
 
     /**
      * Calcul de la longueur de l'objet Line
+     *
      * @return La longueur de l'objet Line
      */
     public double length() {
@@ -48,6 +51,7 @@ public class Line extends Shape {
 
     /**
      * Renvoie un tableau de Vecteur qui composent l'objet Line
+     *
      * @return Tableau de Vecteur
      */
     public Vecteur[] getPoints() {

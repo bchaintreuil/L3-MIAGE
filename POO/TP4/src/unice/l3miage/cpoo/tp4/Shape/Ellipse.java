@@ -1,6 +1,7 @@
 package unice.l3miage.cpoo.tp4.Shape;
 
 import unice.l3miage.cpoo.tp4.Vecteur;
+
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
@@ -12,7 +13,8 @@ public class Ellipse extends Shape implements iToPolygone {
 
     /**
      * Constructeur de la classe Ellipse
-     * @param center : Vecteur-point du centre de l'ellipse
+     *
+     * @param center  : Vecteur-point du centre de l'ellipse
      * @param radiusX : Rayon horizontal x de l'ellipse
      * @param radiusY : Rayon vertical y de l'ellipse
      */
@@ -30,6 +32,7 @@ public class Ellipse extends Shape implements iToPolygone {
 
     /**
      * Calcul de l'aire de l'ellipse
+     *
      * @return L'aire de l'ellipse
      */
     public double aire() {
@@ -38,6 +41,7 @@ public class Ellipse extends Shape implements iToPolygone {
 
     /**
      * Calcul du périmètre de l'ellipse grâce à la formule de Ramanujan
+     *
      * @return Le périmètre de l'ellipse
      */
     public double perimètre() {
@@ -46,6 +50,7 @@ public class Ellipse extends Shape implements iToPolygone {
 
     /**
      * Convertir l'objet Ellipse en un objet Polygone
+     *
      * @return L'objet Polygone crée à partir de l'objet Ellipse
      */
     public Polygone toPolygone() {
@@ -67,9 +72,11 @@ public class Ellipse extends Shape implements iToPolygone {
     public Vecteur getCenter() {
         return this.center;
     }
+
     public double getRadiusX() {
         return this.radiusX;
     }
+
     public double getRadiusY() {
         return this.radiusY;
     }

@@ -4,8 +4,8 @@ import unice.l3miage.cpoo.tp4.Vecteur;
 
 /**
  * Classe Triangle
- * @author Benjamin CHAINTREUIL
  *
+ * @author Benjamin CHAINTREUIL
  */
 
 public class Triangle extends Shape {
@@ -14,6 +14,7 @@ public class Triangle extends Shape {
 
     /**
      * Constructeur de la classe
+     *
      * @param OA : Vecteur-point d'un sommet du triangle
      * @param OB : Vecteur-point d'un sommet du triangle
      * @param OC : Vecteur-point d'un sommet du triangle
@@ -41,12 +42,16 @@ public class Triangle extends Shape {
 
     /**
      * Détermination du barycentre du triangle
+     *
      * @return Vecteur-point du barycentre
      */
-    public Vecteur barycentre() { return Vecteur.add(Vecteur.add(this.OA.multK(1.0/3.0), this.OB.multK(1.0/3.0)), this.OC.multK(1.0/3.0)); }
+    public Vecteur barycentre() {
+        return Vecteur.add(Vecteur.add(this.OA.multK(1.0 / 3.0), this.OB.multK(1.0 / 3.0)), this.OC.multK(1.0 / 3.0));
+    }
 
     /**
      * Calcul du périmètre du Triangle
+     *
      * @return Le périmètre du Triangle
      */
     public double perimètre() {

@@ -10,19 +10,19 @@ public class RectangleTest {
 
     @Test
     public void testPerimetre() {
-        Rectangle unRectangle = new Rectangle(new Vecteur(0.0, 0.0), 100,200);
-        assertEquals(600, unRectangle.perimètre(),0);
+        Rectangle unRectangle = new Rectangle(new Vecteur(0.0, 0.0), 100, 200);
+        assertEquals(600, unRectangle.perimètre(), 0);
     }
 
     @Test
     public void testAire() {
-        Rectangle unRectangle = new Rectangle(new Vecteur(0.0, 0.0), 100,200);
+        Rectangle unRectangle = new Rectangle(new Vecteur(0.0, 0.0), 100, 200);
         assertEquals(20000, unRectangle.aire(), 0);
     }
 
     @Test
     public void testBarycentre() {
-        Rectangle unRectangle = new Rectangle(new Vecteur(2,0.0, 0.0), 1,1);
+        Rectangle unRectangle = new Rectangle(new Vecteur(2, 0.0, 0.0), 1, 1);
         var barycentre = unRectangle.barycentre();
 
         assertEquals(0.5, barycentre.get(0), 0);

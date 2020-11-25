@@ -39,6 +39,7 @@ public class SVGParser {
 
     /**
      * Renvoi le nombre de balise contenu dans le fichier SVG
+     *
      * @return Nombre de balises contendu dans la fichier SVG
      */
     public int nbrTags() {
@@ -57,6 +58,7 @@ public class SVGParser {
 
     /**
      * Récupération des balises
+     *
      * @return Tableau de String contenant les balises du fichier SVG
      */
     private String[] extractTags() {
@@ -77,6 +79,7 @@ public class SVGParser {
 
     /**
      * Renvoie une liste des tags
+     *
      * @return Tableau de String comportant les tags
      */
     public String[] getTags() {

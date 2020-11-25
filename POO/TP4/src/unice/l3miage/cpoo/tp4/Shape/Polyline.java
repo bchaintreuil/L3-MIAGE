@@ -8,6 +8,7 @@ public class Polyline extends Shape {
 
     /**
      * Constructeur de la classe Polyline
+     *
      * @param points : Liste des points composants la Polyline
      */
     public Polyline(Vecteur... points) {
@@ -19,6 +20,7 @@ public class Polyline extends Shape {
 
     /**
      * Calcul impossible de l'aire d'une Polyline
+     *
      * @return Operation Exception
      */
     public double aire() throws UnsupportedOperationException {
@@ -27,6 +29,7 @@ public class Polyline extends Shape {
 
     /**
      * Calcul impossible du périmètre de la Polyline
+     *
      * @return Operation Exception
      */
     public double perimètre() throws UnsupportedOperationException {
@@ -35,6 +38,7 @@ public class Polyline extends Shape {
 
     /**
      * Calcul de la longueur de l'objet Polyline
+     *
      * @return La longueur de la Polyline
      */
     public double length() {
@@ -49,6 +53,7 @@ public class Polyline extends Shape {
 
     /**
      * Renvoie un tableau de Vecteur qui composent l'objet Polyline
+     *
      * @return Tableau de Vecteur composant l'objet Polyline
      */
     public Vecteur[] getPoints() {

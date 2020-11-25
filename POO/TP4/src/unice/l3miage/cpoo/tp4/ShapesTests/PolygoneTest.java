@@ -1,18 +1,18 @@
 package unice.l3miage.cpoo.tp4.ShapesTests;
 
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
 import unice.l3miage.cpoo.tp4.Shape.Polygone;
 import unice.l3miage.cpoo.tp4.Shape.Triangle;
 import unice.l3miage.cpoo.tp4.Vecteur;
+
+import static org.junit.Assert.assertEquals;
 
 public class PolygoneTest {
 
     @Test
     public void testAdd() {
         Polygone unPolygone = new Polygone(new Vecteur(0.0, 0.0), new Vecteur(0.0, 1.0), new Vecteur(1.0, 1.0), new Vecteur(1.0, 0.0));
-        assertEquals(4,unPolygone.nbrPoints(), 0);
+        assertEquals(4, unPolygone.nbrPoints(), 0);
 
         // On ajoute un point
         unPolygone = unPolygone.setPoint(new Vecteur(4.0, 4.0));
@@ -48,19 +48,19 @@ public class PolygoneTest {
         assertEquals(unPolygone.nbrPoints() - 2, liste_triangles.length, 0);
 
         // Triangle 1
-        assertEquals(0.0 ,liste_triangles[0].OA.get(0), 0);
-        assertEquals(0.0 ,liste_triangles[0].OA.get(1), 0);
-        assertEquals(0.0 ,liste_triangles[0].OB.get(0), 0);
-        assertEquals(1.0 ,liste_triangles[0].OB.get(1), 0);
-        assertEquals(1.0 ,liste_triangles[0].OC.get(0), 0);
-        assertEquals(0.0 ,liste_triangles[0].OC.get(1), 0);
+        assertEquals(0.0, liste_triangles[0].OA.get(0), 0);
+        assertEquals(0.0, liste_triangles[0].OA.get(1), 0);
+        assertEquals(0.0, liste_triangles[0].OB.get(0), 0);
+        assertEquals(1.0, liste_triangles[0].OB.get(1), 0);
+        assertEquals(1.0, liste_triangles[0].OC.get(0), 0);
+        assertEquals(0.0, liste_triangles[0].OC.get(1), 0);
 
         // Triangle 2
-        assertEquals(0.0 ,liste_triangles[1].OA.get(0), 0);
-        assertEquals(1.0 ,liste_triangles[1].OA.get(1), 0);
-        assertEquals(1.0 ,liste_triangles[1].OB.get(0), 0);
-        assertEquals(1.0 ,liste_triangles[1].OB.get(1), 0);
-        assertEquals(1.0 ,liste_triangles[1].OC.get(0), 0);
-        assertEquals(0.0 ,liste_triangles[1].OC.get(1), 0);
+        assertEquals(0.0, liste_triangles[1].OA.get(0), 0);
+        assertEquals(1.0, liste_triangles[1].OA.get(1), 0);
+        assertEquals(1.0, liste_triangles[1].OB.get(0), 0);
+        assertEquals(1.0, liste_triangles[1].OB.get(1), 0);
+        assertEquals(1.0, liste_triangles[1].OC.get(0), 0);
+        assertEquals(0.0, liste_triangles[1].OC.get(1), 0);
     }
 }

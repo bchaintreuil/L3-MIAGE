@@ -1,7 +1,6 @@
 package unice.l3miage.cpoo.tp4.Shape;
 
 import unice.l3miage.cpoo.tp4.Vecteur;
-
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
@@ -14,8 +13,8 @@ public class Ellipse extends Shape implements iToPolygone {
     /**
      * Constructeur de la classe Ellipse
      * @param center : Vecteur-point du centre de l'ellipse
-     * @param radiusX : Radius x de l'ellipse
-     * @param radiusY : Radius y de l'ellipse
+     * @param radiusX : Rayon horizontal x de l'ellipse
+     * @param radiusY : Rayon vertical y de l'ellipse
      */
     public Ellipse(Vecteur center, double radiusX, double radiusY) throws RuntimeException {
         if (center.dimension() != 2 || radiusX <= 0 || radiusY <= 0) {

@@ -134,6 +134,11 @@ public interface iTrianguler {
     default ArrayList<Triangle> trianguler(ArrayList<Triangle> liste_triangles) {
         int nbrSommets = this.getPoints().length;
 
+        if(nbrSommets == 3){
+            liste_triangles.add(new Triangle(this.getPoint(0), this.getPoint(1), this.getPoint(2)));
+            return liste_triangles;
+        }
+
         int indiceP0 = this.sommet_gauche();
         int indiceP1 = voisin_sommet(nbrSommets, indiceP0, 1);
         int indiceP2 = voisin_sommet(nbrSommets, indiceP0, -1);

@@ -22,10 +22,10 @@ public class RectangleTest {
 
     @Test
     public void testBarycentre() {
-        Rectangle unRectangle = new Rectangle(new Vecteur(2,0, 0), 45181,4587111);
+        Rectangle unRectangle = new Rectangle(new Vecteur(2,0.0, 0.0), 1,1);
         var barycentre = unRectangle.barycentre();
 
-        assertEquals(0, barycentre.get(0), 0);
-        assertEquals(0, barycentre.get(1), 0);
+        assertEquals(0.5, barycentre.get(0), 0);
+        assertEquals(0.5, barycentre.get(1), 0);
     }
 }

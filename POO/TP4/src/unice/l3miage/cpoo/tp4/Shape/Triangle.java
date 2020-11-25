@@ -43,7 +43,7 @@ public class Triangle extends Shape {
      * Détermination du barycentre du triangle
      * @return Vecteur-point du barycentre
      */
-    public Vecteur barycentre() { return Vecteur.add(Vecteur.add(this.OA.multK(1/3), this.OB.multK(1/3)), this.OC.multK(1/3)); }
+    public Vecteur barycentre() { return Vecteur.add(Vecteur.add(this.OA.multK(1.0/3.0), this.OB.multK(1.0/3.0)), this.OC.multK(1.0/3.0)); }
 
     /**
      * Calcul du périmètre du Triangle
@@ -51,13 +51,9 @@ public class Triangle extends Shape {
      */
     public double perimètre() {
         double AB = Vecteur.add(this.OB, this.OA.opposé()).length();
-        System.out.println(AB);
         double BC = Vecteur.add(this.OC, this.OB.opposé()).length();
-        System.out.println(BC);
         double CA = Vecteur.add(this.OA, this.OC.opposé()).length();
-        System.out.println(CA);
-        double p = AB + BC + CA;
-        return p;
+        return AB + BC + CA;
     }
 
     /**

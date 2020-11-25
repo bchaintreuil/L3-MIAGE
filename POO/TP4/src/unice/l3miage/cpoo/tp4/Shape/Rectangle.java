@@ -42,7 +42,7 @@ public class Rectangle extends Shape implements iToPolygone {
      * Calcul du point barycentre du Rectangle
      * @return Le Vecteur-barycentre du Rectangle
      */
-    public Vecteur barycentre() { return new Vecteur(2, anchor.get(0) + 1/2 * width, anchor.get(1) + 1/2 * height); }
+    public Vecteur barycentre() { return new Vecteur(2, anchor.get(0) + 0.5 * width, anchor.get(1) + 0.5 * height); }
 
     /**
      * Calcul de l'objet Polygone crée à partir de l'objet Rectangle

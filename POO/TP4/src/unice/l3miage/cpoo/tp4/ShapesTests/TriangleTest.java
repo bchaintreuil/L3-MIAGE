@@ -10,7 +10,7 @@ public class TriangleTest {
     @Test
     public void testPerimetre() {
         Triangle unTriangle = new Triangle(new Vecteur(0.0, 0.0), new Vecteur(1.0, 0.0),new Vecteur(0.0, 1.0));
-        assertEquals(3, unTriangle.perimètre(),0);
+        assertEquals(3.41, unTriangle.perimètre(),10e-2);
     }
 
     @Test

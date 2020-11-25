@@ -56,10 +56,9 @@ public class Triangle extends Shape {
         System.out.println(BC);
         double CA = Vecteur.add(this.OA, this.OC.opposé()).length();
         System.out.println(CA);
-        double p = (AB + BC + CA);
+        double p = AB + BC + CA;
         return p;
     }
-    // public double perimètre() { return this.OA.length() + this.OB.length() + this.OC.length(); }
 
     /**
      * Calcul de la distance entre le barycentre et l'un des sommets du triangle.

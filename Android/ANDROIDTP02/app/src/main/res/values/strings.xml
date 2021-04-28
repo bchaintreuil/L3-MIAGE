@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ANDROID-TP02</string>
+    <string name="messageBox">tapez votre message</string>
+    <string name="sendButton">envoyez</string>
+    <string name="switchText">connexion</string>
+    <string name="listes">Personnes connectées</string>
 </resources>
